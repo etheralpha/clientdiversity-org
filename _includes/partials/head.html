@@ -1,0 +1,70 @@
+{%- assign title = site.title -%}
+  {%- if page.title -%}
+    {%- capture page_title -%}{{ page.title }} | {{ title }}{%- endcapture -%}
+    {%- assign title = page_title -%}
+  {%- endif -%}
+
+{%- assign description = site.description -%}
+  {%- if page.description -%}
+    {%- assign description = page.description -%}
+  {%- endif -%}
+
+{%- assign keywords = site.keywords -%}
+  {%- if page.keywords -%}
+    {%- assign keywords = page.keywords -%}
+  {%- endif -%}
+
+<head>
+  <!-- Analytics Tag -->
+  {{site.analytics_tag}}
+
+  <meta http-equiv="Content-Type" content="text/html" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="{{keywords}}">
+  <meta name="description" content="{{description}}">
+  <title>{{title}}</title>
+
+  <link rel="dns-prefetch" href="{{site.url}}">
+  <link rel="canonical" href="{{site.url}}">
+
+  {%- assign favicon = site.url | append: "/assets/img/favicons" -%}
+  <link rel="icon" href="{{favicon}}/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{favicon}}/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{favicon}}/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{favicon}}/apple-touch-icon.png">
+  <link rel="manifest" href="{{favicon}}/site.webmanifest">
+  <link rel="mask-icon" href="{{favicon}}/safari-pinned-tab.svg" color="#fda264">
+  <meta name="msapplication-TileColor" content="#fda264">
+  <meta name="msapplication-config" content="{{favicon}}/browserconfig.xml">
+  <meta name="theme-color" content="#fda264">
+
+  {%- assign cover = site.url | append: "/assets/img/cover/cover.png" -%}
+  <meta property="og:locale" content="en-US">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:url" content="{{site.url}}">
+  <meta property="og:site_name" content="{{title}}">
+  <meta property="og:image" content="{{cover}}">
+  <meta property="og:image:secure_url" content="{{cover}}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:description" content="{{description}}">
+  <meta name="twitter:title" content="{{title}}">
+  <meta name="twitter:image" content="{{cover}}">
+  <meta name="twitter:image:alt" content="{{title}}">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="{{site.url}}/assets/css/main.css">
+  {%- case page.layout -%}
+    {%- when "markdown" -%}
+      <link rel="stylesheet" type="text/css" href="{{site.url}}/assets/css/markdown.css">
+    {%- else -%}
+  {%- endcase -%}
+  {%- case page.name -%}
+    {%- when "custom.md" -%}
+      <link rel="stylesheet" type="text/css" href="{{site.url}}/assets/css/custom.css">
+  {%- endcase -%}
+</head>

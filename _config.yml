@@ -1,0 +1,22 @@
+# Read about configuration here: https://jekyllrb.com/docs/configuration/options/
+title: Client Diversity
+description: A community site for useful links, info, tools, and resources.
+keywords: ethereum, client, diversity, eth, beacon, chain
+url: https://clientdiversity.com
+permalink: pretty # Do not change this, it will break all links
+timezone: America/New_York
+markdown: kramdown
+livereload: true
+port: 4400
+
+# Global variables
+analytics_tag: 
+primary_color: "#1C1C1C"
+primary_color_shaded: "#000"
+
+
+# Links
+github_repo: https://github.com/etheralpha/clientdiversity-org
+discord_invite: 
+
+

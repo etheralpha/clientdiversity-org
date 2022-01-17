@@ -1,0 +1,10 @@
+---
+---
+
+:root {
+  --primary-color: {{site.primary_color}};
+  --primary-color-shaded: {{site.primary_color_shaded}};
+}
+
+{% include css/base.css %}
+{% include css/notification.css %}

@@ -1,0 +1,24 @@
+#notification {
+  position: fixed;
+  z-index: 101;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #f8f9fa;
+  color: #000;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(100, 100, 100, 0.5);
+  display: none;
+}
+#notificationClose {
+  position: absolute;
+  right: 10px;
+  height: 100%;
+  top: 50%;
+  transform: translateY(-18%);
+  cursor: pointer;
+}
+#notification a {
+  color: #000;
+}

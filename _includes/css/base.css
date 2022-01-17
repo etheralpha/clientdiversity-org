@@ -1,0 +1,74 @@
+
+
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--primary-color-shaded);
+  border-color: var(--primary-color-shaded);
+}
+
+.btn-outline-primary {
+  background-color: #fff
+  border-color: var(--primary-color) !important;
+  color: var(--primary-color);
+}
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  border-color: var(--primary-color-shaded) !important;
+  background-color: var(--primary-color-shaded);
+  color: #fff;
+}
+
+.btn-outline-thirdary {
+  background-color: #fff;
+  color: #6c757d;
+  border-color: #6c757d;
+}
+.btn-outline-thirdary:hover,
+.btn-outline-thirdary:focus {
+  border-color: var(--primary-color-shaded) !important;
+  background-color: var(--primary-color-shaded);
+  color: #fff;
+}
+
+
+
+.link-disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  color: currentColor;
+  display: inline-block;  /* For IE11/ MS Edge bug */
+  pointer-events: none;
+  text-decoration: none;
+}
+
+
+.placeholder-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  width: 12rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
