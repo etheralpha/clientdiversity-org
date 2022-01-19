@@ -1,8 +1,8 @@
 # Read about configuration here: https://jekyllrb.com/docs/configuration/options/
-title: Client Diversity
-description: A community site for useful links, info, tools, and resources.
+title: Client Diversity | Ethereum
+description: Improve Etheruem's resiliance and protect the network by using a minority client.
 keywords: ethereum, client, diversity, eth, beacon, chain
-url: https://clientdiversity.com
+url: https://clientdiversity.org
 permalink: pretty # Do not change this, it will break all links
 timezone: America/New_York
 markdown: kramdown
@@ -17,6 +17,6 @@ primary_color_shaded: "#000"
 
 # Links
 github_repo: https://github.com/etheralpha/clientdiversity-org
-discord_invite: 
+discord_invite: https://discord.gg/jeDvQc2rSX
 
 

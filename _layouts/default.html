@@ -2,8 +2,10 @@
 <html lang="en" class="h-100">
   {%- include partials/head.html -%}
   <body class="d-flex flex-column min-vh-100">
-    {%- include partials/notification.html -%}
-  	{%- include partials/nav.html -%}
+    {%- comment -%}
+      {%- include partials/notification.html -%}
+    	{%- include partials/nav.html -%}
+    {%- endcomment -%}
   	{{content}}
   	{%- include partials/footer.html -%}
     <!-- Bootstrap 5 JS -->
