@@ -2,6 +2,10 @@
 layout: default
 ---
 
+{%- assign base_site = site.url -%}
+  {% if jekyll.environment == "development" %}
+    {%- assign base_site = "" -%}
+  {%- endif -%}
 
 
 <header class="px-4 py-5 my-5 text-center">
@@ -98,7 +102,7 @@ layout: default
     <small>
       Data provided by <a href="https://migalabs.es/api-documentation">Miga Labs</a>. 
       Data may not be 100% accurate. 
-      (<a href="{{site.url}}/client-fingerprinting">Read more</a>)
+      (<a href="{{base_site}}/client-fingerprinting">Read more</a>)
       <!-- <svg data-bs-toggle="tooltip" 
           data-bs-placement="top" 
           title=""
