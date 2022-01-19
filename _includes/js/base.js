@@ -7,3 +7,4 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 
 window.onload = getClientDistributionData().then(updateClientDistibutionChart).then(updateClientSwitchForm);
 
+

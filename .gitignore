@@ -4,6 +4,7 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+.netlify
 .DS_Store
 *.DS_Store
 **/.DS_Store
