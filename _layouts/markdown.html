@@ -1,8 +1,3 @@
-{%- assign base_site = site.url -%}
-  {% if jekyll.environment == "development" %}
-    {%- assign base_site = "" -%}
-  {%- endif -%}
-
 <!DOCTYPE html>
 <html lang="en">
   {%- include partials/head.html -%}
@@ -42,19 +37,10 @@
               {%- if button.link contains "http" -%}
                 <a href="{{button.link}}" class="btn btn-outline-thirdary btn-lg px-4 m-1">{{button.text}}</a>
               {%- else -%}
-                <a href="{{base_site}}{{button.link}}" class="btn btn-outline-thirdary btn-lg px-4 m-1">{{button.text}}</a>
+                <a href="{{button.link}}" class="btn btn-outline-thirdary btn-lg px-4 m-1">{{button.text}}</a>
               {%- endif -%}
             {%- endfor -%}
           {%- endif -%}
-
-        {%- comment -%}
-          {%- if page.buttons -%}
-            {%- for button in page.buttons -%}
-              {%- assign siteUrlTag = "{{base_site}}" -%}
-              {{ button | liquify }}
-            {%- endfor -%}
-          {%- endif -%}
-        {%- endcomment -%}
 
       </div>
     </header>
@@ -73,10 +59,10 @@
     <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <!-- Custom JS -->
-  	<script src="{{base_site}}/assets/js/main.js" type="application/javascript"></script>
+  	<script src="/assets/js/main.js" type="application/javascript"></script>
     {%- case page.name -%}
       {%- when "custom.md" -%}
-         <script src="{{base_site}}/assets/js/custom.js" type="application/javascript"></script>
+         <script src="/assets/js/custom.js" type="application/javascript"></script>
       {%- else -%}
     {%- endcase -%}
   </body>

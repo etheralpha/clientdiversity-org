@@ -9,6 +9,7 @@ markdown: kramdown
 livereload: true
 port: 4400
 
+
 # Global variables
 analytics_tag: 
 primary_color: "#1C1C1C"
@@ -17,6 +18,5 @@ primary_color_shaded: "#000"
 
 # Links
 github_repo: https://github.com/etheralpha/clientdiversity-org
-discord_invite: https://discord.gg/jeDvQc2rSX
 
 
