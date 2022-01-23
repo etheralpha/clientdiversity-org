@@ -16,22 +16,22 @@ layout: default
 
 <!-- Logos -->
 <section class="bg-light">
-  <div class="container ppy-3 my-5">
-    <div class="row justify-content-center">
+  <div class="container my-5">
+    <div class="row text-center">
       <div class="col text-center">
-        <img src="/assets/img/clients/lighthouse-logo.png" alt="" class="my-2" style="height: 3rem;">
+        <img src="/assets/img/clients/lighthouse-logo.png" alt="" class="my-2 client-logos">
       </div>
       <div class="col text-center">
-        <img src="/assets/img/clients/lodestar-logo-text.png" alt="" class="my-2" style="height: 3rem;">
+        <img src="/assets/img/clients/lodestar-logo-text.png" alt="" class="my-2 client-logos">
       </div>
       <div class="col text-center">
-        <img src="/assets/img/clients/prysm-logo.png" alt="" class="my-2" style="height: 3rem;">
+        <img src="/assets/img/clients/prysm-logo.png" alt="" class="my-2 client-logos">
       </div>
       <div class="col text-center">
-        <img src="/assets/img/clients/nimbus-logo-text.png" alt="" class="my-2" style="height: 3rem;">
+        <img src="/assets/img/clients/nimbus-logo-text.png" alt="" class="my-2 client-logos">
       </div>
       <div class="col text-center">
-        <img src="/assets/img/clients/teku-logo.png" alt="" class="my-2" style="height: 3rem;">
+        <img src="/assets/img/clients/teku-logo.png" alt="" class="my-2 client-logos">
       </div>
     </div>
   </div>
@@ -167,7 +167,7 @@ layout: default
               <tr>
                 <th scope="col" style="min-width: 8rem;">Client</th>
                 <th scope="col">Github</th>
-                <th scope="col">Docs</th>
+                <th scope="col" style="min-width: 3.8rem;">Docs</th>
                 <th scope="col">Discord</th>
                 <th scope="col">Support</th>
               </tr>

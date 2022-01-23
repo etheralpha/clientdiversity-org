@@ -7,6 +7,15 @@
   text-decoration: none;
 }
 
+.client-logos {
+  height: 3rem;
+}
+@media (max-width: 25em) {
+  .client-logos {
+    height: 2.2rem;
+  }
+}
+
 .alert {
   padding: 0.5rem 1rem;
 }
