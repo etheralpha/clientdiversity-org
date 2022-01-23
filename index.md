@@ -176,7 +176,9 @@ layout: default
               {%- for client in site.data.clients-consensus -%}
                 <tr>
                   <th scope="row">
-                    <a href="{{client.link}}" class="link-dark" target="_blank">{{client.name}}
+                    {%- if client.name == "Grandine" -%}*{%- endif -%}
+                    <a href="{{client.link}}" class="link-dark" target="_blank">
+                      {{client.name}}
                       {{site.data.icons.new_tab}}
                     </a>
                   </th>
@@ -207,6 +209,9 @@ layout: default
               {%- endfor -%}
             </tbody>
           </table>
+        </div>
+        <div class="text-center">
+          <small>* Grandine is not open sourced</small>
         </div>
       </div>
     </div>

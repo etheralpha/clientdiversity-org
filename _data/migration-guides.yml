@@ -84,6 +84,9 @@ prysm_to_lighthouse:
   - link: https://lighthouse.sigmaprime.io/switch-to-lighthouse.html
     author: Michael Sproul
     type: doc
+  - link: https://github.com/cprest0n/eth-guides/blob/main/migrate-prysm-to-lighthouse.md
+    author: cprest0n
+    type: doc
 prysm_to_lodestar:
   - link: https://eth-docker.net/docs/Support/SwitchClient
     author: Yorick
