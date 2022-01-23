@@ -5,9 +5,9 @@
     {%- if site.notification_enabled == true -%}
       {%- include partials/notification.html -%}
     {%- endif -%}
-    {%- comment -%}
-    	{%- include partials/nav.html -%}
-    {%- endcomment -%}
+    {%- if site.nav_enabled == true -%}
+      {%- include partials/nav.html -%}
+    {%- endif -%}
 
 
     <!-- Header -->
