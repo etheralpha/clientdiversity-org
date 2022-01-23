@@ -12,9 +12,13 @@ port: 4400
 
 # Global variables
 analytics_tag: 
-primary_color: "#1C1C1C"
-primary_color_shaded: "#000"
+# primary_color: "#1C1C1C"
+# primary_color_shaded: "#000"
 
+# Notifications
+notification_enabled: false
+notification_id: 1 # Increment value when new notification to show again
+notification_msg: This is a test notification message.<br>This is a test notification message.
 
 # Links
 github_repo: https://github.com/etheralpha/clientdiversity-org

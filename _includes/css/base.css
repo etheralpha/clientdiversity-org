@@ -3,7 +3,7 @@
 }
 
 
-.btn-primary {
+/*.btn-primary {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
 }
@@ -35,7 +35,7 @@
   border-color: var(--primary-color-shaded) !important;
   background-color: var(--primary-color-shaded);
   color: #fff;
-}
+}*/
 
 
 .link-disabled {

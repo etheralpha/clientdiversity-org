@@ -23,7 +23,8 @@
 - name: Lodestar
   link: https://lodestar.chainsafe.io/
   github: https://github.com/ChainSafe/lodestar
-  docs: https://chainsafe.github.io/lodestar/
+  docs: https://hackmd.io/@philknows/rk5cDvKmK
+  # docs: https://chainsafe.github.io/lodestar/
   discord: https://discord.gg/yjyvFRP
   support: Linux, Windows, macOS # windows theoretically works but not tested yet https://github.com/ChainSafe/lodestar/issues/3519
   opensource: true

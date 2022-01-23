@@ -2,8 +2,10 @@
 <html lang="en">
   {%- include partials/head.html -%}
   <body class="d-flex flex-column min-vh-100">
-    {%- comment -%}
+    {%- if site.notification_enabled == true -%}
       {%- include partials/notification.html -%}
+    {%- endif -%}
+    {%- comment -%}
     	{%- include partials/nav.html -%}
     {%- endcomment -%}
 

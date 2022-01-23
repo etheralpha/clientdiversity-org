@@ -6,8 +6,7 @@
     again for users that previously closed it 
   -->
   <span class="pe-2">
-    Notification line one.<br>
-    Notification line two.
+    {{site.notification_msg}}
   </span>
-  <span id="notificationClose" data-notification-id="1" class="my-auto" onclick="hideNotification()">✕</span>
+  <span id="notificationClose" data-notification-id="{{site.notification_id}}" class="my-auto" onclick="hideNotification()">✕</span>
 </div>
