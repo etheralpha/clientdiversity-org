@@ -7,7 +7,7 @@ layout: default
  <div class="px-4 py-5 my-5 text-center">
     <h1 class="display-1 fw-bold mt-5">Diversify Now</h1>
     <div class="col-lg-7 mx-auto">
-      <p class="h4 fw-normal mb-4">Improve Etheruem's resiliance by using a minority client</p>
+      <p class="h4 fw-normal mb-4">Improve Ethereum's resiliance by using a minority client</p>
       <a href="#switch" class="btn btn-dark btn-lg px-4 m-1">Switch Clients</a>
       <a href="#why" class="btn btn-outline-dark btn-lg px-4 m-1">Learn More</a>
     </div>
@@ -152,6 +152,10 @@ layout: default
             <div id="collapseFurtherReading" class="accordion-collapse collapse" aria-labelledby="furtherReadingHeader" data-bs-parent="#furtherReading">
               <div class="accordion-body text-start">
                 <a class="d-block my-2 link-dark text-capitalize" target="_blank"
+                    href="https://twitter.com/sproulM_">
+                    Proposer diversity data (Coming soon) {{site.data.icons.new_tab}}
+                </a>
+                <a class="d-block my-2 link-dark text-capitalize" target="_blank"
                     href="https://medium.com/prysmatic-labs/prysmatic-labs-statement-on-client-diversity-c0e3c2f05671">
                     Prysm: Statement on Client Diversity {{site.data.icons.new_tab}}
                 </a>
@@ -162,6 +166,10 @@ layout: default
                 <a class="d-block my-2 link-dark text-capitalize" target="_blank"
                     href="https://lighthouse.sigmaprime.io/switch-to-lighthouse.html">
                     Lighthouse: Why You Should Switch to Lighthouse {{site.data.icons.new_tab}}
+                </a>
+                <a class="d-block my-2 link-dark text-capitalize" target="_blank"
+                    href="https://medium.com/chainsafe-systems/on-client-diversity-in-decentralized-networks-848aeedfb49d">
+                    Chainsafe: Client Diversity in Decentralized Networks {{site.data.icons.new_tab}}
                 </a>
                 <a class="d-block my-2 link-dark text-capitalize" target="_blank"
                     href="https://www.reddit.com/r/ethstaker/comments/ptm04i/the_financial_incentive_to_run_a_minority_client/">
@@ -330,7 +338,7 @@ layout: default
         <h5>Tools</h5>
         <ul class="">
           <li class="mb-2">
-            <a href="https://stereum.net/" target="_blank" class="p-0 text-muted text-capitalize">Sterneum</a>
+            <a href="https://stereum.net/" target="_blank" class="p-0 text-muted text-capitalize">Stereum</a>
           </li>
           <li class="mb-2">
             <a href="https://eth-docker.net/" target="_blank" class="p-0 text-muted text-capitalize">eth-docker</a>
@@ -351,6 +359,9 @@ layout: default
           </li>
           <li class="mb-2">
             <a href="https://www.nodewatch.io/" target="_blank" class="p-0 text-muted text-capitalize">Chainsafe Nodewatch</a>
+          </li>
+          <li class="mb-2">
+            <a href="https://twitter.com/sproulM_" target="_blank" class="p-0 text-muted text-capitalize">Proposer Diversity Data (Coming soon)</a>
           </li>
         </ul>
       </div>
