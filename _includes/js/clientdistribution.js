@@ -1,5 +1,5 @@
 // var cdJson;
-var cdJson = { "Grandine": 15, "Lighthouse": 524, "Lodestar": 5, "Nimbus": 136, "Others": 1, "Prysm": 1981, "Teku": 304 }
+var cdJson = { "Grandine": 21, "Lighthouse": 618, "Lodestar": 5, "Nimbus": 144, "Others": 1, "Prysm": 2055, "Teku": 313 }
 
 
 async function getClientDistributionData() {
