@@ -1,8 +1,6 @@
 ---
 layout: default
 permalink: /feed/
-
-header: 404
 ---
 
 

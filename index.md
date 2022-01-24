@@ -248,7 +248,7 @@ layout: default
   <div class="container py-5 my-5">
     <h2 class="h1 fw-bold mb-3 text-center">Switch Clients</h2>
     <div class="text-center">
-      <a href="/" class="btn btn-outline-dark btn-sm px-4 m-1">Submit Guide</a>
+      <a href="/contribute/" class="btn btn-outline-dark btn-sm px-4 m-1">Submit Guide</a>
     </div>
     <div class="row justify-content-center mt-4">
       <div class="col col-lg-6 col-md-8">
@@ -306,7 +306,8 @@ layout: default
         <div id="noGuides" class="text-center mt-4 d-none">
           {{site.data.icons.sad_emoji}}
           <p class="my-2">There are no guides for this migration yet.</p>
-          <!-- <a href="/" class="btn btn-primary btn-sm px-4 m-1">Submit one for a bounty!</a> -->
+          <a href="/contribute/" class="btn btn-primary btn-sm px-4 m-1">Submit one for a bounty!</a>
+          <!-- <a href="/contribute/" class="btn btn-primary btn-sm px-4 m-1">Submit Guide</a> -->
         </div>
         <div id="guideList" class="text-center mt-4 d-none">
           <!-- <p class="text-center">
