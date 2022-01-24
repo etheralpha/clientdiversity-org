@@ -41,7 +41,7 @@ layout: default
 <section id="distribution" class="">
   <div class="container py-5 my-5">
     <h2 class="h1 fw-bold mb-3 text-center">Client Distribution</h2>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center mt-4">
       <div class="col col-lg-6 col-md-8 text-center">
         <p class="lead">Goal: &#60;33% <span class="mx-2">|</span> Danger: &#62;50%</p>
         <a id="marketshatWarning" href="#why" class="text-decoration-none d-none">
@@ -129,21 +129,18 @@ layout: default
   </div>
 </section>
 
-
 <!-- Why Client Diversity -->
 <section id="why" class="bg-light">
   <div class="container py-5 my-5">
     <h2 class="h1 fw-bold mb-3 text-center">Client Diversity Is <u>Not</u> Optional</h2>
-    <div class="text-center">
-    </div>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center mt-4">
       <div class="col col-lg-10">
         <p>Many know client diversity is important for a more resilient network, but they don't understand why or just how important it is. It's not just simply important &#8212; <span class="fw-bold fst-italic">it's critical</span>. If a single client is used by 2/3rd of validators <span id="has66majority" class="d-none text-danger fw-bold text-decoration-underline">(which is currently the case) </span>there's a very real risk this can result in disrupting the chain and monetary loss for node operators.</p>
         <p>It takes 2/3rds of validators to reach finality. If a client with 66%+ of marketshare has a bug and forks to its own chain, it will be capable of finalizing. If the fork finalizes, the <strong>validators cannot return to the real chain without being slashed</strong><!--  or exiting and watching their funds drain while in queue -->. If 66% of the chain gets slashed simultaneously, the penalty is the whole 32 ETH.</p>
         <p>So why is >50% still dangerous? If a minority client forks, the 50%+ majority client can obtain a 66%+ majority. With no client having a marketshare over 33%, these scenarios are avoided. That's why <strong>&#60;33% marketshare is the goal for all clients</strong>.</p>
       </div>
     </div>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center mt-2">
       <div class="col col-lg-6 col-md-8 text-center">
         <div class="accordion" id="furtherReading">
           <div class="accordion-item">
@@ -186,7 +183,7 @@ layout: default
 <!-- Consensus Clients -->
 <section id="clients" class="">
   <div class="container py-5 my-5">
-    <h3 class="h1 fw-bold mb-3 text-center">Consensus Clients</h3>
+    <h2 class="h1 fw-bold mb-3 text-center">Consensus Clients</h2>
     <div class="row justify-content-center mt-4">
       <div class="col col-lg-8 col-md-10">
         <div class="table-responsive">
@@ -250,10 +247,10 @@ layout: default
 <section id="switch" class="bg-light">
   <div class="container py-5 my-5">
     <h2 class="h1 fw-bold mb-3 text-center">Switch Clients</h2>
-    <div class="text-center mb-4">
+    <div class="text-center">
       <a href="/" class="btn btn-outline-dark btn-sm px-4 m-1">Submit Guide</a>
     </div>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center mt-4">
       <div class="col col-lg-6 col-md-8">
         <div class="input-group mb-3">
           <label class="input-group-text" for="fromSelect">From</label>
@@ -287,7 +284,7 @@ layout: default
         </div>
       </div>
     </div>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center mt-2">
       <div class="col col-lg-6 col-md-8">
         <div class="text-center">
           <a onclick="getGuides()" class="btn btn-dark btn-lg px-4 m-1">Search Guides</a>
@@ -327,8 +324,46 @@ layout: default
 <section id="resources" class="">
   <div class="container py-5 my-5">
     <h2 class="h1 fw-bold mb-3 text-center">Resources</h2>
-    <div class="row justify-content-center">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div class="row justify-content-center mt-4">
+      <div class="col col-md-3">
+        <h5>Tools</h5>
+        <ul class="">
+          <li class="mb-2">
+            <a href="https://stereum.net/" target="_blank" class="p-0 text-muted text-capitalize">Sterneum</a>
+          </li>
+          <li class="mb-2">
+            <a href="https://eth-docker.net/" target="_blank" class="p-0 text-muted text-capitalize">eth-docker</a>
+          </li>
+          <li class="mb-2">
+            <a href="https://github.com/attestantio/vouch" target="_blank" class="p-0 text-muted text-capitalize">Vouch</a>
+          </li>
+          <li class="mb-2">
+            <a href="https://github.com/ethereum/keymanager-APIs" target="_blank" class="p-0 text-muted text-capitalize">keymanager APIs</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col col-md-3">
+        <h5>Metrics</h5>
+        <ul class="">
+          <li class="mb-2">
+            <a href="https://migalabs.es/crawler/dashboard" target="_blank" class="p-0 text-muted text-capitalize">Miga Labs Dashboard</a>
+          </li>
+          <li class="mb-2">
+            <a href="https://www.nodewatch.io/" target="_blank" class="p-0 text-muted text-capitalize">Chainsafe Nodewatch</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col col-md-3">
+        <h5>Research</h5>
+        <ul class="">
+          <li class="mb-2">
+            <a href="https://twitter.com/sproulM_/status/1440512518242197516" target="_blank" class="p-0 text-muted text-capitalize">Client Fingerprinting</a>
+          </li>
+          <li class="mb-2">
+            <a href="https://eips.ethereum.org/EIPS/eip-3076" target="_blank" class="p-0 text-muted text-capitalize">EIP-3076: Slashing Protection Interchange Format</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>

@@ -24,7 +24,7 @@
 - name: Nethermind
   link: http://nethermind.io/
   github: https://github.com/NethermindEth/nethermind
-  docs: https://docs.nethermind.io/nethermind/
+  docs: https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started
   discord: https://discord.com/invite/PaCMRFdvWT
   support: Linux, Windows, macOS
   opensource: true
