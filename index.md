@@ -3,7 +3,7 @@ layout: default
 ---
 
 
-<header class="">
+<header class="pb-md-3 pb-lg-5">
  <div class="px-4 py-5 my-5 text-center">
     <h1 class="display-1 fw-bold mt-5">Diversify Now</h1>
     <div class="col-lg-7 mx-auto">
@@ -121,22 +121,9 @@ layout: default
     </div>
     <div class="text-center">
       <small>
-        Data provided by <a href="https://migalabs.es/api-documentation">Miga Labs</a>. 
+        Data provided by <a href="https://migalabs.es/api-documentation" target="_blank">Miga Labs</a>. 
         Data may not be 100% accurate. 
         (<a href="/client-fingerprinting">Read more</a>)
-        <!-- <svg data-bs-toggle="tooltip" 
-            data-bs-placement="top" 
-            title=""
-            style="margin-top: -5px;" 
-            xmlns="http://www.w3.org/2000/svg" 
-            width="0.875rem" 
-            height="0.875rem" 
-            fill="currentColor" 
-            class="bi bi-question-circle" 
-            viewBox="0 0 16 16">
-          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-          <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
-        </svg> -->
       </small>
     </div>
   </div>
@@ -149,8 +136,49 @@ layout: default
     <h2 class="h1 fw-bold mb-3 text-center">Client Diversity Is <u>Not</u> Optional</h2>
     <div class="text-center">
     </div>
-    <div class="row justify-content-center ppx-2">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div class="row justify-content-center">
+      <div class="col col-lg-10">
+        <p>Many know client diversity is important for a more resilient network, but they don't understand why or just how important it is. It's not just simply important &#8212; <span class="fw-bold fst-italic">it's critical</span>. If a single client is used by 2/3rd of validators <span id="has66majority" class="d-none text-danger fw-bold text-decoration-underline">(which is currently the case) </span>there's a very real risk this can result in disrupting the chain and monetary loss for node operators.</p>
+        <p>It takes 2/3rds of validators to reach finality. If a client with 66%+ of marketshare has a bug and forks to its own chain, it will be capable of finalizing. If the fork finalizes, the <strong>validators cannot return to the real chain without being slashed</strong><!--  or exiting and watching their funds drain while in queue -->. If 66% of the chain gets slashed simultaneously, the penalty is the whole 32 ETH.</p>
+        <p>So why is >50% still dangerous? If a minority client forks, the 50%+ majority client can obtain a 66%+ majority. With no client having a marketshare over 33%, these scenarios are avoided. That's why <strong>&#60;33% marketshare is the goal for all clients</strong>.</p>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col col-lg-6 col-md-8 text-center">
+        <div class="accordion" id="furtherReading">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="furtherReadingHeader">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFurtherReading" aria-expanded="false" aria-controls="collapseFurtherReading">
+                Further reading...
+              </button>
+            </h2>
+            <div id="collapseFurtherReading" class="accordion-collapse collapse" aria-labelledby="furtherReadingHeader" data-bs-parent="#furtherReading">
+              <div class="accordion-body text-start">
+                <a class="d-block my-2 link-dark text-capitalize" target="_blank"
+                    href="https://medium.com/prysmatic-labs/prysmatic-labs-statement-on-client-diversity-c0e3c2f05671">
+                    Prysm: Statement on Client Diversity {{site.data.icons.new_tab}}
+                </a>
+                <a class="d-block my-2 link-dark text-capitalize" target="_blank"
+                    href="https://our.status.im/the-importance-of-client-diversity/">
+                    Nimbus: The Importance of Client Diversity {{site.data.icons.new_tab}}
+                </a>
+                <a class="d-block my-2 link-dark text-capitalize" target="_blank"
+                    href="https://lighthouse.sigmaprime.io/switch-to-lighthouse.html">
+                    Lighthouse: Why You Should Switch to Lighthouse {{site.data.icons.new_tab}}
+                </a>
+                <a class="d-block my-2 link-dark text-capitalize" target="_blank"
+                    href="https://www.reddit.com/r/ethstaker/comments/ptm04i/the_financial_incentive_to_run_a_minority_client/">
+                    The financial incentive to run a minority client {{site.data.icons.new_tab}}
+                </a>
+                <a class="d-block my-2 link-dark text-capitalize" target="_blank"
+                    href="https://www.symphonious.net/2021/09/23/what-happens-if-beacon-chain-consensus-fails/">
+                    What Happens If Beacon Chain Consensus Fails? {{site.data.icons.new_tab}}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -295,10 +323,10 @@ layout: default
   </div>
 </section>
 
-<!-- Tools and Resources -->
+<!-- Resources -->
 <section id="resources" class="">
   <div class="container py-5 my-5">
-    <h2 class="h1 fw-bold mb-3 text-center">Tools and Resources</h2>
+    <h2 class="h1 fw-bold mb-3 text-center">Resources</h2>
     <div class="row justify-content-center">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>

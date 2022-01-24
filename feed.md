@@ -24,19 +24,19 @@ header: 404
               <p class="card-subtitle mb-1">
                 <small class="text-muted">{{news.date}}</small>
               </p>
-              <span class="me-2" style="margin-top:-15px;">
+              <div class="d-inline me-2" style="margin-top: -0.32rem">
                 {%- if news.link contains "twitter.com" -%}
-                  {{site.data.icons.twitter}}
+                  <span class="text-primary">{{site.data.icons.twitter}}</span>
                 {%- elsif news.link contains "youtube.com" or news.link contains "youtu.be" -%}
-                  {{site.data.icons.video}}
+                  <span class="text-danger">{{site.data.icons.video}}</span>
                 {%- elsif news.link contains "reddit.com" -%}
-                  {{site.data.icons.reddit}}
+                  <span style="color: #ff4500;">{{site.data.icons.reddit}}</span>
                 {%- elsif news.link contains "github.com" -%}
-                  {{site.data.icons.github}}
+                  <span class="text-dark">{{site.data.icons.github}}</span>
                 {%- else -%}
-                  {{site.data.icons.web}}
+                  <span class="text-secondary">{{site.data.icons.web}}</span>
                 {%- endif -%}
-              </span>
+              </div>
               <a href="{{news.link}}" target="_blank">{{news.title}}</a>
             </div>
           </div>

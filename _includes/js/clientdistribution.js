@@ -1,5 +1,5 @@
 // var cdJson;
-var cdJson = { "Grandine": 38, "Lighthouse": 880, "Lodestar": 5, "Nimbus": 234, "Others": 1, "Prysm": 2364, "Teku": 349 }
+var cdJson = { "Grandine": 15, "Lighthouse": 524, "Lodestar": 5, "Nimbus": 136, "Others": 1, "Prysm": 1981, "Teku": 304 }
 
 
 async function getClientDistributionData() {
@@ -14,6 +14,7 @@ async function getClientDistributionData() {
   //   "Prysm": 2364,
   //   "Teku": 349
   // }
+
 
   // const [cdResponse] = await Promise.all([
   //   fetch("https://migalabs.es/api/v1/client-distribution?crawler=london")
@@ -44,6 +45,8 @@ async function updateClientDistibutionChart() {
   });
   // get the most popular client
   topClient = distribution[0]["name"];
+  // hide 66% majority comment if no 2/3 majority
+  has66majorityCheck(distribution[0]["value"]/sampleSize);
   // create the chart
   distribution.forEach(function (item) {
     let client = item["name"][0].toUpperCase() + item["name"].substring(1);
@@ -79,5 +82,14 @@ async function updateClientDistibutionChart() {
 
   return topClient;
 }
+
+// hide 66% majority comment if no 2/3 majority
+function has66majorityCheck(percent) {
+  if (percent >= 0.66) {
+    let comment = document.getElementById("has66majority");
+    comment.classList.remove("d-none");
+  }
+}
+
 
 
