@@ -19,10 +19,9 @@ lighthouse_to_nimbus:
     author: Yorick
     type: doc
     note: w/ ethdocker
-  # awaiting guide to be updated with this section
-  # - link: https://nimbus.guide/migration.html
-  #   author: Nimbus
-  #   type: doc
+  - link: https://nimbus.guide/migration.html
+    author: Nimbus
+    type: doc
 lighthouse_to_prysm:
   - link: https://eth-docker.net/docs/Support/SwitchClient
     author: Yorick
@@ -138,10 +137,9 @@ teku_to_nimbus:
     author: Yorick
     type: doc
     note: w/ ethdocker
-  # awaiting guide to be updated with this section
-  # - link: https://nimbus.guide/migration.html
-  #   author: Nimbus
-  #   type: doc
+  - link: https://nimbus.guide/migration.html
+    author: Nimbus
+    type: doc
 teku_to_prysm:
   - link: https://eth-docker.net/docs/Support/SwitchClient
     author: Yorick

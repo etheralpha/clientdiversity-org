@@ -7,7 +7,6 @@ This is the repo for <https://clientdiversity.org>, a resource site to assist cl
 
 1. Clone the repo
 1. `bundle install`
-1. `git checkout development`
 1. `git checkout -b [your branch]`
 1. `bundle exec jekyll serve`
 1. Go to <http://localhost:4400/>

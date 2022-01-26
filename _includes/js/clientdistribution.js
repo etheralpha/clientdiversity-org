@@ -1,23 +1,25 @@
 // var cdJson;
-var cdJson = { "Grandine": 21, "Lighthouse": 618, "Lodestar": 5, "Nimbus": 144, "Others": 1, "Prysm": 2055, "Teku": 313 }
+
+// hard-coded distribution until CORS issue is resolved 
+var cdJson = { "Grandine": 26, "Lighthouse": 664, "Lodestar": 4, "Nimbus": 185, "Others": 1, "Prysm": 2349, "Teku": 321 }
 
 
 async function getClientDistributionData() {
   // https://migalabs.es/api-documentation
   // example response:
   // {
-  //   "Grandine": 38,
-  //   "Lighthouse": 880,
-  //   "Lodestar": 5,
-  //   "Nimbus": 234,
-  //   "Others": 1,
-  //   "Prysm": 2364,
-  //   "Teku": 349
+  //     "Grandine": 26,
+  //     "Lighthouse": 664,
+  //     "Lodestar": 4,
+  //     "Nimbus": 185,
+  //     "Others": 1,
+  //     "Prysm": 2349,
+  //     "Teku": 321
   // }
 
-
+  // commented out until CORS issue is resolved
   // const [cdResponse] = await Promise.all([
-  //   fetch("https://migalabs.es/api/v1/client-distribution?crawler=london")
+    // fetch("https://migalabs.es/api/v1/client-distribution?crawler=london")
   // ]);
   // const cdJson = await cdResponse.json();
   // console.log(cdJson);

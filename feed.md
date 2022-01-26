@@ -10,6 +10,7 @@ permalink: /feed/
     <p class="col-md-10 col-lg-8 mx-auto lead">
       Client diversity news and developments.
     </p>
+    <a href="/contribute/" class="btn btn-outline-dark btn-lg px-4 m-1">Submit Link</a>
   </div>
 </header>
 
