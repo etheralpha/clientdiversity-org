@@ -1,6 +1,6 @@
 # Read about configuration here: https://jekyllrb.com/docs/configuration/options/
 title: Client Diversity | Ethereum
-description: Improve Etheruem's resiliance and protect the network by using a minority client.
+description: Improve Etheruem's resilience and protect the network by using a minority client.
 keywords: ethereum, client, diversity, eth, beacon, chain
 url: https://clientdiversity.org
 permalink: pretty # Do not change this, it will break all links
