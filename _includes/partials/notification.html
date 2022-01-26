@@ -1,0 +1,12 @@
+<!-- Notification Bar -->
+<div id="notification" class="p-2 pe-4">
+  <!-- 
+    When creating  new notification you must increase 
+    the "data-notification-id" value so it will show 
+    again for users that previously closed it 
+  -->
+  <span class="pe-2">
+    {{site.notification_msg}}
+  </span>
+  <span id="notificationClose" data-notification-id="{{site.notification_id}}" class="my-auto" onclick="hideNotification()">✕</span>
+</div>

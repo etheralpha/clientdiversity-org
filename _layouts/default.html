@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+  {%- include partials/head.html -%}
+  <body class="d-flex flex-column min-vh-100">
+    {%- if site.notification_enabled == true -%}
+      {%- include partials/notification.html -%}
+    {%- endif -%}
+    {%- if site.nav_enabled == true -%}
+    	{%- include partials/nav.html -%}
+  	{%- endif -%}
+    {{content}}
+  	{%- include partials/footer.html -%}
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+  	<script src="/assets/js/main.js" type="application/javascript"></script>
+
+    {%- case page.name -%}
+      {%- when "custom.md" -%}
+        <script src="/assets/js/custom.js" type="application/javascript"></script>
+      {%- else -%}
+    {%- endcase -%}
+  </body>
+</html>

@@ -1,0 +1,27 @@
+# Read about configuration here: https://jekyllrb.com/docs/configuration/options/
+title: Client Diversity | Ethereum
+description: Improve Etheruem's resiliance and protect the network by using a minority client.
+keywords: ethereum, client, diversity, eth, beacon, chain
+url: https://clientdiversity.org
+permalink: pretty # Do not change this, it will break all links
+timezone: America/New_York
+markdown: kramdown
+livereload: true
+port: 4400
+
+
+# Global variables
+analytics_tag: 
+
+# Notifications
+notification_enabled: false
+notification_id: 1 # Increment value when new notification to show again
+notification_msg: This is a test notification message.<br>This is a test notification message.
+
+# Navigation
+nav_enabled: true
+
+# Links
+github_repo: https://github.com/etheralpha/clientdiversity-org
+
+

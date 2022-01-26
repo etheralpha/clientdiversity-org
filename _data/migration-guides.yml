@@ -1,0 +1,171 @@
+# - link:   # required
+#   author: # optional - team/name/handle/etc, example: "Yorick"
+#   type:   # optional - "doc", "video", or "tool" (use tool for automated migration)
+#   note:   # optional - short note, example: "w/ ethdocker"
+#
+# template:
+#   ${type} <a href="${link}">${fromClient.innerHTML} to ${toClient.innerHTML} migration guide (${note}), by ${author}</a>
+# user sees:
+#   (doc icon) Prysm to Nimbus migration guide (w/ ethdocker), by Yorick
+
+
+lighthouse_to_lodestar:
+  - link: https://eth-docker.net/docs/Support/SwitchClient
+    author: Yorick
+    type: doc
+    note: w/ ethdocker
+lighthouse_to_nimbus:
+  - link: https://eth-docker.net/docs/Support/SwitchClient
+    author: Yorick
+    type: doc
+    note: w/ ethdocker
+  - link: https://nimbus.guide/migration.html
+    author: Nimbus
+    type: doc
+lighthouse_to_prysm:
+  - link: https://eth-docker.net/docs/Support/SwitchClient
+    author: Yorick
+    type: doc
+    note: w/ ethdocker
+lighthouse_to_teku:
+  - link: https://eth-docker.net/docs/Support/SwitchClient
+    author: Yorick
+    type: doc
+    note: w/ ethdocker
+lighthouse_to_grandine:
+lodestar_to_lighthouse:
+  - link: https://eth-docker.net/docs/Support/SwitchClient
+    author: Yorick
+    type: doc
+    note: w/ ethdocker
+lodestar_to_nimbus:
+  - link: https://eth-docker.net/docs/Support/SwitchClient
+    author: Yorick
+    type: doc
+    note: w/ ethdocker
+lodestar_to_prysm:
+  - link: https://eth-docker.net/docs/Support/SwitchClient
+    author: Yorick
+    type: doc
+    note: w/ ethdocker
+lodestar_to_teku:
+  - link: https://eth-docker.net/docs/Support/SwitchClient
+    author: Yorick
+    type: doc
+    note: w/ ethdocker
+lodestar_to_grandine:
+nimbus_to_lighthouse:
+  - link: https://eth-docker.net/docs/Support/SwitchClient
+    author: Yorick
+    type: doc
+    note: w/ ethdocker
+nimbus_to_lodestar:
+  - link: https://eth-docker.net/docs/Support/SwitchClient
+    author: Yorick
+    type: doc
+    note: w/ ethdocker
+nimbus_to_prysm:
+  - link: https://eth-docker.net/docs/Support/SwitchClient
+    author: Yorick
+    type: doc
+    note: w/ ethdocker
+nimbus_to_teku:
+  - link: https://eth-docker.net/docs/Support/SwitchClient
+    author: Yorick
+    type: doc
+    note: w/ ethdocker
+nimbus_to_grandine:
+prysm_to_lighthouse:
+  - link: https://eth-docker.net/docs/Support/SwitchClient
+    author: Yorick
+    type: doc
+    note: w/ ethdocker
+  - link: https://lighthouse.sigmaprime.io/switch-to-lighthouse.html
+    author: Michael Sproul
+    type: doc
+  - link: https://github.com/cprest0n/eth-guides/blob/main/migrate-prysm-to-lighthouse.md
+    author: cprest0n
+    type: doc
+prysm_to_lodestar:
+  - link: https://eth-docker.net/docs/Support/SwitchClient
+    author: Yorick
+    type: doc
+    note: w/ ethdocker
+prysm_to_nimbus:
+  - link: https://eth-docker.net/docs/Support/SwitchClient
+    author: Yorick
+    type: doc
+    note: w/ ethdocker
+  - link: https://nimbus.guide/migration.html
+    author: Nimbus
+    type: doc
+  - link: https://www.reddit.com/r/ethstaker/comments/pu30fa/short_guide_to_migrate_from_prysm_to_teku_or/
+    author: u/Breakbeatjuggernaut
+    type: doc
+prysm_to_teku:
+  - link: https://eth-docker.net/docs/Support/SwitchClient
+    author: Yorick
+    type: doc
+    note: w/ ethdocker
+  - link: https://www.coincashew.com/coins/overview-eth/guide-or-operation-client-diversity-migrate-prysm-to-teku
+    author: CoinCashew
+    type: doc
+  - link: https://www.reddit.com/r/ethstaker/comments/pu30fa/short_guide_to_migrate_from_prysm_to_teku_or/
+    author: u/Breakbeatjuggernaut
+    type: doc
+  - link: https://www.reddit.com/r/ethstaker/comments/pyfg0b/guide_migrate_from_prysm_to_teku_with_a_clean/
+    author: u/deecoydev
+    type: doc
+    note: w/ clean Ubuntu install
+  - link: https://www.reddit.com/r/ethstaker/comments/pzl1mn/migrating_from_prysm_to_teku_windows_edition/
+    author: u/flossraptor
+    type: doc
+    note: Windows Edition
+prysm_to_grandine:
+teku_to_lighthouse:
+  - link: https://eth-docker.net/docs/Support/SwitchClient
+    author: Yorick
+    type: doc
+    note: w/ ethdocker
+teku_to_lodestar:
+  - link: https://eth-docker.net/docs/Support/SwitchClient
+    author: Yorick
+    type: doc
+    note: w/ ethdocker
+teku_to_nimbus:
+  - link: https://eth-docker.net/docs/Support/SwitchClient
+    author: Yorick
+    type: doc
+    note: w/ ethdocker
+  - link: https://nimbus.guide/migration.html
+    author: Nimbus
+    type: doc
+teku_to_prysm:
+  - link: https://eth-docker.net/docs/Support/SwitchClient
+    author: Yorick
+    type: doc
+    note: w/ ethdocker
+teku_to_grandine:
+grandine_to_lighthouse:
+grandine_to_lodestar:
+grandine_to_nimbus:
+grandine_to_prysm:
+grandine_to_teku:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
