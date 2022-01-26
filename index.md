@@ -7,7 +7,7 @@ layout: default
  <div class="px-4 py-5 my-5 text-center">
     <h1 class="display-1 fw-bold mt-5">Diversify Now</h1>
     <div class="col-lg-7 mx-auto">
-      <p class="h4 fw-normal mb-4">Improve Ethereum's resiliance by using a minority client</p>
+      <p class="h4 fw-normal mb-4">Improve Ethereum's resilience by using a minority client</p>
       <a href="#switch" class="btn btn-dark btn-lg px-4 m-1">Switch Clients</a>
       <a href="#why" class="btn btn-outline-dark btn-lg px-4 m-1">Learn More</a>
     </div>
