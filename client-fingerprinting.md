@@ -11,6 +11,6 @@ There's no inherent way to know exactly what client a validator is running. Rese
 
 <strong>Miga Labs</strong> uses a crawler to count beacon nodes and their self-reported identity. However, this means that validators sharing a node are counted only once and nodes with fewer validators have a greater influence on the estimate. ([Miga Labs {{site.data.icons.new_tab}}](https://migalabs.es/))
 
-Another method developed by Lighthouse's <strong>Michael Sproul</strong> is to analyze each client's block proposal style as described in [this tweet thread](https://twitter.com/sproulM_/status/1440512518242197516).
+Another method developed by <strong>Sigma Pi's Michael Sproul</strong> is to analyze each client's block proposal style as described in [this tweet thread](https://twitter.com/sproulM_/status/1440512518242197516).
 
 <!-- It's important for clients not to broadcast which client they are in order to minimize potential for client-based attacks. -->
