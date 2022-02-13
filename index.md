@@ -40,7 +40,12 @@ layout: default
 <!-- Client Distribution -->
 <section id="distribution" class="">
   <div class="container py-5 my-5">
-    <h2 class="h1 fw-bold mb-3 text-center">Client Distribution</h2>
+    <h2 class="h1 fw-bold mb-2 text-center">Client Distribution</h2>
+    <div class="row justify-content-center">
+      <div class="col col-lg-6 col-md-8 text-center">
+        <a href="https://pools.invis.cloud/" target="_blank" class="btn btn-dark mt-2">View Staking Pool Diversity</a>
+      </div>
+    </div>
     <div class="row justify-content-center mt-4">
       <div class="col col-lg-6 col-md-8 text-center">
         <p class="lead">Goal: &#60;33% <span class="mx-2">|</span> Danger: &#62;50%</p>
@@ -121,10 +126,30 @@ layout: default
     </div>
     <div class="text-center">
       <small>
-        Data provided by <a href="https://migalabs.es/api-documentation" target="_blank">Miga Labs</a>. 
-        Data may not be 100% accurate. 
+        <span>
+          Data provided by <a href="https://migalabs.es/api-documentation" target="_blank">Miga Labs</a>. 
+          Data may not be 100% accurate. 
+        </span>
         (<a href="/client-fingerprinting">Read more</a>)
       </small>
+    </div>
+    <div class="dd-none row justify-content-center mt-4">
+      <div class="col col-lg-6 col-md-8 text-start text-sm-center">
+        <div class="alert alert-info" role="alert">
+          <div class="me-2 fw-bold">
+            <span>Data source </span>
+            <a href="/client-fingerprinting" style="color: #055160;">(read more)</a>:
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="datasources" id="dataSource1" value="miga" checked>
+            <label class="form-check-label" for="dataSource1">Miga Labs</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="datasources" id="dataSource2" value="sproul" disabled>
+            <label class="form-check-label" for="dataSource2">Sigma Pi's Blockprint (coming)</label>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -355,13 +380,16 @@ layout: default
         <h5>Metrics</h5>
         <ul class="">
           <li class="mb-2">
+            <a href="https://pools.invis.cloud/" target="_blank" class="p-0 text-muted text-capitalize">Staking Pool Client Diversity</a>
+          </li>
+          <li class="mb-2">
             <a href="https://migalabs.es/crawler/dashboard" target="_blank" class="p-0 text-muted text-capitalize">Miga Labs Dashboard</a>
           </li>
           <li class="mb-2">
             <a href="https://www.nodewatch.io/" target="_blank" class="p-0 text-muted text-capitalize">Chainsafe Nodewatch</a>
           </li>
           <li class="mb-2">
-            <a href="https://twitter.com/sproulM_" target="_blank" class="p-0 text-muted text-capitalize">Proposer Diversity Data (Coming soon)</a>
+            <a href="https://github.com/sigp/blockprint/blob/main/docs/api.md" target="_blank" class="p-0 text-muted text-capitalize">Proposer Diversity Data</a>
           </li>
         </ul>
       </div>
