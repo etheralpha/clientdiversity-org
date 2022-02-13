@@ -36,7 +36,7 @@ permalink: /feed/
                   <span class="text-secondary">{{site.data.icons.web}}</span>
                 {%- endif -%}
               </div>
-              <a href="{{news.link}}" target="_blank">{{news.title}}</a>
+              <a href="{{news.link}}" target="_blank" class="text-capitalize">{{news.title}}</a>
             </div>
           </div>
         </div>
