@@ -177,10 +177,6 @@ layout: default
             <div id="collapseFurtherReading" class="accordion-collapse collapse" aria-labelledby="furtherReadingHeader" data-bs-parent="#furtherReading">
               <div class="accordion-body text-start">
                 <a class="d-block my-2 link-dark text-capitalize" target="_blank"
-                    href="https://twitter.com/sproulM_">
-                    Proposer diversity data (Coming soon) {{site.data.icons.new_tab}}
-                </a>
-                <a class="d-block my-2 link-dark text-capitalize" target="_blank"
                     href="https://medium.com/prysmatic-labs/prysmatic-labs-statement-on-client-diversity-c0e3c2f05671">
                     Prysm: Statement on Client Diversity {{site.data.icons.new_tab}}
                 </a>
@@ -203,6 +199,10 @@ layout: default
                 <a class="d-block my-2 link-dark text-capitalize" target="_blank"
                     href="https://www.symphonious.net/2021/09/23/what-happens-if-beacon-chain-consensus-fails/">
                     What Happens If Beacon Chain Consensus Fails? {{site.data.icons.new_tab}}
+                </a>
+                <a class="d-block my-2 link-dark text-capitalize" target="_blank"
+                    href="https://upgrading-ethereum.info/altair/part2/incentives/diversity">
+                    Ben Edgington on diversity, scenarios, and penalties {{site.data.icons.new_tab}}
                 </a>
               </div>
             </div>
