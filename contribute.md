@@ -17,7 +17,7 @@ permalink: /contribute/
   <div class="text-center">
     <p>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSfv_5hHRCA8-TvujWP5WCj8DMhGScSXRwhTCKT360ezYvhrDw/viewform" target="_blank" class="btn btn-outline-dark btn-lg px-4 m-1">
-        Feedback Form
+        Submit Form
       </a>
     </p>
     <div class="my-3">&#8212; OR &#8212;</div>
@@ -29,3 +29,4 @@ permalink: /contribute/
     </p>
   </div>
 </section>
+

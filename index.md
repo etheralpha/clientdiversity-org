@@ -49,91 +49,163 @@ layout: default
     <div class="row justify-content-center mt-4">
       <div class="col col-lg-6 col-md-8 text-center">
         <p class="lead">Goal: &#60;33% <span class="mx-2">|</span> Danger: &#62;50%</p>
-        <a id="marketshatWarning" href="#why" class="text-decoration-none d-none">
+        <a id="marketshareWarningMigaLabs" href="#why" class="d-none text-decoration-none">
           <div class="alert alert-danger d-flex align-items-center" role="alert">
             {{site.data.icons.warning}}
-            <div>We need to move away from <span id="dangerClients">Prysm</span> to minority clients!</div>
+            <div>We need to move away from <span id="dangerClientsMigaLabs">Prysm</span> to minority clients!</div>
+          </div>
+        </a>
+        <a id="marketshareWarningBlockprint" href="#why" class="d-none text-decoration-none">
+          <div class="alert alert-danger d-flex align-items-center" role="alert">
+            {{site.data.icons.warning}}
+            <div>We need to move away from <span id="dangerClientsBlockprint">Prysm</span> to minority clients!</div>
           </div>
         </a>
       </div>
     </div>
-    <div class="row justify-content-center">
-      <div id="distributionBars" class="col col-lg-6 col-md-8">
+    <div id="distributionMigaLabs" class="row justify-content-center">
+      <div id="distributionBarsMigaLabs" class="col col-lg-6 col-md-8">
         <div class="my-2">
-          <label id="prysmLabel" class="form-label my-0 py-0 fw-bold">Prysm - <span id="prysmText">59.47%</span></label>
+          <label class="form-label my-0 py-0 fw-bold">Prysm - 59.47%</label>
           <div class="progress position-relative" style="height: 1.3rem;">
-            <div id="prysmProgress" class="progress-bar position-absolute bg-danger" role="progressbar" style="width: 59.47%; height: 1.25rem;" aria-valuenow="59.47" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar position-absolute bg-danger" role="progressbar" style="width: 59.47%; height: 1.25rem;" aria-valuenow="59.47" aria-valuemin="0" aria-valuemax="100"></div>
             <div class="progress-bar bg-trans clientshare-success" role="progressbar" style="width: 33%; height: 1.25rem"></div>
             <div class="progress-bar bg-trans clientshare-warning" role="progressbar" style="width: 17%; height: 1.25rem"></div>
             <div class="progress-bar bg-trans clientshare-danger" role="progressbar" style="width: 50%; height: 1.25rem"></div>
           </div>
         </div>
         <div class="my-2">
-          <label id="lighthouseLabel" class="form-label my-0 py-0">Lighthouse - <span id="lighthouseText">24.64%</span></label>
+          <label class="form-label my-0 py-0">Lighthouse - 24.64%</label>
           <div class="progress position-relative" style="height: 1.3rem;">
-            <div id="lighthouseProgress" class="progress-bar position-absolute bg-success" role="progressbar" style="width: 24.64%; height: 1.25rem;" aria-valuenow="24.64" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar position-absolute bg-success" role="progressbar" style="width: 24.64%; height: 1.25rem;" aria-valuenow="24.64" aria-valuemin="0" aria-valuemax="100"></div>
             <div class="progress-bar bg-trans clientshare-success" role="progressbar" style="width: 33%; height: 1.25rem"></div>
             <div class="progress-bar bg-trans clientshare-warning" role="progressbar" style="width: 17%; height: 1.25rem"></div>
             <div class="progress-bar bg-trans clientshare-danger" role="progressbar" style="width: 50%; height: 1.25rem"></div>
           </div>
         </div>
         <div class="my-2">
-          <label id="tekuLabel" class="form-label my-0 py-0">Teku - <span id="tekuText">9.54%</span></label>
+          <label class="form-label my-0 py-0">Teku - 9.54%</label>
           <div class="progress position-relative" style="height: 1.3rem;">
-            <div id="tekuProgress" class="progress-bar position-absolute bg-success" role="progressbar" style="width: 9.54%; height: 1.25rem;" aria-valuenow="9.54" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar position-absolute bg-success" role="progressbar" style="width: 9.54%; height: 1.25rem;" aria-valuenow="9.54" aria-valuemin="0" aria-valuemax="100"></div>
             <div class="progress-bar bg-trans clientshare-success" role="progressbar" style="width: 33%; height: 1.25rem"></div>
             <div class="progress-bar bg-trans clientshare-warning" role="progressbar" style="width: 17%; height: 1.25rem"></div>
             <div class="progress-bar bg-trans clientshare-danger" role="progressbar" style="width: 50%; height: 1.25rem"></div>
           </div>
         </div>
         <div class="my-2">
-          <label id="nimbusLabel" class="form-label my-0 py-0">Nimbus - <span id="nimbusText">5.11%</span></label>
+          <label class="form-label my-0 py-0">Nimbus - 5.11%</label>
           <div class="progress position-relative" style="height: 1.3rem;">
-            <div id="nimbusProgress" class="progress-bar position-absolute bg-success" role="progressbar" style="width: 5.11%; height: 1.25rem;" aria-valuenow="5.11" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar position-absolute bg-success" role="progressbar" style="width: 5.11%; height: 1.25rem;" aria-valuenow="5.11" aria-valuemin="0" aria-valuemax="100"></div>
             <div class="progress-bar bg-trans clientshare-success" role="progressbar" style="width: 33%; height: 1.25rem"></div>
             <div class="progress-bar bg-trans clientshare-warning" role="progressbar" style="width: 17%; height: 1.25rem"></div>
             <div class="progress-bar bg-trans clientshare-danger" role="progressbar" style="width: 50%; height: 1.25rem"></div>
           </div>
         </div>
         <div class="my-2">
-          <label id="grandineLabel" class="form-label my-0 py-0">Grandine - <span id="grandineText">1.07%</span></label>
+          <label class="form-label my-0 py-0">Grandine - 1.07%</label>
           <div class="progress position-relative" style="height: 1.3rem;">
-            <div id="Progress" class="progress-bar position-absolute bg-success" role="progressbar" style="width: 1.07%; height: 1.25rem;" aria-valuenow="1.07" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar position-absolute bg-success" role="progressbar" style="width: 1.07%; height: 1.25rem;" aria-valuenow="1.07" aria-valuemin="0" aria-valuemax="100"></div>
             <div class="progress-bar bg-trans clientshare-success" role="progressbar" style="width: 33%; height: 1.25rem"></div>
             <div class="progress-bar bg-trans clientshare-warning" role="progressbar" style="width: 17%; height: 1.25rem"></div>
             <div class="progress-bar bg-trans clientshare-danger" role="progressbar" style="width: 50%; height: 1.25rem"></div>
           </div>
         </div>
         <div class="my-2">
-          <label id="lodestarLabel" class="form-label my-0 py-0">Lodestar - <span id="lodestarText">0.11%</span></label>
+          <label class="form-label my-0 py-0">Lodestar - 0.11%</label>
           <div class="progress position-relative" style="height: 1.3rem;">
-            <div id="lodestarProgress" class="progress-bar position-absolute bg-success" role="progressbar" style="width: 0.11%; height: 1.25rem;" aria-valuenow="0.11" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar position-absolute bg-success" role="progressbar" style="width: 0.11%; height: 1.25rem;" aria-valuenow="0.11" aria-valuemin="0" aria-valuemax="100"></div>
             <div class="progress-bar bg-trans clientshare-success" role="progressbar" style="width: 33%; height: 1.25rem"></div>
             <div class="progress-bar bg-trans clientshare-warning" role="progressbar" style="width: 17%; height: 1.25rem"></div>
             <div class="progress-bar bg-trans clientshare-danger" role="progressbar" style="width: 50%; height: 1.25rem"></div>
           </div>
         </div>
         <div class="my-2">
-          <label id="otherLabel" class="form-label my-0 py-0">Other - <span id="otherText">0.02%</span></label>
+          <label class="form-label my-0 py-0">Other - 0.02%</label>
           <div class="progress position-relative" style="height: 1.3rem;">
-            <div id="otherProgress" class="progress-bar position-absolute bg-success" role="progressbar" style="width: 0.02%; height: 1.25rem;" aria-valuenow="0.02" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar position-absolute bg-success" role="progressbar" style="width: 0.02%; height: 1.25rem;" aria-valuenow="0.02" aria-valuemin="0" aria-valuemax="100"></div>
             <div class="progress-bar bg-trans clientshare-success" role="progressbar" style="width: 33%; height: 1.25rem"></div>
             <div class="progress-bar bg-trans clientshare-warning" role="progressbar" style="width: 17%; height: 1.25rem"></div>
             <div class="progress-bar bg-trans clientshare-danger" role="progressbar" style="width: 50%; height: 1.25rem"></div>
           </div>
         </div>
       </div>
+      <div class="text-center small">
+        Data provided by <a href="https://migalabs.es/api-documentation" target="_blank">Miga Labs</a>. <br>
+        Data may not be 100% accurate. (<a href="/client-fingerprinting">Read more</a>)
+      </div>
     </div>
-    <div class="text-center">
-      <small>
-        <span>
-          Data provided by <a href="https://migalabs.es/api-documentation" target="_blank">Miga Labs</a>. 
-          Data may not be 100% accurate. 
-        </span>
-        (<a href="/client-fingerprinting">Read more</a>)
-      </small>
+    <div id="distributionBlockprint" class="d-none row justify-content-center">
+      <div id="distributionBarsBlockprint" class="col col-lg-6 col-md-8">
+        <div class="my-2">
+          <label class="form-label my-0 py-0 fw-bold">Prysm - 63.75%</label>
+          <div class="progress position-relative" style="height: 1.3rem;">
+            <div class="progress-bar position-absolute bg-danger" role="progressbar" style="width: 65.75%; height: 1.25rem;" aria-valuenow="65.75" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar bg-trans clientshare-success" role="progressbar" style="width: 33%; height: 1.25rem"></div>
+            <div class="progress-bar bg-trans clientshare-warning" role="progressbar" style="width: 17%; height: 1.25rem"></div>
+            <div class="progress-bar bg-trans clientshare-danger" role="progressbar" style="width: 50%; height: 1.25rem"></div>
+          </div>
+        </div>
+        <div class="my-2">
+          <label class="form-label my-0 py-0">Lighthouse - 23.05%</label>
+          <div class="progress position-relative" style="height: 1.3rem;">
+            <div class="progress-bar position-absolute bg-success" role="progressbar" style="width: 23.05%; height: 1.25rem;" aria-valuenow="23.05" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar bg-trans clientshare-success" role="progressbar" style="width: 33%; height: 1.25rem"></div>
+            <div class="progress-bar bg-trans clientshare-warning" role="progressbar" style="width: 17%; height: 1.25rem"></div>
+            <div class="progress-bar bg-trans clientshare-danger" role="progressbar" style="width: 50%; height: 1.25rem"></div>
+          </div>
+        </div>
+        <div class="my-2">
+          <label class="form-label my-0 py-0">Teku - 10.87%</label>
+          <div class="progress position-relative" style="height: 1.3rem;">
+            <div class="progress-bar position-absolute bg-success" role="progressbar" style="width: 10.87%; height: 1.25rem;" aria-valuenow="10.87" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar bg-trans clientshare-success" role="progressbar" style="width: 33%; height: 1.25rem"></div>
+            <div class="progress-bar bg-trans clientshare-warning" role="progressbar" style="width: 17%; height: 1.25rem"></div>
+            <div class="progress-bar bg-trans clientshare-danger" role="progressbar" style="width: 50%; height: 1.25rem"></div>
+          </div>
+        </div>
+        <div class="my-2">
+          <label class="form-label my-0 py-0">Nimbus - 0.34%</label>
+          <div class="progress position-relative" style="height: 1.3rem;">
+            <div class="progress-bar position-absolute bg-success" role="progressbar" style="width: 0.34%; height: 1.25rem;" aria-valuenow="0.34" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar bg-trans clientshare-success" role="progressbar" style="width: 33%; height: 1.25rem"></div>
+            <div class="progress-bar bg-trans clientshare-warning" role="progressbar" style="width: 17%; height: 1.25rem"></div>
+            <div class="progress-bar bg-trans clientshare-danger" role="progressbar" style="width: 50%; height: 1.25rem"></div>
+          </div>
+        </div>
+        <div class="my-2">
+          <label class="form-label my-0 py-0">Lodestar - 0%</label>
+          <div class="progress position-relative" style="height: 1.3rem;">
+            <div class="progress-bar position-absolute bg-success" role="progressbar" style="width: 0%; height: 1.25rem;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar bg-trans clientshare-success" role="progressbar" style="width: 33%; height: 1.25rem"></div>
+            <div class="progress-bar bg-trans clientshare-warning" role="progressbar" style="width: 17%; height: 1.25rem"></div>
+            <div class="progress-bar bg-trans clientshare-danger" role="progressbar" style="width: 50%; height: 1.25rem"></div>
+          </div>
+        </div>
+        <div class="my-2">
+          <label class="form-label my-0 py-0">Undefined - 0%</label>
+          <div class="progress position-relative" style="height: 1.3rem;">
+            <div class="progress-bar position-absolute bg-success" role="progressbar" style="width: 0%; height: 1.25rem;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar bg-trans clientshare-success" role="progressbar" style="width: 33%; height: 1.25rem"></div>
+            <div class="progress-bar bg-trans clientshare-warning" role="progressbar" style="width: 17%; height: 1.25rem"></div>
+            <div class="progress-bar bg-trans clientshare-danger" role="progressbar" style="width: 50%; height: 1.25rem"></div>
+          </div>
+        </div>
+        <div class="my-2">
+          <label class="form-label my-0 py-0">Other - 0%</label>
+          <div class="progress position-relative" style="height: 1.3rem;">
+            <div class="progress-bar position-absolute bg-success" role="progressbar" style="width: 0%; height: 1.25rem;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar bg-trans clientshare-success" role="progressbar" style="width: 33%; height: 1.25rem"></div>
+            <div class="progress-bar bg-trans clientshare-warning" role="progressbar" style="width: 17%; height: 1.25rem"></div>
+            <div class="progress-bar bg-trans clientshare-danger" role="progressbar" style="width: 50%; height: 1.25rem"></div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center small">
+        Data provided by <a href="https://github.com/sigp/blockprint/blob/main/docs/api.md" target="_blank">Sigma Prime's Blockprint</a>. <br>
+        Data may not be 100% accurate. (<a href="/client-fingerprinting">Read more</a>)
+      </div>
     </div>
-    <div class="dd-none row justify-content-center mt-4">
+    <div class="row justify-content-center mt-4">
       <div class="col col-lg-6 col-md-8 text-start text-sm-center">
         <div class="alert alert-info" role="alert">
           <div class="me-2 fw-bold">
@@ -141,12 +213,12 @@ layout: default
             <a href="/client-fingerprinting" style="color: #055160;">(read more)</a>:
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="datasources" id="dataSource1" value="miga" checked>
+            <input class="form-check-input" type="radio" name="datasources" id="dataSource1" value="migalabs"  onclick="setDataSource();" checked>
             <label class="form-check-label" for="dataSource1">Miga Labs</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="datasources" id="dataSource2" value="sproul" disabled>
-            <label class="form-check-label" for="dataSource2">Sigma Pi's Blockprint (coming)</label>
+            <input class="form-check-input" type="radio" name="datasources" id="dataSource2" value="blockprint"  onclick="setDataSource();">
+            <label class="form-check-label" for="dataSource2">Sigma Prime's Blockprint</label>
           </div>
         </div>
       </div>
@@ -160,9 +232,9 @@ layout: default
     <h2 class="h1 fw-bold mb-3 text-center">Client Diversity Is <u>Not</u> Optional</h2>
     <div class="row justify-content-center mt-4">
       <div class="col col-lg-10">
-        <p class="mb-4">Many know client diversity is important for a more resilient network, but they don't understand why or just how essential it is. It's not only important &#8212; <span class="fw-bold fst-italic">it's critical</span>. If a single client is used by 2/3rds (66%) of validators <span id="has66majority" class="d-none text-danger fw-bold text-decoration-underline">(this is currently the case) </span>there's a very real risk this can result in disrupting the chain and monetary loss for node operators.</p>
+        <p class="mb-4">Many know client diversity is important for a more resilient network, but they don't understand why or just how essential it is. It's not only important &#8212; <span class="fw-bold fst-italic">it's critical</span>. If a single client is used by 2/3rds (66%) of validators <span id="extremeMajorityMsgMigaLabs" class="d-none text-danger fw-bold text-decoration-underline">(this is currently the case) </span><span id="extremeMajorityMsgBlockprint" class="d-none text-danger fw-bold text-decoration-underline">(this is currently the case) </span>there's a very real risk this can result in disrupting the chain and monetary loss for node operators.</p>
         <p class="mb-4">It takes 2/3rds of validators to reach finality. If a client with 66%+ of marketshare has a bug and forks to its own chain, it'll be capable of finalizing. Once the fork finalizes, the <strong>validators cannot return to the real chain without being slashed</strong><!--  or exiting and watching their funds drain while in queue -->. If 66% of the chain gets slashed simultaneously, the penalty is the whole 32 ETH.</p>
-        <p class="mb-4">So why is >50% marketshare still dangerous? If a minority client forks, the 50%+ majority client can obtain a 66%+ majority. With no client having a marketshare over 33%, these scenarios are avoided. That's why <strong>&#60;33% marketshare is the goal for all clients</strong>.</p>
+        <p class="mb-4">So why is >50% marketshare still dangerous? <span id="majorityMsgMigaLabs" class="d-none text-danger fw-bold text-decoration-underline">(this is currently the case) </span><span id="majorityMsgBlockprint" class="d-none text-danger fw-bold text-decoration-underline">(this is currently the case) </span>If a minority client forks, the 50%+ majority client can obtain a 66%+ majority. With no client having a marketshare over 33%, these scenarios are avoided. That's why <strong>&#60;33% marketshare is the goal for all clients</strong>.</p>
       </div>
     </div>
     <div class="row justify-content-center mt-2">
@@ -176,6 +248,10 @@ layout: default
             </h2>
             <div id="collapseFurtherReading" class="accordion-collapse collapse" aria-labelledby="furtherReadingHeader" data-bs-parent="#furtherReading">
               <div class="accordion-body text-start">
+                <a class="d-block my-2 link-dark text-capitalize" target="_blank"
+                    href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">
+                    Client diversity on Ethereum’s consensus layer {{site.data.icons.new_tab}}
+                </a>
                 <a class="d-block my-2 link-dark text-capitalize" target="_blank"
                     href="https://medium.com/prysmatic-labs/prysmatic-labs-statement-on-client-diversity-c0e3c2f05671">
                     Prysm: Statement on Client Diversity {{site.data.icons.new_tab}}
@@ -288,7 +364,6 @@ layout: default
         <div class="input-group mb-3">
           <label class="input-group-text" for="fromSelect">From</label>
           <select class="form-select" id="fromSelect" onchange="preventDoubleClientSelect(this)">
-            <!-- <option selected>Choose...</option> -->
             <option value="none" selected disabled hidden>Choose...</option>
             <option value="lighthouse">Lighthouse</option>
             <option value="lodestar">Lodestar</option>
@@ -305,7 +380,6 @@ layout: default
         <div class="input-group mb-3">
           <label class="input-group-text" for="toSelect">To</label>
           <select class="form-select" id="toSelect" onchange="preventDoubleClientSelect(this)">
-            <!-- <option selected>Choose...</option> -->
             <option value="none" selected disabled hidden>Choose...</option>
             <option value="lighthouse">Lighthouse</option>
             <option value="lodestar">Lodestar</option>
@@ -339,15 +413,11 @@ layout: default
         <div id="noGuides" class="text-center mt-4 d-none">
           {{site.data.icons.sad_emoji}}
           <p class="my-2">There are no guides for this migration yet.</p>
-          <a href="/contribute/" class="btn btn-primary btn-sm px-4 m-1">Submit one for a bounty!</a>
-          <!-- <a href="/contribute/" class="btn btn-primary btn-sm px-4 m-1">Submit Guide</a> -->
+          <!-- <a href="/contribute/" class="btn btn-primary btn-sm px-4 m-1">Submit one for a bounty!</a> -->
+          <a href="/contribute/" class="btn btn-primary btn-sm px-4 m-1">Submit Guide</a>
         </div>
         <div id="guideList" class="text-center mt-4 d-none">
-          <!-- <p class="text-center">
-            {{site.data.icons.docs}}
-            <a href="">Prysm to Nimbus migration guide, by Paul Harris</a>
-            {{site.data.icons.new_tab}}
-          </p> -->
+          <!-- Populated w/ JS based on matching results from _data/migration-guides.yml -->
         </div>
       </div>
     </div>
@@ -407,7 +477,4 @@ layout: default
     </div>
   </div>
 </section>
-
-
-
 

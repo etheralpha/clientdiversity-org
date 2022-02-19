@@ -2,11 +2,22 @@
 #   author: # optional - team/name/handle/etc, example: "Yorick"
 #   type:   # optional - "doc", "video", or "tool" (use tool for automated migration)
 #   note:   # optional - short note, example: "w/ ethdocker"
-#
-# template:
-#   ${type} <a href="${link}">${fromClient.innerHTML} to ${toClient.innerHTML} migration guide (${note}), by ${author}</a>
-# user sees:
+
+
+# Example:
+# - link: https://eth-docker.net/docs/Support/SwitchClient
+#   author: Yorick
+#   type: doc
+#   note: w/ ethdocker
+# User sees:
 #   (doc icon) Prysm to Nimbus migration guide (w/ ethdocker), by Yorick
+
+
+# Template to copy for new entries
+# - link: 
+#   author: 
+#   type: 
+#   note: 
 
 
 lighthouse_to_lodestar:
