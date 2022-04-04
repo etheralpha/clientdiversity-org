@@ -20,6 +20,56 @@
 #   note: 
 
 
+blank_to_lighthouse:
+  - link: https://someresat.medium.com/guide-to-staking-on-ethereum-2-0-ubuntu-lighthouse-41de20513b12
+    author: Somer Esat
+    type: doc
+    note: w/ Ubuntu
+  - link: https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet
+    author: CoinCashew
+    type: doc
+    note: w/ Ubuntu
+blank_to_lodestar:
+  - link: https://youtu.be/0xo85F-_fag
+    author: Phil Ngo
+    type: video
+    note: w/ Ubuntu/Docker
+  - link: https://hackmd.io/@philknows/rk5cDvKmK
+    author: Phil Ngo
+    type: doc
+    note: w/ Ubuntu/Docker
+  - link: https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet
+    author: CoinCashew
+    type: doc
+    note: w/ Ubuntu
+blank_to_nimbus:
+  - link: https://someresat.medium.com/guide-to-staking-on-ethereum-2-0-ubuntu-nimbus-e86bdee8c550
+    author: Somer Esat
+    type: doc
+    note: w/ Ubuntu
+  - link: https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet
+    author: CoinCashew
+    type: doc
+    note: w/ Ubuntu
+blank_to_prysm:
+  - link: https://someresat.medium.com/guide-to-staking-on-ethereum-2-0-ubuntu-prysm-56f681646f74
+    author: Somer Esat
+    type: doc
+    note: w/ Ubuntu
+  - link: https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet
+    author: CoinCashew
+    type: doc
+    note: w/ Ubuntu
+blank_to_teku:
+  - link: https://someresat.medium.com/guide-to-staking-on-ethereum-2-0-ubuntu-teku-e4247e7c75a1
+    author: Somer Esat
+    type: doc
+    note: w/ Ubuntu
+  - link: https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet
+    author: CoinCashew
+    type: doc
+    note: w/ Ubuntu
+blank_to_grandine:
 lighthouse_to_lodestar:
   - link: https://eth-docker.net/docs/Support/SwitchClient
     author: Yorick
@@ -33,16 +83,28 @@ lighthouse_to_nimbus:
   - link: https://nimbus.guide/migration.html
     author: Nimbus
     type: doc
+  - link: https://twitter.com/jcrtp_eth/status/1501216542511575051
+    author: jcrtp
+    type: video
+    note: w/ Rocket Pool
 lighthouse_to_prysm:
   - link: https://eth-docker.net/docs/Support/SwitchClient
     author: Yorick
     type: doc
     note: w/ ethdocker
+  - link: https://twitter.com/jcrtp_eth/status/1501216542511575051
+    author: jcrtp
+    type: video
+    note: w/ Rocket Pool
 lighthouse_to_teku:
   - link: https://eth-docker.net/docs/Support/SwitchClient
     author: Yorick
     type: doc
     note: w/ ethdocker
+  - link: https://twitter.com/jcrtp_eth/status/1501216542511575051
+    author: jcrtp
+    type: video
+    note: w/ Rocket Pool
 lighthouse_to_grandine:
 lodestar_to_lighthouse:
   - link: https://eth-docker.net/docs/Support/SwitchClient
@@ -70,6 +132,10 @@ nimbus_to_lighthouse:
     author: Yorick
     type: doc
     note: w/ ethdocker
+  - link: https://twitter.com/jcrtp_eth/status/1501216542511575051
+    author: jcrtp
+    type: video
+    note: w/ Rocket Pool
 nimbus_to_lodestar:
   - link: https://eth-docker.net/docs/Support/SwitchClient
     author: Yorick
@@ -80,11 +146,19 @@ nimbus_to_prysm:
     author: Yorick
     type: doc
     note: w/ ethdocker
+  - link: https://twitter.com/jcrtp_eth/status/1501216542511575051
+    author: jcrtp
+    type: video
+    note: w/ Rocket Pool
 nimbus_to_teku:
   - link: https://eth-docker.net/docs/Support/SwitchClient
     author: Yorick
     type: doc
     note: w/ ethdocker
+  - link: https://twitter.com/jcrtp_eth/status/1501216542511575051
+    author: jcrtp
+    type: video
+    note: w/ Rocket Pool
 nimbus_to_grandine:
 prysm_to_lighthouse:
   - link: https://eth-docker.net/docs/Support/SwitchClient
@@ -97,6 +171,10 @@ prysm_to_lighthouse:
   - link: https://github.com/cprest0n/eth-guides/blob/main/migrate-prysm-to-lighthouse.md
     author: cprest0n
     type: doc
+  - link: https://twitter.com/jcrtp_eth/status/1501216542511575051
+    author: jcrtp
+    type: video
+    note: w/ Rocket Pool
 prysm_to_lodestar:
   - link: https://eth-docker.net/docs/Support/SwitchClient
     author: Yorick
@@ -113,6 +191,10 @@ prysm_to_nimbus:
   - link: https://www.reddit.com/r/ethstaker/comments/pu30fa/short_guide_to_migrate_from_prysm_to_teku_or/
     author: u/Breakbeatjuggernaut
     type: doc
+  - link: https://twitter.com/jcrtp_eth/status/1501216542511575051
+    author: jcrtp
+    type: video
+    note: w/ Rocket Pool
 prysm_to_teku:
   - link: https://eth-docker.net/docs/Support/SwitchClient
     author: Yorick
@@ -132,12 +214,20 @@ prysm_to_teku:
     author: u/flossraptor
     type: doc
     note: Windows Edition
+  - link: https://twitter.com/jcrtp_eth/status/1501216542511575051
+    author: jcrtp
+    type: video
+    note: w/ Rocket Pool
 prysm_to_grandine:
 teku_to_lighthouse:
   - link: https://eth-docker.net/docs/Support/SwitchClient
     author: Yorick
     type: doc
     note: w/ ethdocker
+  - link: https://twitter.com/jcrtp_eth/status/1501216542511575051
+    author: jcrtp
+    type: video
+    note: w/ Rocket Pool
 teku_to_lodestar:
   - link: https://eth-docker.net/docs/Support/SwitchClient
     author: Yorick
@@ -151,29 +241,25 @@ teku_to_nimbus:
   - link: https://nimbus.guide/migration.html
     author: Nimbus
     type: doc
+  - link: https://twitter.com/jcrtp_eth/status/1501216542511575051
+    author: jcrtp
+    type: video
+    note: w/ Rocket Pool
 teku_to_prysm:
   - link: https://eth-docker.net/docs/Support/SwitchClient
     author: Yorick
     type: doc
     note: w/ ethdocker
+  - link: https://twitter.com/jcrtp_eth/status/1501216542511575051
+    author: jcrtp
+    type: video
+    note: w/ Rocket Pool
 teku_to_grandine:
 grandine_to_lighthouse:
 grandine_to_lodestar:
 grandine_to_nimbus:
 grandine_to_prysm:
 grandine_to_teku:
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
