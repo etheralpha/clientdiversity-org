@@ -9,8 +9,8 @@ function updateClientSwitchForm(topClient) {
   let toSelect = document.getElementById('toSelect');
   for (var i=0; i<toSelect.length; i++) {
     if (toSelect.options[i].value == topClient.toLowerCase())
-      toSelect.remove(i);
-      // toSelect.options[i].disabled = true;
+      // toSelect.remove(i);
+      toSelect.options[i].disabled = true;
   }
 }
 

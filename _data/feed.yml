@@ -1,8 +1,17 @@
 # - link: 
 #   title:
-#   date:   # format: 18-Oct-2021
+#   date:   # format: 04-Apr-2022
 
 
+- link: https://dankradfeist.de/ethereum/2022/03/24/run-the-majority-client-at-your-own-peril.html
+  title: Dankrad Feist (Ethereum Researcher) on Client Diversity
+  date: 24-Mar-2022
+- link: https://twitter.com/_crypto_crack/status/1504459918539120643
+  title: Client Risk/Benefit Financial Scenario Modelling
+  date: 17-Mar-2022
+- link: https://twitter.com/ratedw3b/status/1504455874995130370
+  title: Rated.Network Extends Monitoring to Michael Sproul's Data
+  date: 17-Mar-2021
 - link: https://www.reddit.com/r/ethstaker/comments/sz5owa/a_hopefully_brief_history_of_client_diversity_on/
   title: "Superphiz: A [hopefully] brief history of client diversity on the beacon chain"
   date: 22-Feb-2022
@@ -21,6 +30,9 @@
 - link: https://twitter.com/0xinvis/status/1492936618449199109
   title: Staking Pools Diversity Site Published
   date: 13-Feb-2022
+- link: https://youtu.be/0xo85F-_fag
+  title: New Lodestar Setup Guide
+  date: 11-Feb-2022
 - link: https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA
   title: jmcook.eth - Client diversity on Ethereum’s consensus layer
   date: 08-Feb-2022
@@ -36,7 +48,13 @@
 - link: https://youtu.be/ZEvn4liYlJA
   title: ETHGlobal Client Diversity Panel | Merge & Scalability Summit
   date: 18-Oct-2021
+- link: https://our.status.im/the-importance-of-client-diversity/
+  title: "Sacha (from Nimbus): The importance of client diversity in the run up to the merge"
+  date: 01-Sep-2021
 - link: https://youtu.be/1hZgCaiqwfU
   title: Ethereum Client Diversity & How To Solve For It
   date: 05-May-2021
+- link: https://notes.ethereum.org/@afhGjrKfTKmksTOtqhB9RQ/BJGj7uh08
+  title: "ACD Notes: “Five Why’s” to our client diversity problem"
+  date: 03-Jul-2020
 
