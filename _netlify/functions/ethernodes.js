@@ -30,6 +30,7 @@ exports.handler = async (event, context) => {
         let key = response[item]["client"];
         let value = response[item]["value"];
         if (mainClients.includes(key)) {
+          key = (key == "openethereum") ? "openEthereum" : key;
           formattedResponse[key] = value;
         } else {
           others += value;

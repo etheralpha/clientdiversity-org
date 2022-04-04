@@ -102,7 +102,7 @@ function createChart(data, datasource) {
 
   // create the chart
   distribution.forEach(function (item) {
-    let client = item["name"].toLowerCase().replace("-"," ").split(' ')
+    let client = item["name"].replace("-"," ").split(' ')
       .map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(' ');
     let marketshare = Math.round( item["value"] / sampleSize * 10000 )/100;
     let fontWeight = "fw-normal";
