@@ -1,0 +1,64 @@
+# - link:   # required
+#   author: # optional - team/name/handle/etc, example: "Yorick"
+#   type:   # optional - "doc", "video", or "tool" (use tool for automated migration)
+#   note:   # optional - short note, example: "w/ ethdocker"
+
+
+# Example:
+# - link: https://eth-docker.net/docs/Support/SwitchClient
+#   author: Yorick
+#   type: doc
+#   note: w/ ethdocker
+# User sees:
+#   (doc icon) Geth to Erigon migration guide (w/ ethdocker), by Yorick
+
+
+# Template to copy for new entries
+# - link: 
+#   author: 
+#   type: 
+#   note: 
+
+
+blank_to_besu:
+  - link: https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet
+    author: CoinCashew
+    type: doc
+    note: w/ Ubuntu
+blank_to_erigon:
+  - link: https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet
+    author: CoinCashew
+    type: doc
+    note: w/ Ubuntu
+blank_to_geth:
+  - link: https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet
+    author: CoinCashew
+    type: doc
+    note: w/ Ubuntu
+blank_to_nethermind:
+  - link: https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet
+    author: CoinCashew
+    type: doc
+    note: w/ Ubuntu
+besu_to_erigon:
+besu_to_geth:
+besu_to_nethermind:
+erigon_to_besu:
+erigon_to_geth:
+erigon_to_nethermind:
+geth_to_besu:
+geth_to_erigon:
+geth_to_nethermind:
+nethermind_to_besu:
+nethermind_to_erigon:
+nethermind_to_geth:
+openethereum_to_besu:
+openethereum_to_erigon:
+openethereum_to_geth:
+openethereum_to_nethermind:
+
+
+
+
+
+

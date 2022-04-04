@@ -438,27 +438,35 @@ layout: default
                       {{site.data.icons.new_tab}}
                     </a>
                   </th>
-                  <td>
-                    <a href="{{client.github}}" class="text-decoration-none link-dark" target="_blank">
-                      {{site.data.icons.github}}
-                      {{site.data.icons.new_tab}}
-                    </a>
-                  </td>
-                  <td>
-                    <a href="{{client.docs}}" class="text-decoration-none link-dark" target="_blank">
-                      {{site.data.icons.docs}}
-                      {{site.data.icons.new_tab}}
-                    </a>
-                  </td>
-                  {%- if client.name == "Grandine" -%}
-                    <td>(none)</td>
+                  {%- if client.github -%}
+                    <td>
+                      <a href="{{client.github}}" class="text-decoration-none link-dark" target="_blank">
+                        {{site.data.icons.github}}
+                        {{site.data.icons.new_tab}}
+                      </a>
+                    </td>
                   {%- else -%}
+                    <td>(none)</td>
+                  {%- endif -%}
+                  {%- if client.docs -%}
+                    <td>
+                      <a href="{{client.docs}}" class="text-decoration-none link-dark" target="_blank">
+                        {{site.data.icons.docs}}
+                        {{site.data.icons.new_tab}}
+                      </a>
+                    </td>
+                  {%- else -%}
+                    <td>(none)</td>
+                  {%- endif -%}
+                  {%- if client.discord -%}
                     <td>
                       <a href="{{client.discord}}" class="text-decoration-none link-dark" target="_blank">
                         {{site.data.icons.discord}}
                         {{site.data.icons.new_tab}}
                       </a>
                     </td>
+                  {%- else -%}
+                    <td>(none)</td>
                   {%- endif -%}
                   <td>{{client.support}}</td>
                 </tr>
@@ -493,27 +501,35 @@ layout: default
                       {{site.data.icons.new_tab}}
                     </a>
                   </th>
-                  <td>
-                    <a href="{{client.github}}" class="text-decoration-none link-dark" target="_blank">
-                      {{site.data.icons.github}}
-                      {{site.data.icons.new_tab}}
-                    </a>
-                  </td>
-                  <td>
-                    <a href="{{client.docs}}" class="text-decoration-none link-dark" target="_blank">
-                      {{site.data.icons.docs}}
-                      {{site.data.icons.new_tab}}
-                    </a>
-                  </td>
-                  {%- if client.name == "Grandine" -%}
-                    <td>(none)</td>
+                  {%- if client.github -%}
+                    <td>
+                      <a href="{{client.github}}" class="text-decoration-none link-dark" target="_blank">
+                        {{site.data.icons.github}}
+                        {{site.data.icons.new_tab}}
+                      </a>
+                    </td>
                   {%- else -%}
+                    <td>(none)</td>
+                  {%- endif -%}
+                  {%- if client.docs -%}
+                    <td>
+                      <a href="{{client.docs}}" class="text-decoration-none link-dark" target="_blank">
+                        {{site.data.icons.docs}}
+                        {{site.data.icons.new_tab}}
+                      </a>
+                    </td>
+                  {%- else -%}
+                    <td>(none)</td>
+                  {%- endif -%}
+                  {%- if client.discord -%}
                     <td>
                       <a href="{{client.discord}}" class="text-decoration-none link-dark" target="_blank">
                         {{site.data.icons.discord}}
                         {{site.data.icons.new_tab}}
                       </a>
                     </td>
+                  {%- else -%}
+                    <td>(none)</td>
                   {%- endif -%}
                   <td>{{client.support}}</td>
                 </tr>
@@ -540,18 +556,38 @@ layout: default
       <div class="col col-lg-6 col-md-8">
         <div class="input-group mb-3">
           <label class="input-group-text" for="typeSelect">Type</label>
-          <select class="form-select" id="typeSelect" onchange="">
+          <select class="form-select" id="typeSelect" onchange="setSwitchType()">
             <option value="consensus" selected>Consensus Client</option>
-            <option value="execution" disabled>Execution Client (coming soon&#8482;)</option>
+            <option value="execution">Execution Client</option>
+            <!-- <option value="execution" disabled>Execution Client (coming soon&#8482;)</option> -->
           </select>
         </div>
       </div>
     </div>
-    <div class="row justify-content-center mt-3">
+    <!-- Consensus Clients - From -->
+    <div id="switchFromConsensus" class="row justify-content-center mt-3">
       <div class="col col-lg-6 col-md-8">
         <div class="input-group mb-3">
-          <label class="input-group-text" for="fromSelect">From</label>
-          <select class="form-select" id="fromSelect" onchange="preventDoubleClientSelect(this)">
+          <label class="input-group-text" for="fromSelectCC">From</label>
+          <select class="form-select" id="fromSelectCC" onchange="preventDoubleClientSelect('fromSelect')">
+            <option value="none" selected disabled hidden>Choose...</option>
+            <option value="blank">Fresh Install</option>
+            <option value="lighthouse">Lighthouse</option>
+            <option value="lodestar">Lodestar</option>
+            <option value="nimbus">Nimbus</option>
+            <option value="prysm">Prysm</option>
+            <option value="teku">Teku</option>
+            <option value="grandine">Grandine</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!-- Consensus Clients - To -->
+    <div id="switchToConsensus" class="row justify-content-center">
+      <div class="col col-lg-6 col-md-8">
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="toSelectCC">To</label>
+          <select class="form-select" id="toSelectCC" onchange="preventDoubleClientSelect('toSelect')">
             <option value="none" selected disabled hidden>Choose...</option>
             <option value="lighthouse">Lighthouse</option>
             <option value="lodestar">Lodestar</option>
@@ -563,18 +599,35 @@ layout: default
         </div>
       </div>
     </div>
-    <div class="row justify-content-center">
+    <!-- Execution Clients - From -->
+    <div id="switchFromExecution" class="d-none row justify-content-center mt-3">
       <div class="col col-lg-6 col-md-8">
         <div class="input-group mb-3">
-          <label class="input-group-text" for="toSelect">To</label>
-          <select class="form-select" id="toSelect" onchange="preventDoubleClientSelect(this)">
+          <label class="input-group-text" for="fromSelectEC">From</label>
+          <select class="form-select" id="fromSelectEC" onchange="preventDoubleClientSelect('fromSelect')">
+            <option value="none" disabled hidden>Choose...</option>
+            <option value="blank">Fresh Install</option>
+            <option value="geth" selected>Geth</option>
+            <option value="openethereum">Open Ethereum</option>
+            <option value="erigon">Erigon</option>
+            <option value="nethermind">Nethermind</option>
+            <option value="besu">Besu</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!-- Execution Clients - To -->
+    <div id="switchToExecution" class="d-none row justify-content-center">
+      <div class="col col-lg-6 col-md-8">
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="toSelectEC">To</label>
+          <select class="form-select" id="toSelectEC" onchange="preventDoubleClientSelect('toSelect')">
             <option value="none" selected disabled hidden>Choose...</option>
-            <option value="lighthouse">Lighthouse</option>
-            <option value="lodestar">Lodestar</option>
-            <option value="nimbus">Nimbus</option>
-            <option value="prysm">Prysm</option>
-            <option value="teku">Teku</option>
-            <option value="grandine">Grandine</option>
+            <option value="geth">Geth</option>
+            <option value="openethereum" disabled>Open Ethereum (deprecated)</option>
+            <option value="erigon">Erigon</option>
+            <option value="nethermind">Nethermind</option>
+            <option value="besu">Besu</option>
           </select>
         </div>
       </div>
