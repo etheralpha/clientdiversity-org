@@ -6,6 +6,7 @@
 #   support: # Linux, Windows, macOS
 #   opensource: # true/false
 
+
 - name: Grandine
   link: https://sifrai.com/
   github: https://github.com/sifraitech/grandine
@@ -49,5 +50,4 @@
   discord: https://discord.gg/9mCVSY6
   support: Linux, Windows, macOS
   opensource: true
-
 

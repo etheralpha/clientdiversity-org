@@ -4,6 +4,3 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl)
 })
 
-
-window.onload = getClientDistributionData().then(updateClientDistibutionChart).then(updateClientSwitchForm);
-

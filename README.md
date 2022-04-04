@@ -12,3 +12,4 @@ This is the repo for <https://clientdiversity.org>, a resource site to assist cl
 1. Go to <http://localhost:4400/>
 
 To build the site use `bundle exec jekyll build`.
+

@@ -1,41 +1,93 @@
-// var cdJson;
-
-// hard-coded distribution until CORS issue is resolved 
-var cdJson = { "Grandine": 26, "Lighthouse": 664, "Lodestar": 4, "Nimbus": 185, "Others": 1, "Prysm": 2349, "Teku": 321 }
+window.onload = getData().then(updatePageData).then(setDataSources);
 
 
-async function getClientDistributionData() {
-  // https://migalabs.es/api-documentation
-  // example response:
-  // {
-  //     "Grandine": 26,
-  //     "Lighthouse": 664,
-  //     "Lodestar": 4,
-  //     "Nimbus": 185,
-  //     "Others": 1,
-  //     "Prysm": 2349,
-  //     "Teku": 321
-  // }
+var ethernodesData = [
+  { "client":"geth",         "value":4421 },
+  { "client":"openethereum", "value":333  },
+  { "client":"erigon",       "value":300  },
+  { "client":"nethermind",   "value":63   },
+  { "client":"besu",         "value":31   },
+  { "client":"coregeth",     "value":5    },
+  { "client":"teth",         "value":3    },
+  { "client":"merp-client",  "value":2    }
+];
+var migalabsData = {
+    "Grandine": 49,
+    "Lighthouse": 1194,
+    "Lodestar": 8,
+    "Nimbus": 191,
+    "Others": 4,
+    "Prysm": 2257,
+    "Teku": 358
+};
+var blockprintData = {
+  "Uncertain": 0,
+  "Lighthouse": 25508,
+  "Lodestar": 0,
+  "Nimbus": 2030,
+  "Other": 0,
+  "Prysm": 54699,
+  "Teku": 17879
+};
 
-  // commented out until CORS issue is resolved
-  // const [cdResponse] = await Promise.all([
-    // fetch("https://migalabs.es/api/v1/client-distribution?crawler=london")
-  // ]);
-  // const cdJson = await cdResponse.json();
-  // console.log(cdJson);
-  // return cdJson
-  return
+var migalabsHasMajority = true;
+var migalabsHasExtremeMajority = false;
+var migalabsMajorityClient = "Prysm";
+var migalabsTopClient = "Prysm";
+
+var blockprintHasMajority = true;
+var blockprintHasExtremeMajority = false;
+var blockprintMajorityClient = "Prysm";
+var blockprintTopClient = "Prysm";
+
+var ethernodesHasMajority = true;
+var ethernodesHasExtremeMajority = true;
+var ethernodesMajorityClient = "Geth";
+var ethernodesTopClient = "Geth";
+
+
+async function getData() {
+  try {
+    const [migalabs, blockprint, ethernodes] = await Promise.all([
+      fetch("/.netlify/functions/migalabs/"),
+      fetch("/.netlify/functions/blockprint/"),
+      fetch("/.netlify/functions/ethernodes/")
+    ]);
+    const migalabsResponse = await migalabs.json();
+    const blockprintResponse = await blockprint.json();
+    const ethernodesResponse = await ethernodes.json();
+    migalabsData = migalabsResponse;
+    blockprintData = blockprintResponse;
+    ethernodesData = ethernodesResponse;
+  }
+  catch {
+    console.error("Failed to load data")
+  }
+
+  return;
 }
 
-async function updateClientDistibutionChart() {
-  var distribution = [];
+
+function updatePageData() {
+  createChart(migalabsData, "migalabs");
+  createChart(blockprintData, "blockprint");
+  createChart(ethernodesData, "ethernodes");
+}
+
+
+// create and update chart
+function createChart(data, datasource) {
+  let distribution = [];
   let sampleSize = 0;
   let chart = "";
+  let hasMajority = false;
+  let hasExtremeMajority = false;
   let dangerClient = "";
   let topClient = "";
+
   // create array of objects
-  for (var key in cdJson) {
-    distribution.push({ "name": key, "value": cdJson[key] });
+  for (var key in data) {
+    distribution.push({ "name": key, "value": data[key] });
   }
   // sort by value
   distribution.sort(function (a, b) {
@@ -47,18 +99,22 @@ async function updateClientDistibutionChart() {
   });
   // get the most popular client
   topClient = distribution[0]["name"];
-  // hide 66% majority comment if no 2/3 majority
-  has66majorityCheck(distribution[0]["value"]/sampleSize);
+
   // create the chart
   distribution.forEach(function (item) {
-    let client = item["name"][0].toUpperCase() + item["name"].substring(1);
+    let client = item["name"].toLowerCase().replace("-"," ").split(' ')
+      .map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(' ');
     let marketshare = Math.round( item["value"] / sampleSize * 10000 )/100;
     let fontWeight = "fw-normal";
     let color = "success";
     if (marketshare > 50) {
       fontWeight = "fw-bold";
       color = "danger";
+      hasMajority = true;
       dangerClient = client;
+      if (marketshare > 66) {
+        hasExtremeMajority = true;
+      }
     } else if (marketshare > 33) {
       color = "warning";
     }
@@ -74,24 +130,127 @@ async function updateClientDistibutionChart() {
       </div>`;
     chart += bar;
   });
-  document.getElementById("distributionBars").innerHTML = chart;
-  // update/show the marketshare warning message if needed
-  if (dangerClient.length > 0) {
-    document.getElementById("dangerClients").innerHTML = dangerClient;
-    let warningMessage = document.getElementById("marketshatWarning");
-    warningMessage.classList.remove("d-none");
+
+  // populate respective html and set global variables
+  if (datasource == "migalabs") {
+    document.getElementById("distributionBarsMigaLabs").innerHTML = chart;
+    document.getElementById("dangerClientsMigaLabs").innerHTML = dangerClient;
+    migalabsHasMajority = hasMajority;
+    migalabsHasExtremeMajority = hasExtremeMajority;
+    migalabsMajorityClient = dangerClient;
+    migalabsTopClient = topClient;
+  }
+  if (datasource == "blockprint") {
+    document.getElementById("distributionBarsBlockprint").innerHTML = chart;
+    document.getElementById("dangerClientsBlockprint").innerHTML = dangerClient;
+    blockprintHasMajority = hasMajority;
+    blockprintHasExtremeMajority = hasExtremeMajority;
+    blockprintMajorityClient = dangerClient;
+    blockprintTopClient = topClient;
+  }
+  if (datasource == "ethernodes") {
+    document.getElementById("distributionBarsEthernodes").innerHTML = chart;
+    document.getElementById("dangerClientsEthernodes").innerHTML = dangerClient;
+    ethernodesHasMajority = hasMajority;
+    ethernodesHasExtremeMajority = hasExtremeMajority;
+    ethernodesMajorityClient = dangerClient;
+    ethernodesTopClient = topClient;
   }
 
-  return topClient;
+  return;
 }
 
-// hide 66% majority comment if no 2/3 majority
-function has66majorityCheck(percent) {
-  if (percent >= 0.66) {
-    let comment = document.getElementById("has66majority");
-    comment.classList.remove("d-none");
+
+// when the data source is toggled, show the respective data
+function setDataSources() {
+  const datasourceCC = document.querySelector('input[name="datasourcesCC"]:checked').value;
+  const marketshareSuccessCC = document.getElementById("marketshareSuccessCC");
+
+  const datasourceEC = document.querySelector('input[name="datasourcesEC"]:checked').value;
+  const marketshareSuccessEC = document.getElementById("marketshareSuccessEC");
+
+  // migalabs elements
+  const marketshareWarningMigaLabs = document.getElementById("marketshareWarningMigaLabs");
+  const distributionMigaLabs = document.getElementById("distributionMigaLabs");
+  const majorityMsgMigaLabs = document.getElementById("majorityMsgMigaLabs");
+  const extremeMajorityMsgMigaLabs = document.getElementById("extremeMajorityMsgMigaLabs");
+  // blockprint elements
+  const marketshareWarningBlockprint = document.getElementById("marketshareWarningBlockprint");
+  const distributionBlockprint = document.getElementById("distributionBlockprint");
+  const majorityMsgBlockprint = document.getElementById("majorityMsgBlockprint");
+  const extremeMajorityMsgBlockprint = document.getElementById("extremeMajorityMsgBlockprint");
+  // ethernodes elements
+  const marketshareWarningEthernodes = document.getElementById("marketshareWarningEthernodes");
+  const distributionEthernodes = document.getElementById("distributionEthernodes");
+  // const majorityMsgEthernodes = document.getElementById("majorityMsgEthernodes");
+  // const extremeMajorityMsgEthernodes = document.getElementById("extremeMajorityMsgEthernodes");
+
+  // hide all elements to reset
+  distributionMigaLabs.classList.add("d-none");
+  distributionBlockprint.classList.add("d-none");
+  distributionEthernodes.classList.add("d-none");
+
+  marketshareWarningMigaLabs.classList.add("d-none");
+  marketshareWarningBlockprint.classList.add("d-none");
+  marketshareWarningEthernodes.classList.add("d-none");
+
+  marketshareSuccessCC.classList.add("d-none");
+  marketshareSuccessEC.classList.add("d-none");
+
+  majorityMsgMigaLabs.classList.add("d-none");
+  majorityMsgBlockprint.classList.add("d-none");
+  // majorityMsgEthernodes.classList.add("d-none");
+
+  extremeMajorityMsgMigaLabs.classList.add("d-none");
+  extremeMajorityMsgBlockprint.classList.add("d-none");
+  // extremeMajorityEthernodes.classList.add("d-none");
+
+  // show only relevant elements
+  if (datasourceCC == "migalabs") {
+    updateClientSwitchForm(migalabsTopClient);
+    distributionMigaLabs.classList.remove("d-none");
+    if (migalabsHasMajority && !migalabsHasExtremeMajority) {
+      marketshareWarningMigaLabs.classList.remove("d-none");
+      majorityMsgMigaLabs.classList.remove("d-none");
+    }
+    if (migalabsHasExtremeMajority) {
+      marketshareWarningMigaLabs.classList.remove("d-none");
+      extremeMajorityMsgMigaLabs.classList.remove("d-none");
+    }
+    if (!migalabsHasMajority) {
+      marketshareSuccessCC.classList.remove("d-none");
+    }
+  }
+  if (datasourceCC == "blockprint") {
+    updateClientSwitchForm(blockprintTopClient);
+    distributionBlockprint.classList.remove("d-none");
+    if (blockprintHasMajority && !blockprintHasExtremeMajority) {
+      marketshareWarningBlockprint.classList.remove("d-none");
+      majorityMsgBlockprint.classList.remove("d-none");
+    }
+    if (blockprintHasExtremeMajority) {
+      marketshareWarningBlockprint.classList.remove("d-none");
+      extremeMajorityMsgBlockprint.classList.remove("d-none");
+    }
+    if (!blockprintHasMajority) {
+      marketshareSuccessCC.classList.remove("d-none");
+    }
+  }
+  if (datasourceEC == "ethernodes") {
+    // updateClientSwitchForm(ethernodesTopClient);
+    distributionEthernodes.classList.remove("d-none");
+    if (ethernodesHasMajority && !ethernodesHasExtremeMajority) {
+      marketshareWarningEthernodes.classList.remove("d-none");
+      // majorityMsgEthernodes.classList.remove("d-none");
+    }
+    if (ethernodesHasExtremeMajority) {
+      marketshareWarningEthernodes.classList.remove("d-none");
+      // extremeMajorityMsgEthernodes.classList.remove("d-none");
+    }
+    if (!ethernodesHasMajority) {
+      marketshareSuccessEC.classList.remove("d-none");
+    }
   }
 }
-
 
 

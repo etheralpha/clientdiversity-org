@@ -1,0 +1,7 @@
+[build]
+	functions = "/_netlify/functions"
+	node_bundler = "esbuild"
+
+[dev]
+	command = 'bundle exec jekyll serve'
+	publish = '_site/'
