@@ -438,27 +438,35 @@ layout: default
                       {{site.data.icons.new_tab}}
                     </a>
                   </th>
-                  <td>
-                    <a href="{{client.github}}" class="text-decoration-none link-dark" target="_blank">
-                      {{site.data.icons.github}}
-                      {{site.data.icons.new_tab}}
-                    </a>
-                  </td>
-                  <td>
-                    <a href="{{client.docs}}" class="text-decoration-none link-dark" target="_blank">
-                      {{site.data.icons.docs}}
-                      {{site.data.icons.new_tab}}
-                    </a>
-                  </td>
-                  {%- if client.name == "Grandine" -%}
-                    <td>(none)</td>
+                  {%- if client.github -%}
+                    <td>
+                      <a href="{{client.github}}" class="text-decoration-none link-dark" target="_blank">
+                        {{site.data.icons.github}}
+                        {{site.data.icons.new_tab}}
+                      </a>
+                    </td>
                   {%- else -%}
+                    <td>(none)</td>
+                  {%- endif -%}
+                  {%- if client.docs -%}
+                    <td>
+                      <a href="{{client.docs}}" class="text-decoration-none link-dark" target="_blank">
+                        {{site.data.icons.docs}}
+                        {{site.data.icons.new_tab}}
+                      </a>
+                    </td>
+                  {%- else -%}
+                    <td>(none)</td>
+                  {%- endif -%}
+                  {%- if client.discord -%}
                     <td>
                       <a href="{{client.discord}}" class="text-decoration-none link-dark" target="_blank">
                         {{site.data.icons.discord}}
                         {{site.data.icons.new_tab}}
                       </a>
                     </td>
+                  {%- else -%}
+                    <td>(none)</td>
                   {%- endif -%}
                   <td>{{client.support}}</td>
                 </tr>
@@ -493,27 +501,35 @@ layout: default
                       {{site.data.icons.new_tab}}
                     </a>
                   </th>
-                  <td>
-                    <a href="{{client.github}}" class="text-decoration-none link-dark" target="_blank">
-                      {{site.data.icons.github}}
-                      {{site.data.icons.new_tab}}
-                    </a>
-                  </td>
-                  <td>
-                    <a href="{{client.docs}}" class="text-decoration-none link-dark" target="_blank">
-                      {{site.data.icons.docs}}
-                      {{site.data.icons.new_tab}}
-                    </a>
-                  </td>
-                  {%- if client.name == "Grandine" -%}
-                    <td>(none)</td>
+                  {%- if client.github -%}
+                    <td>
+                      <a href="{{client.github}}" class="text-decoration-none link-dark" target="_blank">
+                        {{site.data.icons.github}}
+                        {{site.data.icons.new_tab}}
+                      </a>
+                    </td>
                   {%- else -%}
+                    <td>(none)</td>
+                  {%- endif -%}
+                  {%- if client.docs -%}
+                    <td>
+                      <a href="{{client.docs}}" class="text-decoration-none link-dark" target="_blank">
+                        {{site.data.icons.docs}}
+                        {{site.data.icons.new_tab}}
+                      </a>
+                    </td>
+                  {%- else -%}
+                    <td>(none)</td>
+                  {%- endif -%}
+                  {%- if client.discord -%}
                     <td>
                       <a href="{{client.discord}}" class="text-decoration-none link-dark" target="_blank">
                         {{site.data.icons.discord}}
                         {{site.data.icons.new_tab}}
                       </a>
                     </td>
+                  {%- else -%}
+                    <td>(none)</td>
                   {%- endif -%}
                   <td>{{client.support}}</td>
                 </tr>
