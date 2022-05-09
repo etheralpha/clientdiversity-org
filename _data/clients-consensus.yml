@@ -3,7 +3,8 @@
 #   github: 
 #   docs: 
 #   discord: 
-#   support: # Linux, Windows, macOS
+#   status:     # (select one) alpha, beta, stable
+#   support:    # Linux, Windows, macOS
 #   opensource: # true/false
 
 
@@ -12,6 +13,7 @@
   github: https://github.com/sifraitech/grandine
   docs: https://github.com/sifraitech/grandine
   discord: https://discord.gg/H9XCdUSyZd
+  status: 
   support: Linux, Windows, macOS
   opensource: false
 - name: Lighthouse
@@ -19,6 +21,7 @@
   github: https://github.com/sigp/lighthouse/
   docs: https://lighthouse-book.sigmaprime.io/
   discord: https://discord.gg/cyAszAh
+  status: stable
   support: Linux, Windows, macOS
   opensource: true
 - name: Lodestar
@@ -27,6 +30,7 @@
   docs: https://hackmd.io/@philknows/rk5cDvKmK
   # docs: https://chainsafe.github.io/lodestar/
   discord: https://discord.gg/yjyvFRP
+  status: stable
   support: Linux, Windows, macOS # windows theoretically works but not tested yet https://github.com/ChainSafe/lodestar/issues/3519
   opensource: true
 - name: Nimbus
@@ -34,6 +38,7 @@
   github: https://github.com/status-im/nimbus
   docs: https://nimbus.team/docs/
   discord: https://discord.gg/qnjVyhatUa
+  status: stable
   support: Linux, Windows, macOS
   opensource: true
 - name: Prysm
@@ -41,6 +46,7 @@
   github: https://github.com/prysmaticlabs/prysm
   docs: https://docs.prylabs.network/docs/getting-started/
   discord: https://discord.gg/YMVYzv6
+  status: stable
   support: Linux, Windows, macOS
   opensource: true
 - name: Teku
@@ -48,6 +54,7 @@
   github: https://github.com/ConsenSys/teku
   docs: https://docs.teku.consensys.net/en/latest/
   discord: https://discord.gg/9mCVSY6
+  status: stable
   support: Linux, Windows, macOS
   opensource: true
 

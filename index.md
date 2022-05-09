@@ -425,6 +425,7 @@ layout: default
                 <th scope="col">Github</th>
                 <th scope="col" style="min-width: 3.8rem;">Docs</th>
                 <th scope="col">Discord</th>
+                <th scope="col">Status</th>
                 <th scope="col">Support</th>
               </tr>
             </thead>
@@ -468,6 +469,11 @@ layout: default
                   {%- else -%}
                     <td>(none)</td>
                   {%- endif -%}
+                  {%- if client.status -%}
+                    <td>{{client.status}}</td>
+                  {%- else -%}
+                    <td>(unknown)</td>
+                  {%- endif -%}
                   <td>{{client.support}}</td>
                 </tr>
               {%- endfor -%}
@@ -488,6 +494,7 @@ layout: default
                 <th scope="col">Github</th>
                 <th scope="col" style="min-width: 3.8rem;">Docs</th>
                 <th scope="col">Discord</th>
+                <th scope="col">Status</th>
                 <th scope="col">Support</th>
               </tr>
             </thead>
@@ -530,6 +537,11 @@ layout: default
                     </td>
                   {%- else -%}
                     <td>(none)</td>
+                  {%- endif -%}
+                  {%- if client.status -%}
+                    <td>{{client.status}}</td>
+                  {%- else -%}
+                    <td>(unknown)</td>
                   {%- endif -%}
                   <td>{{client.support}}</td>
                 </tr>

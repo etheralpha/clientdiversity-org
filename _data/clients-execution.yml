@@ -3,6 +3,7 @@
 #   github: 
 #   docs: 
 #   discord: 
+#   status:     # (select one) alpha, beta, stable
 #   support:    # Linux, Windows, macOS
 #   opensource: # true/false
 
@@ -12,6 +13,7 @@
   github: https://github.com/hyperledger/besu/
   docs: https://besu.hyperledger.org/en/stable/
   discord: https://discord.com/invite/hyperledger
+  status: stable
   support: Linux, Windows, macOS
   opensource: true
 - name: Erigon (Turbo-Geth)
@@ -19,6 +21,7 @@
   github: https://github.com/ledgerwatch/erigon
   docs: https://github.com/ledgerwatch/erigon#usage
   discord: # invite only
+  status: 
   support: Linux, Windows, macOS
   opensource: true
 - name: Geth
@@ -26,6 +29,7 @@
   github: https://github.com/ethereum/go-ethereum
   docs: https://geth.ethereum.org/docs/
   discord: https://discord.com/invite/nthXNEv
+  status: stable
   support: Linux, Windows, macOS
   opensource: true
 - name: Nethermind
@@ -33,6 +37,7 @@
   github: https://github.com/NethermindEth/nethermind
   docs: https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started
   discord: https://discord.com/invite/PaCMRFdvWT
+  status: stable
   support: Linux, Windows, macOS
   opensource: true
 - name: OpenEthereum
@@ -40,6 +45,7 @@
   github: https://github.com/openethereum/openethereum
   docs: https://openethereum.github.io/
   discord: https://discord.io/openethereum
+  status: deprecated
   support: Linux, Windows, macOS
   opensource: true
 
