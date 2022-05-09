@@ -236,12 +236,12 @@ layout: default
                   <a href="/client-fingerprinting" style="color: #055160;">(read more)</a>:
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="datasourcesCC" id="dataSource1" value="migalabs"  onclick="setDataSources();" checked>
-                  <label class="form-check-label" for="dataSource1">Miga Labs</label>
+                  <input class="form-check-input" type="radio" name="datasourcesCC" id="dataSource2" value="blockprint"  onclick="setDataSources();" checked>
+                  <label class="form-check-label" for="dataSource2">Sigma Prime's Blockprint</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="datasourcesCC" id="dataSource2" value="blockprint"  onclick="setDataSources();">
-                  <label class="form-check-label" for="dataSource2">Sigma Prime's Blockprint</label>
+                  <input class="form-check-input" type="radio" name="datasourcesCC" id="dataSource1" value="migalabs"  onclick="setDataSources();">
+                  <label class="form-check-label" for="dataSource1">Miga Labs</label>
                 </div>
               </div>
             </div>
