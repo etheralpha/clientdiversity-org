@@ -37,8 +37,7 @@ exports.handler = async (event, context) => {
         }
       }
       formattedResponse["others"] = others;
-      console.log(response);
-      console.log(formattedResponse)
+      console.log({"ethernodes":formattedResponse});
       return formattedResponse;
     } catch (err) {
       return {

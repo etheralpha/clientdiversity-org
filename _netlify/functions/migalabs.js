@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-const API_ENDPOINT = 'https://migalabs.es/api/v1/client-distribution?crawler=london';
+const API_ENDPOINT = 'https://migalabs.es/api/v1/client-distribution';
 let data;
 let lastUpdate = 0;
 
@@ -22,7 +22,7 @@ exports.handler = async (event, context) => {
   const fetchData = async () => {
     try {
       const response = await fetch(API_ENDPOINT).then( response => response.json() );
-      console.log(response);
+      console.log({"migalabs":response});
       return response;
     } catch (err) {
       return {

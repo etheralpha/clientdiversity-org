@@ -35,7 +35,7 @@ exports.handler = async (event, context) => {
 
     try {
       const response = await fetch(blockprintEndpoint).then( response => response.json() );
-      console.log(response);
+      console.log({"blockprint":response});
       return response;
     } catch (err) {
       return {
