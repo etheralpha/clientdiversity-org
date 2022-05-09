@@ -6,7 +6,7 @@ let lastUpdate = 0;
 
 // https://migalabs.es/api-documentation
 // https://migalabs.es/api/v1/client-distribution?crawler=london
-// example MigaLabs response:
+// example migalabs response:
 // {
 //     "Grandine": 26,
 //     "Lighthouse": 664,

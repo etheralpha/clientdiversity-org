@@ -5,7 +5,7 @@ let lastUpdate = 0;
 
 
 // https://ethernodes.org/api/clients
-// example MigaLabs response:
+// example ethernodes response:
 // [
 //   { "client":"geth",         "value":4421 },
 //   { "client":"openethereum", "value":333  },

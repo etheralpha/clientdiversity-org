@@ -5,7 +5,7 @@ let lastUpdate = 0;
 
 // https://github.com/sigp/blockprint/blob/main/docs/api.md
 // https://api.blockprint.sigp.io/blocks_per_client/${startEpoch}/${endEpoch}
-// example Blockprint response:
+// example blockprint response:
 // {
 //   "Uncertain": 0,
 //   "Lighthouse": 46030,
