@@ -3,6 +3,15 @@
 #   date:   # format: 04-Apr-2022
 
 
+- link: https://github.com/dappnode/DAppNode/issues/389
+  title: DAppNode CL Client Diversity Support Status Tracker
+  date: 08-May-2022
+- link: https://www.youtube.com/watch?v=4AMlr6xj4MM
+  title: How client diversity builds network resilience
+  date: 25-Apr-2022
+- link: https://twitter.com/superphiz/status/1513938761968726016
+  title: Prysm marketshare drops below 50% &#127881;
+  date: 12-Apr-2022
 - link: https://dankradfeist.de/ethereum/2022/03/24/run-the-majority-client-at-your-own-peril.html
   title: Dankrad Feist (Ethereum Researcher) on Client Diversity
   date: 24-Mar-2022
@@ -24,6 +33,9 @@
 - link: https://youtu.be/TQN7QL2lsy0?t=1353
   title: ETHDenver - Cayman Nava & Preston Van Loon on client diversity
   date: 18-Feb-2022
+- link: https://www.attestant.io/posts/helping-client-diversity/
+  title: Attestant - Helping Client Diversity
+  date: 15-Feb-2022
 - link: https://youtu.be/aK4fx1efCDU?t=230
   title: The Daily Gwei - Client diversity chat
   date: 14-Feb-2022
