@@ -29,6 +29,10 @@ blank_to_lighthouse:
     author: CoinCashew
     type: doc
     note: w/ Ubuntu
+  - link: https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-testnet
+    author: CoinCashew
+    type: doc
+    note: w/ Ubuntu - Testnet
 blank_to_lodestar:
   - link: https://youtu.be/0xo85F-_fag
     author: Phil Ngo
@@ -42,6 +46,10 @@ blank_to_lodestar:
     author: CoinCashew
     type: doc
     note: w/ Ubuntu
+  - link: https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-testnet
+    author: CoinCashew
+    type: doc
+    note: w/ Ubuntu - Testnet
 blank_to_nimbus:
   - link: https://someresat.medium.com/guide-to-staking-on-ethereum-2-0-ubuntu-nimbus-e86bdee8c550
     author: Somer Esat
@@ -51,6 +59,10 @@ blank_to_nimbus:
     author: CoinCashew
     type: doc
     note: w/ Ubuntu
+  - link: https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-testnet
+    author: CoinCashew
+    type: doc
+    note: w/ Ubuntu - Testnet
 blank_to_prysm:
   - link: https://someresat.medium.com/guide-to-staking-on-ethereum-2-0-ubuntu-prysm-56f681646f74
     author: Somer Esat
@@ -60,6 +72,10 @@ blank_to_prysm:
     author: CoinCashew
     type: doc
     note: w/ Ubuntu
+  - link: https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-testnet
+    author: CoinCashew
+    type: doc
+    note: w/ Ubuntu - Testnet
 blank_to_teku:
   - link: https://someresat.medium.com/guide-to-staking-on-ethereum-2-0-ubuntu-teku-e4247e7c75a1
     author: Somer Esat
@@ -69,6 +85,10 @@ blank_to_teku:
     author: CoinCashew
     type: doc
     note: w/ Ubuntu
+  - link: https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-testnet
+    author: CoinCashew
+    type: doc
+    note: w/ Ubuntu - Testnet
 blank_to_grandine:
 lighthouse_to_lodestar:
   - link: https://eth-docker.net/docs/Support/SwitchClient

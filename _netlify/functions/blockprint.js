@@ -5,7 +5,7 @@ let lastUpdate = 0;
 
 // https://github.com/sigp/blockprint/blob/main/docs/api.md
 // https://api.blockprint.sigp.io/blocks_per_client/${startEpoch}/${endEpoch}
-// example Blockprint response:
+// example blockprint response:
 // {
 //   "Uncertain": 0,
 //   "Lighthouse": 46030,
@@ -35,7 +35,7 @@ exports.handler = async (event, context) => {
 
     try {
       const response = await fetch(blockprintEndpoint).then( response => response.json() );
-      console.log(response);
+      console.log({"blockprint":response});
       return response;
     } catch (err) {
       return {

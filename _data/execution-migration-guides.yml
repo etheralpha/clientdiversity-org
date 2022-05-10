@@ -25,6 +25,10 @@ blank_to_besu:
     author: CoinCashew
     type: doc
     note: w/ Ubuntu
+  - link: https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-testnet
+    author: CoinCashew
+    type: doc
+    note: w/ Ubuntu - Testnet
 blank_to_erigon:
   - link: https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet
     author: CoinCashew
@@ -35,11 +39,19 @@ blank_to_geth:
     author: CoinCashew
     type: doc
     note: w/ Ubuntu
+  - link: https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-testnet
+    author: CoinCashew
+    type: doc
+    note: w/ Ubuntu - Testnet
 blank_to_nethermind:
   - link: https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet
     author: CoinCashew
     type: doc
     note: w/ Ubuntu
+  - link: https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-testnet
+    author: CoinCashew
+    type: doc
+    note: w/ Ubuntu - Testnet
 besu_to_erigon:
 besu_to_geth:
 besu_to_nethermind:
@@ -47,6 +59,10 @@ erigon_to_besu:
 erigon_to_geth:
 erigon_to_nethermind:
 geth_to_besu:
+  - link: https://medium.com/@frank_56417/switch-to-besu-as-el-client-for-your-rocketpool-minipool-node-de7d10e0ab86
+    author: Frank
+    type: doc
+    note: w/ Rocket Pool
 geth_to_erigon:
 geth_to_nethermind:
 nethermind_to_besu:
