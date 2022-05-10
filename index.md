@@ -697,6 +697,9 @@ layout: default
           <li class="mb-2">
             <a href="https://github.com/ethereum/keymanager-APIs" target="_blank" class="p-0 text-muted text-capitalize">keymanager APIs</a>
           </li>
+          <li class="mb-2">
+            <a href="https://www.kotal.co" target="_blank" class="p-0 text-muted text-capitalize">Kotal</a>
+          </li>
         </ul>
       </div>
       <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
