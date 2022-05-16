@@ -21,7 +21,7 @@
   github: https://github.com/ledgerwatch/erigon
   docs: https://github.com/ledgerwatch/erigon#usage
   discord: # invite only
-  status: 
+  status: alpha & beta
   support: Linux, Windows, macOS
   opensource: true
 - name: Geth
@@ -48,4 +48,27 @@
   status: deprecated
   support: Linux, Windows, macOS
   opensource: true
-
+- name: EthereumJS
+  link: https://ethereumjs.github.io/
+  github: https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client
+  docs: https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client/docs
+  discord: https://discord.gg/TNwARpR
+  status: alpha
+  support: Linux, Windows, macOS
+  opensource: true
+- name: Akula
+  link:
+  github: https://github.com/akula-bft/akula
+  docs:
+  discord:
+  status: pre-alpha
+  support:
+  opensource: true
+- name: Silkworm
+  link:
+  github: https://github.com/torquem-ch/silkworm
+  docs:
+  discord:
+  status: pre-alpha
+  support:
+  opensource: true
