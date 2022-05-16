@@ -502,7 +502,6 @@ layout: default
               {%- for client in site.data.clients-execution -%}
                 <tr>
                   <th scope="row">
-                    {%- if client.name == "OpenEthereum" -%}*{%- endif -%}
                     <a href="{{client.link}}" class="link-dark" target="_blank">
                       {{client.name}}
                       {{site.data.icons.new_tab}}
@@ -548,9 +547,6 @@ layout: default
               {%- endfor -%}
             </tbody>
           </table>
-        </div>
-        <div class="text-center">
-          <small>* OpenEthereum is deprecated</small>
         </div>
       </div>
     </div>
