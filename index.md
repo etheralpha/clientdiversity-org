@@ -434,10 +434,14 @@ layout: default
                 <tr>
                   <th scope="row">
                     {%- if client.name == "Grandine" -%}*{%- endif -%}
-                    <a href="{{client.link}}" class="link-dark" target="_blank">
+                    {%- if client.link -%}
+                      <a href="{{client.link}}" class="link-dark" target="_blank">
                       {{client.name}}
                       {{site.data.icons.new_tab}}
-                    </a>
+                      </a>
+                    {%- else -%}
+                      {{client.name}}
+                    {%- endif -%}
                   </th>
                   {%- if client.github -%}
                     <td>
@@ -474,7 +478,11 @@ layout: default
                   {%- else -%}
                     <td>(unknown)</td>
                   {%- endif -%}
-                  <td>{{client.support}}</td>
+                  {%- if client.support -%}
+                    <td>{{client.support}}</td>
+                  {%- else -%}
+                    <td>(unknown)</td>
+                  {%- endif -%}
                 </tr>
               {%- endfor -%}
             </tbody>
@@ -502,10 +510,14 @@ layout: default
               {%- for client in site.data.clients-execution -%}
                 <tr>
                   <th scope="row">
-                    <a href="{{client.link}}" class="link-dark" target="_blank">
+                    {%- if client.link -%}
+                      <a href="{{client.link}}" class="link-dark" target="_blank">
+                        {{client.name}}
+                        {{site.data.icons.new_tab}}
+                      </a>
+                    {%- else -%}
                       {{client.name}}
-                      {{site.data.icons.new_tab}}
-                    </a>
+                    {%- endif -%}
                   </th>
                   {%- if client.github -%}
                     <td>
@@ -542,7 +554,11 @@ layout: default
                   {%- else -%}
                     <td>(unknown)</td>
                   {%- endif -%}
-                  <td>{{client.support}}</td>
+                  {%- if client.support -%}
+                    <td>{{client.support}}</td>
+                  {%- else -%}
+                    <td>(unknown)</td>
+                  {%- endif -%}
                 </tr>
               {%- endfor -%}
             </tbody>
