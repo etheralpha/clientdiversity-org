@@ -474,7 +474,11 @@ layout: default
                   {%- else -%}
                     <td>(unknown)</td>
                   {%- endif -%}
-                  <td>{{client.support}}</td>
+                  {%- if client.support -%}
+                    <td>{{client.support}}</td>
+                  {%- else -%}
+                    <td>(unknown)</td>
+                  {%- endif -%}
                 </tr>
               {%- endfor -%}
             </tbody>
@@ -543,7 +547,11 @@ layout: default
                   {%- else -%}
                     <td>(unknown)</td>
                   {%- endif -%}
-                  <td>{{client.support}}</td>
+                  {%- if client.support -%}
+                    <td>{{client.support}}</td>
+                  {%- else -%}
+                    <td>(unknown)</td>
+                  {%- endif -%}
                 </tr>
               {%- endfor -%}
             </tbody>
