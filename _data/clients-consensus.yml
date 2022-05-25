@@ -2,7 +2,7 @@
 #   link: 
 #   github: 
 #   docs: 
-#   discord: 
+#   chat: 
 #   status:     # (select one) alpha, beta, stable
 #   support:    # Linux, Windows, macOS
 #   opensource: # true/false
@@ -12,7 +12,7 @@
   link: https://sifrai.com/
   github: https://github.com/sifraitech/grandine
   docs: https://github.com/sifraitech/grandine
-  discord: https://discord.gg/H9XCdUSyZd
+  chat: https://discord.gg/H9XCdUSyZd
   status: beta
   support: Linux, Windows, macOS
   opensource: false
@@ -20,7 +20,7 @@
   link: https://lighthouse.sigmaprime.io/
   github: https://github.com/sigp/lighthouse/
   docs: https://lighthouse-book.sigmaprime.io/
-  discord: https://discord.gg/cyAszAh
+  chat: https://discord.gg/cyAszAh
   status: stable
   support: Linux, Windows, macOS
   opensource: true
@@ -29,7 +29,7 @@
   github: https://github.com/ChainSafe/lodestar
   docs: https://hackmd.io/@philknows/rk5cDvKmK
   # docs: https://chainsafe.github.io/lodestar/
-  discord: https://discord.gg/yjyvFRP
+  chat: https://discord.gg/yjyvFRP
   status: stable
   support: Linux, Windows, macOS # windows theoretically works but not tested yet https://github.com/ChainSafe/lodestar/issues/3519
   opensource: true
@@ -37,7 +37,7 @@
   link: https://nimbus.team/
   github: https://github.com/status-im/nimbus
   docs: https://nimbus.team/docs/
-  discord: https://discord.gg/qnjVyhatUa
+  chat: https://discord.gg/qnjVyhatUa
   status: stable
   support: Linux, Windows, macOS
   opensource: true
@@ -45,7 +45,7 @@
   link: https://prysmaticlabs.com/
   github: https://github.com/prysmaticlabs/prysm
   docs: https://docs.prylabs.network/docs/getting-started/
-  discord: https://discord.gg/YMVYzv6
+  chat: https://discord.gg/YMVYzv6
   status: stable
   support: Linux, Windows, macOS
   opensource: true
@@ -53,7 +53,7 @@
   link: https://consensys.net/knowledge-base/ethereum-2/teku/
   github: https://github.com/ConsenSys/teku
   docs: https://docs.teku.consensys.net/en/latest/
-  discord: https://discord.gg/9mCVSY6
+  chat: https://discord.gg/9mCVSY6
   status: stable
   support: Linux, Windows, macOS
   opensource: true

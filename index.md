@@ -424,7 +424,7 @@ layout: default
                 <th scope="col" style="min-width: 8rem;">Client</th>
                 <th scope="col">Github</th>
                 <th scope="col" style="min-width: 3.8rem;">Docs</th>
-                <th scope="col">Discord</th>
+                <th scope="col">Chat</th>
                 <th scope="col">Status</th>
                 <th scope="col">Support</th>
               </tr>
@@ -463,10 +463,17 @@ layout: default
                   {%- else -%}
                     <td>(none)</td>
                   {%- endif -%}
-                  {%- if client.discord -%}
+                  {%- if client.chat -%}
+                    {%- assign chat_icon = site.data.icons.chat -%}
+                    {%- if client.chat contains "discord" -%}
+                      {%- assign chat_icon = site.data.icons.discord -%}
+                    {%- endif -%}
+                    {%- if client.chat contains "t.me" -%}
+                      {%- assign chat_icon = site.data.icons.telegram -%}
+                    {%- endif -%}
                     <td>
-                      <a href="{{client.discord}}" class="text-decoration-none link-dark" target="_blank">
-                        {{site.data.icons.discord}}
+                      <a href="{{client.chat}}" class="text-decoration-none link-dark" target="_blank">
+                        {{chat_icon}}
                         {{site.data.icons.new_tab}}
                       </a>
                     </td>
@@ -501,7 +508,7 @@ layout: default
                 <th scope="col" style="min-width: 8rem;">Client</th>
                 <th scope="col">Github</th>
                 <th scope="col" style="min-width: 3.8rem;">Docs</th>
-                <th scope="col">Discord</th>
+                <th scope="col">Chat</th>
                 <th scope="col">Status</th>
                 <th scope="col">Support</th>
               </tr>
@@ -539,10 +546,17 @@ layout: default
                   {%- else -%}
                     <td>(none)</td>
                   {%- endif -%}
-                  {%- if client.discord -%}
+                  {%- if client.chat -%}
+                    {%- assign chat_icon = site.data.icons.chat -%}
+                    {%- if client.chat contains "discord" -%}
+                      {%- assign chat_icon = site.data.icons.discord -%}
+                    {%- endif -%}
+                    {%- if client.chat contains "t.me" -%}
+                      {%- assign chat_icon = site.data.icons.telegram -%}
+                    {%- endif -%}
                     <td>
-                      <a href="{{client.discord}}" class="text-decoration-none link-dark" target="_blank">
-                        {{site.data.icons.discord}}
+                      <a href="{{client.chat}}" class="text-decoration-none link-dark" target="_blank">
+                        {{chat_icon}}
                         {{site.data.icons.new_tab}}
                       </a>
                     </td>

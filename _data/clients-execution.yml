@@ -2,7 +2,7 @@
 #   link: 
 #   github: 
 #   docs: 
-#   discord: 
+#   chat: 
 #   status:     # (select one) alpha, beta, stable
 #   support:    # Linux, Windows, macOS
 #   opensource: # true/false
@@ -12,7 +12,7 @@
   link: https://hyperledger.org/use/besu
   github: https://github.com/hyperledger/besu/
   docs: https://besu.hyperledger.org/en/stable/
-  discord: https://discord.com/invite/hyperledger
+  chat: https://discord.com/invite/hyperledger
   status: stable
   support: Linux, Windows, macOS
   opensource: true
@@ -20,7 +20,7 @@
   link: 
   github: https://github.com/ledgerwatch/erigon
   docs: https://github.com/ledgerwatch/erigon#usage
-  discord: # invite only
+  chat: # invite only
   status: alpha & beta
   support: Linux, Windows, macOS
   opensource: true
@@ -28,7 +28,7 @@
   link: https://geth.ethereum.org/
   github: https://github.com/ethereum/go-ethereum
   docs: https://geth.ethereum.org/docs/
-  discord: https://discord.com/invite/nthXNEv
+  chat: https://discord.com/invite/nthXNEv
   status: stable
   support: Linux, Windows, macOS
   opensource: true
@@ -36,7 +36,7 @@
   link: http://nethermind.io/
   github: https://github.com/NethermindEth/nethermind
   docs: https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started
-  discord: https://discord.com/invite/PaCMRFdvWT
+  chat: https://discord.com/invite/PaCMRFdvWT
   status: stable
   support: Linux, Windows, macOS
   opensource: true
@@ -44,7 +44,7 @@
   link: https://openethereum.org/
   github: https://github.com/openethereum/openethereum
   docs: https://openethereum.github.io/
-  discord: https://discord.io/openethereum
+  chat: https://discord.io/openethereum
   status: deprecated
   support: Linux, Windows, macOS
   opensource: true
@@ -52,23 +52,23 @@
   link: https://ethereumjs.github.io/
   github: https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client
   docs: https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client/docs
-  discord: https://discord.gg/TNwARpR
+  chat: https://discord.gg/TNwARpR
   status: alpha
   support: Linux, Windows, macOS
   opensource: true
 - name: Akula
-  link:
+  link: 
   github: https://github.com/akula-bft/akula
-  docs:
-  discord:
+  docs: 
+  chat: https://t.me/akula_bft
   status: pre-alpha
   support:
   opensource: true
 - name: Silkworm
-  link:
+  link: 
   github: https://github.com/torquem-ch/silkworm
-  docs:
-  discord:
+  docs: 
+  chat: 
   status: pre-alpha
-  support:
+  support: 
   opensource: true
