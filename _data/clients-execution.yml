@@ -4,7 +4,7 @@
 #   docs: 
 #   chat: 
 #   status:     # (select one) alpha, beta, stable
-#   support:    # Linux, Windows, macOS
+#   support:    # Linux, Win, macOS, ARM
 #   opensource: # true/false
 
 
@@ -14,7 +14,7 @@
   docs: https://besu.hyperledger.org/en/stable/
   chat: https://discord.com/invite/hyperledger
   status: stable
-  support: Linux, Windows, macOS
+  support: Linux, Win, macOS
   opensource: true
 - name: Erigon (Turbo-Geth)
   link: 
@@ -22,7 +22,7 @@
   docs: https://github.com/ledgerwatch/erigon#usage
   chat: # invite only
   status: alpha & beta
-  support: Linux, Windows, macOS
+  support: Linux, Win, macOS
   opensource: true
 - name: Geth
   link: https://geth.ethereum.org/
@@ -30,7 +30,7 @@
   docs: https://geth.ethereum.org/docs/
   chat: https://discord.com/invite/nthXNEv
   status: stable
-  support: Linux, Windows, macOS
+  support: Linux, Win, macOS, ARM
   opensource: true
 - name: Nethermind
   link: http://nethermind.io/
@@ -38,7 +38,7 @@
   docs: https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started
   chat: https://discord.com/invite/PaCMRFdvWT
   status: stable
-  support: Linux, Windows, macOS
+  support: Linux, Win, macOS
   opensource: true
 - name: OpenEthereum
   link: https://openethereum.org/
@@ -46,7 +46,7 @@
   docs: https://openethereum.github.io/
   chat: https://discord.io/openethereum
   status: deprecated
-  support: Linux, Windows, macOS
+  support: Linux, Win, macOS
   opensource: true
 - name: EthereumJS
   link: https://ethereumjs.github.io/
@@ -54,7 +54,7 @@
   docs: https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client/docs
   chat: https://discord.gg/TNwARpR
   status: alpha
-  support: Linux, Windows, macOS
+  support: Linux, Win, macOS
   opensource: true
 - name: Akula
   link: 

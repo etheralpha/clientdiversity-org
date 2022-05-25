@@ -4,7 +4,7 @@
 #   docs: 
 #   chat: 
 #   status:     # (select one) alpha, beta, stable
-#   support:    # Linux, Windows, macOS
+#   support:    # Linux, Win, macOS, ARM
 #   opensource: # true/false
 
 
@@ -14,7 +14,7 @@
   docs: https://github.com/sifraitech/grandine
   chat: https://discord.gg/H9XCdUSyZd
   status: beta
-  support: Linux, Windows, macOS
+  support: Linux, Win, macOS
   opensource: false
 - name: Lighthouse
   link: https://lighthouse.sigmaprime.io/
@@ -22,7 +22,7 @@
   docs: https://lighthouse-book.sigmaprime.io/
   chat: https://discord.gg/cyAszAh
   status: stable
-  support: Linux, Windows, macOS
+  support: Linux, Win, macOS, ARM
   opensource: true
 - name: Lodestar
   link: https://lodestar.chainsafe.io/
@@ -31,7 +31,7 @@
   # docs: https://chainsafe.github.io/lodestar/
   chat: https://discord.gg/yjyvFRP
   status: stable
-  support: Linux, Windows, macOS # windows theoretically works but not tested yet https://github.com/ChainSafe/lodestar/issues/3519
+  support: Linux, Win, macOS # windows theoretically works but not tested yet https://github.com/ChainSafe/lodestar/issues/3519
   opensource: true
 - name: Nimbus
   link: https://nimbus.team/
@@ -39,7 +39,7 @@
   docs: https://nimbus.team/docs/
   chat: https://discord.gg/qnjVyhatUa
   status: stable
-  support: Linux, Windows, macOS
+  support: Linux, Win, macOS, ARM
   opensource: true
 - name: Prysm
   link: https://prysmaticlabs.com/
@@ -47,7 +47,7 @@
   docs: https://docs.prylabs.network/docs/getting-started/
   chat: https://discord.gg/YMVYzv6
   status: stable
-  support: Linux, Windows, macOS
+  support: Linux, Win, macOS
   opensource: true
 - name: Teku
   link: https://consensys.net/knowledge-base/ethereum-2/teku/
@@ -55,6 +55,6 @@
   docs: https://docs.teku.consensys.net/en/latest/
   chat: https://discord.gg/9mCVSY6
   status: stable
-  support: Linux, Windows, macOS
+  support: Linux, Win, macOS
   opensource: true
 
