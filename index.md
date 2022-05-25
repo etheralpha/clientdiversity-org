@@ -434,10 +434,14 @@ layout: default
                 <tr>
                   <th scope="row">
                     {%- if client.name == "Grandine" -%}*{%- endif -%}
-                    <a href="{{client.link}}" class="link-dark" target="_blank">
+                    {%- if client.link -%}
+                      <a href="{{client.link}}" class="link-dark" target="_blank">
                       {{client.name}}
                       {{site.data.icons.new_tab}}
-                    </a>
+                      </a>
+                    {%- else -%}
+                      {{client.name}}
+                    {%- endif -%}
                   </th>
                   {%- if client.github -%}
                     <td>
@@ -507,10 +511,14 @@ layout: default
                 <tr>
                   <th scope="row">
                     {%- if client.name == "OpenEthereum" -%}*{%- endif -%}
-                    <a href="{{client.link}}" class="link-dark" target="_blank">
+                    {%- if client.link -%}
+                      <a href="{{client.link}}" class="link-dark" target="_blank">
                       {{client.name}}
                       {{site.data.icons.new_tab}}
-                    </a>
+                      </a>
+                    {%- else -%}
+                      {{client.name}}
+                    {%- endif -%}
                   </th>
                   {%- if client.github -%}
                     <td>
