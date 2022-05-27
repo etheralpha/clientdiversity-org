@@ -8,6 +8,14 @@
 #   opensource: # true/false
 
 
+- name: Akula
+  link: 
+  github: https://github.com/akula-bft/akula
+  docs: 
+  chat: https://t.me/akula_bft
+  status: pre-alpha
+  support:
+  opensource: true
 - name: Besu
   link: https://hyperledger.org/use/besu
   github: https://github.com/hyperledger/besu/
@@ -22,6 +30,14 @@
   docs: https://github.com/ledgerwatch/erigon#usage
   chat: # invite only
   status: alpha & beta
+  support: Linux, Win, macOS
+  opensource: true
+- name: EthereumJS
+  link: https://ethereumjs.github.io/
+  github: https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client
+  docs: https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client/docs
+  chat: https://discord.gg/TNwARpR
+  status: alpha
   support: Linux, Win, macOS
   opensource: true
 - name: Geth
@@ -40,6 +56,14 @@
   status: stable
   support: Linux, Win, macOS
   opensource: true
+- name: Nimbus
+  link: https://nimbus.team/
+  github: https://github.com/status-im/nimbus-eth1
+  docs: https://github.com/status-im/nimbus-eth1/tree/master/doc
+  chat: https://discord.gg/qnjVyhatUa
+  status: pre-alpha
+  support: 
+  opensource: true
 - name: OpenEthereum
   link: https://openethereum.org/
   github: https://github.com/openethereum/openethereum
@@ -48,35 +72,11 @@
   status: deprecated
   support: Linux, Win, macOS
   opensource: true
-- name: EthereumJS
-  link: https://ethereumjs.github.io/
-  github: https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client
-  docs: https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client/docs
-  chat: https://discord.gg/TNwARpR
-  status: alpha
-  support: Linux, Win, macOS
-  opensource: true
-- name: Akula
-  link: 
-  github: https://github.com/akula-bft/akula
-  docs: 
-  chat: https://t.me/akula_bft
-  status: pre-alpha
-  support:
-  opensource: true
 - name: Silkworm
   link: 
   github: https://github.com/torquem-ch/silkworm
   docs: 
   chat: 
-  status: pre-alpha
-  support: 
-  opensource: true
-- name: Nimbus
-  link: https://nimbus.team/
-  github: https://github.com/status-im/nimbus-eth1
-  docs: https://github.com/status-im/nimbus-eth1/tree/master/doc
-  chat: https://discord.gg/qnjVyhatUa
   status: pre-alpha
   support: 
   opensource: true
