@@ -1,10 +1,11 @@
-# - name: 
-#   link: 
-#   github: 
-#   docs: 
-#   chat: 
+# - name:       # client name
+#   link:       # link to website
+#   github:     # link to github
+#   docs:       # link to documentation
+#   chat:       # link to community chat
 #   status:     # (select one) alpha, beta, stable
 #   support:    # Linux, Win, macOS, ARM
+#   donate:     # link to gitcoin or etherscan address
 #   opensource: # true/false
 
 
@@ -15,6 +16,7 @@
   chat: https://discord.gg/H9XCdUSyZd
   status: beta
   support: Linux, Win, macOS
+  donate: 
   opensource: false
 - name: Lighthouse
   link: https://lighthouse.sigmaprime.io/
@@ -23,6 +25,7 @@
   chat: https://discord.gg/cyAszAh
   status: stable
   support: Linux, Win, macOS, ARM
+  donate: https://gitcoin.co/grants/25/lighthouse-ethereum-20-client
   opensource: true
 - name: Lodestar
   link: https://lodestar.chainsafe.io/
@@ -32,6 +35,7 @@
   chat: https://discord.gg/yjyvFRP
   status: stable
   support: Linux, Win, macOS # windows theoretically works but not tested yet https://github.com/ChainSafe/lodestar/issues/3519
+  donate: funded # funded by EF
   opensource: true
 - name: Nimbus
   link: https://nimbus.team/
@@ -40,6 +44,7 @@
   chat: https://discord.gg/qnjVyhatUa
   status: stable
   support: Linux, Win, macOS, ARM
+  donate: https://gitcoin.co/grants/137/nimbus-2
   opensource: true
 - name: Prysm
   link: https://prysmaticlabs.com/
@@ -48,6 +53,7 @@
   chat: https://discord.gg/YMVYzv6
   status: stable
   support: Linux, Win, macOS
+  donate: https://gitcoin.co/grants/24/prysm-by-prysmatic-labs
   opensource: true
 - name: Teku
   link: https://consensys.net/knowledge-base/ethereum-2/teku/
@@ -56,5 +62,6 @@
   chat: https://discord.gg/9mCVSY6
   status: stable
   support: Linux, Win, macOS
+  donate: funded # funded by ConsenSys
   opensource: true
 
