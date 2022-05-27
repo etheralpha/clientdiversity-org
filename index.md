@@ -415,7 +415,7 @@ layout: default
       <h2 class="h1 fw-bold mb-2">Client Resources</h2>
     </div>
     <div class="row justify-content-evenly mt-4">
-      <div class="col col-xxl-8 col-xl-9 col-lg-10 col-md-11 ttext-center">
+      <div class="col col-xxl-8 col-xl-9 col-lg-10 col-md-11">
         <h3 class="mb-3">Consensus Clients</h3>
         <div class="table-responsive">
           <table class="table table-bordered">
@@ -427,6 +427,7 @@ layout: default
                 <th scope="col">Chat</th>
                 <th scope="col">Status</th>
                 <th scope="col">Support</th>
+                <th scope="col">Donate</th>
               </tr>
             </thead>
             <tbody>
@@ -451,7 +452,7 @@ layout: default
                       </a>
                     </td>
                   {%- else -%}
-                    <td>(none)</td>
+                    <td>-</td>
                   {%- endif -%}
                   {%- if client.docs -%}
                     <td>
@@ -461,7 +462,7 @@ layout: default
                       </a>
                     </td>
                   {%- else -%}
-                    <td>(none)</td>
+                    <td>-</td>
                   {%- endif -%}
                   {%- if client.chat -%}
                     {%- assign chat_icon = site.data.icons.chat -%}
@@ -478,17 +479,45 @@ layout: default
                       </a>
                     </td>
                   {%- else -%}
-                    <td>(none)</td>
+                    <td>-</td>
                   {%- endif -%}
                   {%- if client.status -%}
                     <td>{{client.status}}</td>
                   {%- else -%}
-                    <td>(unknown)</td>
+                    <td>-</td>
                   {%- endif -%}
                   {%- if client.support -%}
                     <td>{{client.support}}</td>
                   {%- else -%}
-                    <td>(unknown)</td>
+                    <td>-</td>
+                  {%- endif -%}
+                  {%- if client.donate -%}
+                    {%- if client.donate contains "http" -%}
+                      {%- assign donate_icon = site.data.icons.donate -%}
+                      {%- if client.donate contains "etherscan.io" -%}
+                        {%- assign donate_icon = site.data.icons.etherscan -%}
+                      {%- endif -%}
+                      {%- if client.donate contains "gitcoin.co" -%}
+                        {%- assign donate_icon = site.data.icons.gitcoin -%}
+                      {%- endif -%}
+                      {%- if client.donate contains "protocol-guild" -%}
+                        {%- assign donate_icon = '<img src="/assets/img/protocol-guild.png" style="width:1.4rem;height:1.4rem;">' -%}
+                      {%- endif -%}
+                      <td>
+                        <a href="{{client.donate}}" class="text-decoration-none link-dark" target="_blank">
+                          {{donate_icon}}
+                          {{site.data.icons.new_tab}}
+                        </a>
+                      </td>
+                    {%- else -%}
+                      {%- if client.donate == "funded" -%}
+                        <td><span class="text-success" title="funded">{{site.data.icons.checkmark}}</span></td>
+                      {%- else -%}
+                        <td>{{client.donate}}</td>
+                      {%- endif -%}
+                    {%- endif -%}
+                  {%- else -%}
+                    <td>-</td>
                   {%- endif -%}
                 </tr>
               {%- endfor -%}
@@ -499,7 +528,7 @@ layout: default
           <small>* Grandine is not open sourced</small>
         </div>
       </div>
-      <div class="col col-xxl-8 col-xl-9 col-lg-10 col-md-11 ttext-center mt-5 ppt-3 mmt-md-0 ppt-md-0">
+      <div class="col col-xxl-8 col-xl-9 col-lg-10 col-md-11 mt-5">
         <h3 class="mb-3">Execution Clients</h3>
         <div class="table-responsive">
           <table class="table table-bordered">
@@ -511,6 +540,7 @@ layout: default
                 <th scope="col">Chat</th>
                 <th scope="col">Status</th>
                 <th scope="col">Support</th>
+                <th scope="col">Donate</th>
               </tr>
             </thead>
             <tbody>
@@ -534,7 +564,7 @@ layout: default
                       </a>
                     </td>
                   {%- else -%}
-                    <td>(none)</td>
+                    <td>-</td>
                   {%- endif -%}
                   {%- if client.docs -%}
                     <td>
@@ -544,7 +574,7 @@ layout: default
                       </a>
                     </td>
                   {%- else -%}
-                    <td>(none)</td>
+                    <td>-</td>
                   {%- endif -%}
                   {%- if client.chat -%}
                     {%- assign chat_icon = site.data.icons.chat -%}
@@ -561,23 +591,56 @@ layout: default
                       </a>
                     </td>
                   {%- else -%}
-                    <td>(none)</td>
+                    <td>-</td>
                   {%- endif -%}
                   {%- if client.status -%}
                     <td>{{client.status}}</td>
                   {%- else -%}
-                    <td>(unknown)</td>
+                    <td>-</td>
                   {%- endif -%}
                   {%- if client.support -%}
                     <td>{{client.support}}</td>
                   {%- else -%}
-                    <td>(unknown)</td>
+                    <td>-</td>
+                  {%- endif -%}
+                  {%- if client.donate -%}
+                    {%- if client.donate contains "http" -%}
+                      {%- assign donate_icon = site.data.icons.donate -%}
+                      {%- if client.donate contains "etherscan.io" -%}
+                        {%- assign donate_icon = site.data.icons.etherscan -%}
+                      {%- endif -%}
+                      {%- if client.donate contains "gitcoin.co" -%}
+                        {%- assign donate_icon = site.data.icons.gitcoin -%}
+                      {%- endif -%}
+                      {%- if client.donate contains "protocol-guild" -%}
+                        {%- assign donate_icon = '<img src="/assets/img/protocol-guild.png" style="width:1.4rem;height:1.4rem;">' -%}
+                      {%- endif -%}
+                      <td>
+                        <a href="{{client.donate}}" class="text-decoration-none link-dark" target="_blank">
+                          {{donate_icon}}
+                          {{site.data.icons.new_tab}}
+                        </a>
+                      </td>
+                    {%- else -%}
+                      {%- if client.donate == "funded" -%}
+                        <td><span class="text-success" title="funded">{{site.data.icons.checkmark}}</span></td>
+                      {%- else -%}
+                        <td>{{client.donate}}</td>
+                      {%- endif -%}
+                    {%- endif -%}
+                  {%- else -%}
+                    <td>-</td>
                   {%- endif -%}
                 </tr>
               {%- endfor -%}
             </tbody>
           </table>
         </div>
+      </div>
+    </div>
+    <div class="row justify-content-center mt-3">
+      <div class="col col-xl-6 col-lg-8 col-md-11 mt-5 text-md-center">
+        <p><strong>Note</strong>: Donations made to <a href="https://protocol-guild.readthedocs.io/en/latest/index.html" target="_blank">Protocol Guild</a> are distributed among Ethereum protocol contributors, including client teams. All recipients and splits can be <a href="https://protocol-guild.readthedocs.io/en/latest/9-membership.html" target="_blank">seen here</a>.</p>
       </div>
     </div>
   </div>
@@ -597,7 +660,6 @@ layout: default
           <select class="form-select" id="typeSelect" onchange="setSwitchType()">
             <option value="consensus" selected>Consensus Client</option>
             <option value="execution">Execution Client</option>
-            <!-- <option value="execution" disabled>Execution Client (coming soon&#8482;)</option> -->
           </select>
         </div>
       </div>
