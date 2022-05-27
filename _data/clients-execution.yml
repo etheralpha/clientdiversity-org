@@ -1,51 +1,92 @@
-# - name: 
-#   link: 
-#   github: 
-#   docs: 
-#   discord: 
+# - name:       # client name
+#   link:       # link to website
+#   github:     # link to github
+#   docs:       # link to documentation
+#   chat:       # link to community chat
 #   status:     # (select one) alpha, beta, stable
-#   support:    # Linux, Windows, macOS
+#   support:    # Linux, Win, macOS, ARM
+#   donate:     # link to gitcoin or etherscan address
 #   opensource: # true/false
 
 
+- name: Akula
+  link: 
+  github: https://github.com/akula-bft/akula
+  docs: https://github.com/akula-bft/akula#running
+  chat: https://t.me/akula_bft
+  status: pre-alpha
+  support: 
+  donate: https://etherscan.io/address/0x048a9ea34FcE0B2828a2703e486648c21ACCCC1A
+  opensource: true
 - name: Besu
   link: https://hyperledger.org/use/besu
   github: https://github.com/hyperledger/besu/
   docs: https://besu.hyperledger.org/en/stable/
-  discord: https://discord.com/invite/hyperledger
+  chat: https://discord.com/invite/hyperledger
   status: stable
-  support: Linux, Windows, macOS
+  support: Linux, Win, macOS
+  donate: https://protocol-guild.readthedocs.io/en/latest/index.html
   opensource: true
 - name: Erigon (Turbo-Geth)
-  link: 
+  link: https://github.com/ledgerwatch/erigon#erigon
   github: https://github.com/ledgerwatch/erigon
   docs: https://github.com/ledgerwatch/erigon#usage
-  discord: # invite only
-  status: 
-  support: Linux, Windows, macOS
+  chat: # invite only
+  status: alpha & beta
+  support: Linux, Win, macOS, ARM
+  donate: https://etherscan.io/address/0x8BFBB529A9E85fDC4b70A4FCdC0D68Bb298B8816 # funded by EF, Gnosis DAO
+  opensource: true
+- name: EthereumJS
+  link: https://ethereumjs.github.io/
+  github: https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client
+  docs: https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client/docs
+  chat: https://discord.gg/TNwARpR
+  status: alpha
+  support: Linux, Win, macOS
+  donate: funded # funded by EF
   opensource: true
 - name: Geth
   link: https://geth.ethereum.org/
   github: https://github.com/ethereum/go-ethereum
   docs: https://geth.ethereum.org/docs/
-  discord: https://discord.com/invite/nthXNEv
+  chat: https://discord.com/invite/nthXNEv
   status: stable
-  support: Linux, Windows, macOS
+  support: Linux, Win, macOS, ARM
+  donate: funded # funded by EF
   opensource: true
 - name: Nethermind
   link: http://nethermind.io/
   github: https://github.com/NethermindEth/nethermind
   docs: https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started
-  discord: https://discord.com/invite/PaCMRFdvWT
+  chat: https://discord.com/invite/PaCMRFdvWT
   status: stable
-  support: Linux, Windows, macOS
+  support: Linux, Win, macOS
+  donate: https://gitcoin.co/grants/142/nethermind
   opensource: true
-- name: OpenEthereum
-  link: https://openethereum.org/
-  github: https://github.com/openethereum/openethereum
-  docs: https://openethereum.github.io/
-  discord: https://discord.io/openethereum
-  status: deprecated
-  support: Linux, Windows, macOS
+- name: Nimbus
+  link: https://nimbus.team/
+  github: https://github.com/status-im/nimbus-eth1
+  docs: https://github.com/status-im/nimbus-eth1/tree/master/doc
+  chat: https://discord.gg/qnjVyhatUa
+  status: pre-alpha
+  support: 
+  donate: https://gitcoin.co/grants/137/nimbus-2
   opensource: true
-
+# - name: OpenEthereum
+#   link: https://openethereum.org/
+#   github: https://github.com/openethereum/openethereum
+#   docs: https://openethereum.github.io/
+#   chat: https://discord.io/openethereum
+#   status: deprecated
+#   support: Linux, Win, macOS
+#   donate: n/a
+#   opensource: true
+- name: Silkworm
+  link: https://github.com/torquem-ch/silkworm#about-silkworm
+  github: https://github.com/torquem-ch/silkworm
+  docs: https://github.com/torquem-ch/silkworm#source
+  chat: # invite only, channel in the erigon server
+  status: pre-alpha
+  support: Linux, Win, macOS
+  donate: https://etherscan.io/address/0x8BFBB529A9E85fDC4b70A4FCdC0D68Bb298B8816
+  opensource: true

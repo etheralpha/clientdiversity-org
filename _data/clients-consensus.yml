@@ -1,10 +1,11 @@
-# - name: 
-#   link: 
-#   github: 
-#   docs: 
-#   discord: 
+# - name:       # client name
+#   link:       # link to website
+#   github:     # link to github
+#   docs:       # link to documentation
+#   chat:       # link to community chat
 #   status:     # (select one) alpha, beta, stable
-#   support:    # Linux, Windows, macOS
+#   support:    # Linux, Win, macOS, ARM
+#   donate:     # link to gitcoin or etherscan address
 #   opensource: # true/false
 
 
@@ -12,49 +13,55 @@
   link: https://sifrai.com/
   github: https://github.com/sifraitech/grandine
   docs: https://github.com/sifraitech/grandine
-  discord: https://discord.gg/H9XCdUSyZd
-  status: 
-  support: Linux, Windows, macOS
+  chat: https://discord.gg/H9XCdUSyZd
+  status: beta
+  support: Linux, Win, macOS
+  donate: 
   opensource: false
 - name: Lighthouse
   link: https://lighthouse.sigmaprime.io/
   github: https://github.com/sigp/lighthouse/
   docs: https://lighthouse-book.sigmaprime.io/
-  discord: https://discord.gg/cyAszAh
+  chat: https://discord.gg/cyAszAh
   status: stable
-  support: Linux, Windows, macOS
+  support: Linux, Win, macOS, ARM
+  donate: https://gitcoin.co/grants/25/lighthouse-ethereum-20-client
   opensource: true
 - name: Lodestar
   link: https://lodestar.chainsafe.io/
   github: https://github.com/ChainSafe/lodestar
   docs: https://hackmd.io/@philknows/rk5cDvKmK
   # docs: https://chainsafe.github.io/lodestar/
-  discord: https://discord.gg/yjyvFRP
+  chat: https://discord.gg/yjyvFRP
   status: stable
-  support: Linux, Windows, macOS # windows theoretically works but not tested yet https://github.com/ChainSafe/lodestar/issues/3519
+  support: Linux, Win, macOS # windows theoretically works but not tested yet https://github.com/ChainSafe/lodestar/issues/3519
+  donate: funded # funded by EF
   opensource: true
 - name: Nimbus
   link: https://nimbus.team/
   github: https://github.com/status-im/nimbus
   docs: https://nimbus.team/docs/
-  discord: https://discord.gg/qnjVyhatUa
+  chat: https://discord.gg/qnjVyhatUa
   status: stable
-  support: Linux, Windows, macOS
+  support: Linux, Win, macOS, ARM
+  donate: https://gitcoin.co/grants/137/nimbus-2
   opensource: true
 - name: Prysm
   link: https://prysmaticlabs.com/
   github: https://github.com/prysmaticlabs/prysm
   docs: https://docs.prylabs.network/docs/getting-started/
-  discord: https://discord.gg/YMVYzv6
+  chat: https://discord.gg/YMVYzv6
   status: stable
-  support: Linux, Windows, macOS
+  support: Linux, Win, macOS
+  donate: https://gitcoin.co/grants/24/prysm-by-prysmatic-labs
   opensource: true
 - name: Teku
   link: https://consensys.net/knowledge-base/ethereum-2/teku/
   github: https://github.com/ConsenSys/teku
   docs: https://docs.teku.consensys.net/en/latest/
-  discord: https://discord.gg/9mCVSY6
+  chat: https://discord.gg/9mCVSY6
   status: stable
-  support: Linux, Windows, macOS
+  support: Linux, Win, macOS
+  donate: funded # funded by ConsenSys
   opensource: true
 

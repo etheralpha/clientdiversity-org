@@ -23,14 +23,13 @@ exports.handler = async (event, context) => {
     try {
       const response = await fetch(API_ENDPOINT).then( response => response.json() );
       // reformat to match blockprint and migalabs
-      let mainClients = ["geth", "openethereum", "erigon", "nethermind", "besu"];
+      let mainClients = ["geth", "erigon", "nethermind", "besu"];
       let others = 0;
       let formattedResponse = {};
       for (let item in response) {
         let key = response[item]["client"];
         let value = response[item]["value"];
         if (mainClients.includes(key)) {
-          key = (key == "openethereum") ? "open ethereum" : key;
           formattedResponse[key] = value;
         } else {
           others += value;
