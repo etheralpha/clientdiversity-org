@@ -35,7 +35,7 @@
   chat: https://discord.gg/yjyvFRP
   status: stable
   support: Linux, Win, macOS # windows theoretically works but not tested yet https://github.com/ChainSafe/lodestar/issues/3519
-  donate: funded # funded by EF
+  donate: https://gitcoin.co/grants/6034/lodestar-typescript-ethereum-consensus-client
   opensource: true
 - name: Nimbus
   link: https://nimbus.team/

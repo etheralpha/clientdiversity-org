@@ -52,7 +52,7 @@
   chat: https://discord.com/invite/nthXNEv
   status: stable
   support: Linux, Win, macOS, ARM
-  donate: funded # funded by EF
+  donate: https://gitcoin.co/grants/6128/go-ethereum-geth 
   opensource: true
 - name: Nethermind
   link: http://nethermind.io/
