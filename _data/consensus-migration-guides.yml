@@ -34,6 +34,14 @@ blank_to_lighthouse:
     type: doc
     note: w/ Ubuntu - Testnet
 blank_to_lodestar:
+  - link: https://someresat.medium.com/guide-to-staking-on-ethereum-ubuntu-goerli-lodestar-f3c8f77e7097
+    author: Somer Esat
+    type: doc
+    note: w/ Ubuntu - Testnet
+  - link: https://someresat.medium.com/guide-to-staking-on-ethereum-ubuntu-lodestar-193a2553a161
+    author: Somer Esat
+    type: doc
+    note: w/ Ubuntu
   - link: https://youtu.be/0xo85F-_fag
     author: Phil Ngo
     type: video
