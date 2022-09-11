@@ -9,7 +9,10 @@ layout: default
     <div class="col-lg-7 mx-auto">
       <p class="h4 fw-normal mb-4">Improve Ethereum's resilience by using a minority client</p>
       <a href="#switch" class="btn btn-dark btn-lg px-4 m-1">Switch Clients</a>
-      <a href="#why" class="btn btn-outline-dark btn-lg px-4 m-1">Learn More</a>
+      <a href="#distribution" class="btn btn-outline-dark btn-lg px-4 m-1">Dashboard</a>
+      <p class="mt-3">
+        <a href="#why" class="h5 fw-light text-dark">Learn More {{site.data.icons.arrow_right}}</a>
+      </p>
     </div>
   </div>
 </header>
