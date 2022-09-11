@@ -2,7 +2,15 @@
 #   title:
 #   date:   # format: 04-Apr-2022
 
-
+- link: https://twitter.com/miga_labs/status/1550130663516282884
+  title: "MigaLabs: Eth2.0 Fluid validator migration"
+  date: 21-Jul-2022
+- link: https://medium.com/@migalabs/analysis-of-ethereum-2-consensus-clients-dfede8e0145e
+  title: "MigaLabs: Analysis of Ethereum 2, Consensus Clients"
+  date: 09-Jun-2022
+- link: https://twitter.com/ethingfrankly/status/1532143752948551680
+  title: Besu validator count doubles in a month
+  date: 01-Jun-2022
 - link: https://github.com/dappnode/DAppNode/issues/389
   title: DAppNode CL Client Diversity Support Status Tracker
   date: 08-May-2022
