@@ -29,6 +29,7 @@ var blockprintData = {
   "Prysm": 54699,
   "Teku": 17879
 };
+var blockprintAccuracy;
 
 var migalabsHasMajority = true;
 var migalabsHasExtremeMajority = false;
@@ -57,7 +58,8 @@ async function getData() {
     const blockprintResponse = await blockprint.json();
     const ethernodesResponse = await ethernodes.json();
     migalabsData = migalabsResponse;
-    blockprintData = blockprintResponse;
+    blockprintData = blockprintResponse[0];
+    blockprintAccuracy = blockprintResponse[1];
     ethernodesData = ethernodesResponse;
   }
   catch {
@@ -107,9 +109,12 @@ function createChart(data, datasource) {
     let marketshare = Math.round( item["value"] / sampleSize * 10000 )/100;
     let fontWeight = "fw-normal";
     let color = "success";
+    let status = "danger!";
+    let accuracy = "no data";
     if (marketshare > 50) {
       fontWeight = "fw-bold";
       color = "danger";
+      status = "great!";
       hasMajority = true;
       dangerClient = client;
       if (marketshare > 66) {
@@ -117,11 +122,38 @@ function createChart(data, datasource) {
       }
     } else if (marketshare > 33) {
       color = "warning";
+      status = "caution";
     }
-    let bar =  `
+    if (datasource == "blockprint") {
+      if (blockprintAccuracy && blockprintAccuracy[client]) {
+        let blocksTotal = blockprintAccuracy[client]['num_blocks'];
+        let blocksCorrect = blockprintAccuracy[client]['num_correct'];
+        accuracy = Math.round( blocksCorrect/blocksTotal*1000 ) / 10 + '%';
+      }
+    }
+
+    let bar = `
       <div class="my-2">
         <label class="form-label my-0 py-0 ${fontWeight}">${client} - ${marketshare}%</label>
-        <div class="progress position-relative" style="height: 1.3rem;">
+        <div class="progress position-relative" style="height: 1.3rem;" 
+          data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true" title='
+              <div class="progress-tooltip text-capitalize text-start">
+                <div class="mb-1 pb-1 text-center border-bottom border-secondary">
+                  ${client} status:<br>${marketshare}% (${status})
+                </div>
+                <div class="d-flex justify-content-between">
+                  <span class="me-2">great:</span><span>0-33%</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <span class="me-2">caution:</span><span>33-50%</span>
+                </div>
+                <div class="d-flex justify-content-between mb-1 pb-1 border-bottom border-secondary">
+                <span class="me-2">danger:</span><span>50-100%</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <span class="me-2">accuracy:</span><span>${accuracy}</span>
+                </div>
+              </div>'>
           <div class="progress-bar position-absolute bg-${color}" role="progressbar" style="width: ${marketshare}%; height: 1.25rem;" aria-valuenow="${marketshare}" aria-valuemin="0" aria-valuemax="100"></div>
           <div class="progress-bar bg-trans clientshare-success" role="progressbar" style="width: 33%; height: 1.25rem"></div>
           <div class="progress-bar bg-trans clientshare-warning" role="progressbar" style="width: 17%; height: 1.25rem"></div>
@@ -129,6 +161,7 @@ function createChart(data, datasource) {
         </div>
       </div>`;
     chart += bar;
+    enableTooltips();
   });
 
   // populate respective html and set global variables

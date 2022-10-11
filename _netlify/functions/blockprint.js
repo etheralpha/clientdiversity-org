@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-let data;
+let data = [];
 let lastUpdate = 0;
 
 
@@ -16,6 +16,21 @@ let lastUpdate = 0;
 //   "Teku": 21713
 // }
 
+// https://api.blockprint.sigp.io/accuracy
+// example response: 
+// {
+//   "Lighthouse": {
+//     "num_blocks": 47015,
+//     "num_correct": 46305,
+//     "misclassifications": {
+//       "lighthouse-subscribe-none": {
+//         "Nimbus": 499,
+//         "Prysm": 211
+//       }
+//     }
+//   },
+//   ...
+// }
 
 exports.handler = async (event, context) => {
   const fetchData = async () => {
@@ -31,10 +46,20 @@ exports.handler = async (event, context) => {
     // Michael Sproul recommends using a 2-week period
     const endEpoch = Math.floor(currentEpoch / 225) * 225;
     const startEpoch = endEpoch - 3150;
-    const blockprintEndpoint = `https://api.blockprint.sigp.io/blocks_per_client/${startEpoch}/${endEpoch}`;
+    const blockprintMarketshareEndpoint = `https://api.blockprint.sigp.io/blocks_per_client/${startEpoch}/${endEpoch}`;
+    // endpoint fo the accuracy of fingerprinting for each client
+    const blockprintAccuracyEndpoint = 'https://api.blockprint.sigp.io/accuracy';
 
     try {
-      const response = await fetch(blockprintEndpoint).then( response => response.json() );
+      let response = [];
+      const [blockprintMarketshare, blockprintAccuracy] = await Promise.all([
+        fetch(blockprintMarketshareEndpoint),
+        fetch(blockprintAccuracyEndpoint)
+      ]);
+      const blockprintMarketshareResponse = await blockprintMarketshare.json();
+      const blockprintAccuracyResponse = await blockprintAccuracy.json();
+      response[0] = blockprintMarketshareResponse;
+      response[1] = blockprintAccuracyResponse;
       console.log({"blockprint":response});
       return response;
     } catch (err) {
@@ -49,7 +74,7 @@ exports.handler = async (event, context) => {
 
   // If cached data from the past 12 hrs, send that, otherwise fetchData
   const currentTime = new Date().getTime();
-  const noData = (data === undefined || data === null);
+  const noData = (data.length < 2 || data[0] === undefined || data[0] === null || data[1] === undefined || data[1] === null);
   if (noData || ( currentTime - lastUpdate > 43200000 )) { // 43200000 = 12hrs
     const response = await fetchData();
     data = response;
