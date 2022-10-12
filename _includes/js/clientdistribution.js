@@ -1,4 +1,4 @@
-window.onload = getData().then(updatePageData).then(setDataSources);
+// window.onload = getData().then(updatePageData).then(setDataSources);
 
 
 var ethernodesData = [
@@ -109,12 +109,12 @@ function createChart(data, datasource) {
     let marketshare = Math.round( item["value"] / sampleSize * 10000 )/100;
     let fontWeight = "fw-normal";
     let color = "success";
-    let status = "danger!";
+    let status = "great!";
     let accuracy = "no data";
     if (marketshare > 50) {
       fontWeight = "fw-bold";
       color = "danger";
-      status = "great!";
+      status = "danger!";
       hasMajority = true;
       dangerClient = client;
       if (marketshare > 66) {
@@ -161,7 +161,6 @@ function createChart(data, datasource) {
         </div>
       </div>`;
     chart += bar;
-    enableTooltips();
   });
 
   // populate respective html and set global variables
@@ -190,6 +189,7 @@ function createChart(data, datasource) {
     ethernodesTopClient = topClient;
   }
 
+  enableTooltips();
   return;
 }
 

@@ -70,6 +70,7 @@ layout: default
         <div class="card h-100 rounded-3 p-0 p-lg-2">
           <div class="card-body d-flex flex-column p-4">
             <h3 class="p-2 mb-4">Consensus Clients</h3>
+            <!-- Consensus Clinet Alerts -->
             <div id="marketshareAlertsCC">
               <a id="marketshareWarningMigaLabs" href="#why" class="d-none text-decoration-none">
                 <div class="alert alert-danger d-flex align-items-center" role="alert">
@@ -90,6 +91,7 @@ layout: default
                 </div>
               </a>
             </div>
+            <!-- Miga Labs Data -->
             <div id="distributionMigaLabs" class="d-none text-start flex-grow-1">
               <div id="distributionBarsMigaLabs">
                 {%- include partials/progress-bar.html data=site.data.fallback.migalabs -%}
@@ -99,6 +101,7 @@ layout: default
                 Data may not be 100% accurate. (<a href="/client-fingerprinting">Read more</a>)
               </div>
             </div>
+            <!-- Blockprint Data -->
             <div id="distributionBlockprint" class="text-start">
               <div id="distributionBarsBlockprint">
                 {%- include partials/progress-bar.html data=site.data.fallback.blockprint -%}
@@ -108,6 +111,7 @@ layout: default
                 Data may not be 100% accurate. (<a href="/client-fingerprinting">Read more</a>)
               </div>
             </div>
+            <!-- Select Data Source -->
             <div id="dataSourceOptionsCC" class="mt-4 text-start text-sm-center">
               <div class="alert alert-info" role="alert">
                 <div class="me-2 fw-bold">
@@ -131,6 +135,7 @@ layout: default
         <div class="card h-100 rounded-3 p-0 p-lg-2">
           <div class="card-body d-flex flex-column p-4">
             <h3 class="p-2 mb-4">Execution Clients</h3>
+            <!-- Execution Client Alerts -->
             <div id="marketshareAlertsEC">
               <a id="marketshareWarningEthernodes" href="#why" class="text-decoration-none">
                 <div class="alert alert-danger d-flex align-items-center" role="alert">
@@ -145,6 +150,7 @@ layout: default
                 </div>
               </a>
             </div>
+            <!-- Ethernodes Data -->
             <div id="distributionEthernodes" class="text-start flex-grow-1">
               <div id="distributionBarsEthernodes">
                 {%- include partials/progress-bar.html data=site.data.fallback.ethernodes -%}
@@ -154,6 +160,7 @@ layout: default
                 Data may not be 100% accurate. (<a href="/client-fingerprinting">Read more</a>)
               </div>
             </div>
+            <!-- Select Data Source -->
             <div id="dataSourceOptionsEC" class="mt-4 text-start text-sm-center">
               <div class="alert alert-info" role="alert">
                 <div class="me-2 fw-bold">Data source:</div>

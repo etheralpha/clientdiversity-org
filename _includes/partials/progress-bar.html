@@ -1,12 +1,12 @@
 {%- assign data = include.data -%}
-{%- assign color = "danger" -%}
-{%- assign status = "danger!" -%}
 
 {%- for client in data -%}
-  {%- if client.value < 33 -%}
-    {%- assign color = "success" -%}
-    {%- assign status = "great!" -%}
-  {%- elsif client.value < 66 -%}
+  {%- assign color = "success" -%}
+  {%- assign status = "great!" -%}
+  {%- if client.value > 50 -%}
+		{%- assign color = "danger" -%}
+		{%- assign status = "danger!" -%}
+  {%- elsif client.value > 33 -%}
     {%- assign color = "warning" -%}
     {%- assign status = "caution" -%}
   {%- endif -%}
