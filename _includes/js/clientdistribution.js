@@ -1,4 +1,4 @@
-// window.onload = getData().then(updatePageData).then(setDataSources);
+window.onload = getData().then(updatePageData).then(setDataSources);
 
 
 var ethernodesData = [
