@@ -86,8 +86,8 @@
   github: https://github.com/paradigmxyz/reth
   docs: https://github.com/paradigmxyz/reth/tree/main/docs
   chat: https://t.me/paradigm_reth
-  status: alpha
-  support: Linux
+  status: pre-alpha
+  support: Linux, macOS
   donate:
   opensource: true
 - name: Silkworm
