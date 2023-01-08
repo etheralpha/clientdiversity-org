@@ -42,7 +42,7 @@ layout: default
         <img src="/assets/img/execution-clients/besu-text-logo.png" alt="" class="my-2 client-logos">
       </div>
       <div class="col">
-        <img src="/assets/img/execution-clients/nethermind-logo.png" alt="" class="my-2 client-logos">
+        <img src="/assets/img/execution-clients/nethermind-text-logo.png" alt="" class="my-2 client-logos">
       </div>
       <div class="col">
         <img src="/assets/img/execution-clients/erigon-text-logo.png" alt="" class="my-2 client-logos">
