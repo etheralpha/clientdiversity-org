@@ -14,7 +14,7 @@
   github: https://github.com/akula-bft/akula
   docs: https://github.com/akula-bft/akula#running
   chat: https://t.me/akula_bft
-  status: pre-alpha
+  status: deprecated
   support: 
   donate: https://etherscan.io/address/0x048a9ea34FcE0B2828a2703e486648c21ACCCC1A
   opensource: true
@@ -81,6 +81,15 @@
 #   support: Linux, Win, macOS
 #   donate: n/a
 #   opensource: true
+- name: Reth
+  link: https://github.com/paradigmxyz/reth
+  github: https://github.com/paradigmxyz/reth
+  docs: https://github.com/paradigmxyz/reth/tree/main/docs
+  chat: https://t.me/paradigm_reth
+  status: pre-alpha
+  support: Linux, macOS
+  donate:
+  opensource: true
 - name: Silkworm
   link: https://github.com/torquem-ch/silkworm#about-silkworm
   github: https://github.com/torquem-ch/silkworm
