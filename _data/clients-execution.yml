@@ -60,7 +60,7 @@
   docs: https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started
   chat: https://discord.com/invite/PaCMRFdvWT
   status: stable
-  support: Linux, Win, macOS
+  support: Linux, Win, macOS, ARM
   donate: https://gitcoin.co/grants/142/nethermind
   opensource: true
 - name: Nimbus
