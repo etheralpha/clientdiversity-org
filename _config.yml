@@ -11,7 +11,16 @@ livereload: true
 
 
 # Global variables
-analytics_tag: 
+analytics_tag: |
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5YPSBBTM6W"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-5YPSBBTM6W');
+  </script>
 
 # Notifications
 notification_enabled: false

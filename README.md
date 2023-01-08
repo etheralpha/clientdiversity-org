@@ -11,7 +11,7 @@ This is the repo for <https://clientdiversity.org>, a resource site to assist cl
 	- Note: Use Node v16 (Netlify has issues with Node v17)
 1. Install Netlify CLI: `npm install netlify-cli -g`
 1. Authenticate Netlify account: `netlify login`
-1. Create a feature branch off of the `dev` branch
+1. Create a feature branch off of the latest version branch
 1. Start the local server: `netlify dev`
 1. The local server should open automatically
 
@@ -20,7 +20,7 @@ This is the repo for <https://clientdiversity.org>, a resource site to assist cl
 
 1. Clone the repo (or fork the repo to your account)
 1. Install dependencies: `bundle install`
-1. Create a feature branch off of the `dev` branch
+1. Create a feature branch off of the latest version branch
 1. Start the local server: `bundle exec jekyll serve`
 1. Go to <http://localhost:4000/> to view changes
 

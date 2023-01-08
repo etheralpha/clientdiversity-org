@@ -42,7 +42,7 @@ layout: default
         <img src="/assets/img/execution-clients/besu-text-logo.png" alt="" class="my-2 client-logos">
       </div>
       <div class="col">
-        <img src="/assets/img/execution-clients/nethermind-logo.png" alt="" class="my-2 client-logos">
+        <img src="/assets/img/execution-clients/nethermind-text-logo.png" alt="" class="my-2 client-logos">
       </div>
       <div class="col">
         <img src="/assets/img/execution-clients/erigon-text-logo.png" alt="" class="my-2 client-logos">
@@ -70,6 +70,7 @@ layout: default
         <div class="card h-100 rounded-3 p-0 p-lg-2">
           <div class="card-body d-flex flex-column p-4">
             <h3 class="p-2 mb-4">Consensus Clients</h3>
+            <!-- Consensus Clinet Alerts -->
             <div id="marketshareAlertsCC">
               <a id="marketshareWarningMigaLabs" href="#why" class="d-none text-decoration-none">
                 <div class="alert alert-danger d-flex align-items-center" role="alert">
@@ -90,148 +91,27 @@ layout: default
                 </div>
               </a>
             </div>
+            <!-- Miga Labs Data -->
             <div id="distributionMigaLabs" class="d-none text-start flex-grow-1">
               <div id="distributionBarsMigaLabs">
-                <div class="my-2">
-                  <label class="form-label my-0 py-0">Lighthouse - 41.61%</label>
-                  <div class="progress position-relative" style="height: 1.3rem;">
-                    <div class="progress-bar position-absolute bg-success" role="progressbar" style="width: 41.61%; height: 1.25rem;" aria-valuenow="41.61" aria-valuemin="0" aria-valuemax="100"></div>
-                    <div class="progress-bar bg-trans clientshare-success" role="progressbar" style="width: 33%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-warning" role="progressbar" style="width: 17%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-danger" role="progressbar" style="width: 50%; height: 1.25rem"></div>
-                  </div>
-                </div>
-                <div class="my-2">
-                  <label class="form-label my-0 py-0 fw-bold">Prysm - 36.63%</label>
-                  <div class="progress position-relative" style="height: 1.3rem;">
-                    <div class="progress-bar position-absolute bg-danger" role="progressbar" style="width: 36.63%; height: 1.25rem;" aria-valuenow="36.63" aria-valuemin="0" aria-valuemax="100"></div>
-                    <div class="progress-bar bg-trans clientshare-success" role="progressbar" style="width: 33%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-warning" role="progressbar" style="width: 17%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-danger" role="progressbar" style="width: 50%; height: 1.25rem"></div>
-                  </div>
-                </div>
-                <div class="my-2">
-                  <label class="form-label my-0 py-0">Teku - 14.08%</label>
-                  <div class="progress position-relative" style="height: 1.3rem;">
-                    <div class="progress-bar position-absolute bg-success" role="progressbar" style="width: 14.08%; height: 1.25rem;" aria-valuenow="14.08" aria-valuemin="0" aria-valuemax="100"></div>
-                    <div class="progress-bar bg-trans clientshare-success" role="progressbar" style="width: 33%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-warning" role="progressbar" style="width: 17%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-danger" role="progressbar" style="width: 50%; height: 1.25rem"></div>
-                  </div>
-                </div>
-                <div class="my-2">
-                  <label class="form-label my-0 py-0">Grandine - 5.45%</label>
-                  <div class="progress position-relative" style="height: 1.3rem;">
-                    <div class="progress-bar position-absolute bg-success" role="progressbar" style="width: 5.45%; height: 1.25rem;" aria-valuenow="5.45" aria-valuemin="0" aria-valuemax="100"></div>
-                    <div class="progress-bar bg-trans clientshare-success" role="progressbar" style="width: 33%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-warning" role="progressbar" style="width: 17%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-danger" role="progressbar" style="width: 50%; height: 1.25rem"></div>
-                  </div>
-                </div>
-                <div class="my-2">
-                  <label class="form-label my-0 py-0">Nimbus - 1.75%</label>
-                  <div class="progress position-relative" style="height: 1.3rem;">
-                    <div class="progress-bar position-absolute bg-success" role="progressbar" style="width: 1.75%; height: 1.25rem;" aria-valuenow="1.75" aria-valuemin="0" aria-valuemax="100"></div>
-                    <div class="progress-bar bg-trans clientshare-success" role="progressbar" style="width: 33%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-warning" role="progressbar" style="width: 17%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-danger" role="progressbar" style="width: 50%; height: 1.25rem"></div>
-                  </div>
-                </div>
-                <div class="my-2">
-                  <label class="form-label my-0 py-0">Lodestar - 0.45%</label>
-                  <div class="progress position-relative" style="height: 1.3rem;">
-                    <div class="progress-bar position-absolute bg-success" role="progressbar" style="width: 0.45%; height: 1.25rem;" aria-valuenow="0.45" aria-valuemin="0" aria-valuemax="100"></div>
-                    <div class="progress-bar bg-trans clientshare-success" role="progressbar" style="width: 33%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-warning" role="progressbar" style="width: 17%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-danger" role="progressbar" style="width: 50%; height: 1.25rem"></div>
-                  </div>
-                </div>
-                <div class="my-2">
-                  <label class="form-label my-0 py-0">Other - 0.03%</label>
-                  <div class="progress position-relative" style="height: 1.3rem;">
-                    <div class="progress-bar position-absolute bg-success" role="progressbar" style="width: 0.03%; height: 1.25rem;" aria-valuenow="0.03" aria-valuemin="0" aria-valuemax="100"></div>
-                    <div class="progress-bar bg-trans clientshare-success" role="progressbar" style="width: 33%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-warning" role="progressbar" style="width: 17%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-danger" role="progressbar" style="width: 50%; height: 1.25rem"></div>
-                  </div>
-                </div>
+                {%- include partials/progress-bar.html data=site.data.fallback.migalabs -%}
               </div>
               <div class="text-center small">
                 Data provided by <a href="https://migalabs.es/api-documentation" target="_blank">Miga Labs</a> — updated daily. <br>
                 Data may not be 100% accurate. (<a href="/client-fingerprinting">Read more</a>)
               </div>
             </div>
+            <!-- Blockprint Data -->
             <div id="distributionBlockprint" class="text-start">
               <div id="distributionBarsBlockprint">
-                <div class="my-2">
-                  <label class="form-label my-0 py-0 fw-bold">Prysm - 43.7%</label>
-                  <div class="progress position-relative" style="height: 1.3rem;">
-                    <div class="progress-bar position-absolute bg-danger" role="progressbar" style="width: 43.7%; height: 1.25rem;" aria-valuenow="43.7" aria-valuemin="0" aria-valuemax="100"></div>
-                    <div class="progress-bar bg-trans clientshare-success" role="progressbar" style="width: 33%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-warning" role="progressbar" style="width: 17%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-danger" role="progressbar" style="width: 50%; height: 1.25rem"></div>
-                  </div>
-                </div>
-                <div class="my-2">
-                  <label class="form-label my-0 py-0">Lighthouse - 33.77%</label>
-                  <div class="progress position-relative" style="height: 1.3rem;">
-                    <div class="progress-bar position-absolute bg-success" role="progressbar" style="width: 33.77%; height: 1.25rem;" aria-valuenow="33.77" aria-valuemin="0" aria-valuemax="100"></div>
-                    <div class="progress-bar bg-trans clientshare-success" role="progressbar" style="width: 33%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-warning" role="progressbar" style="width: 17%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-danger" role="progressbar" style="width: 50%; height: 1.25rem"></div>
-                  </div>
-                </div>
-                <div class="my-2">
-                  <label class="form-label my-0 py-0">Teku - 17.05%</label>
-                  <div class="progress position-relative" style="height: 1.3rem;">
-                    <div class="progress-bar position-absolute bg-success" role="progressbar" style="width: 17.05%; height: 1.25rem;" aria-valuenow="17.05" aria-valuemin="0" aria-valuemax="100"></div>
-                    <div class="progress-bar bg-trans clientshare-success" role="progressbar" style="width: 33%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-warning" role="progressbar" style="width: 17%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-danger" role="progressbar" style="width: 50%; height: 1.25rem"></div>
-                  </div>
-                </div>
-                <div class="my-2">
-                  <label class="form-label my-0 py-0">Nimbus - 5.44%</label>
-                  <div class="progress position-relative" style="height: 1.3rem;">
-                    <div class="progress-bar position-absolute bg-success" role="progressbar" style="width: 5.44%; height: 1.25rem;" aria-valuenow="5.44" aria-valuemin="0" aria-valuemax="100"></div>
-                    <div class="progress-bar bg-trans clientshare-success" role="progressbar" style="width: 33%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-warning" role="progressbar" style="width: 17%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-danger" role="progressbar" style="width: 50%; height: 1.25rem"></div>
-                  </div>
-                </div>
-                <div class="my-2">
-                  <label class="form-label my-0 py-0">Lodestar - 0.04%</label>
-                  <div class="progress position-relative" style="height: 1.3rem;">
-                    <div class="progress-bar position-absolute bg-success" role="progressbar" style="width: 0.04%; height: 1.25rem;" aria-valuenow="0.04" aria-valuemin="0" aria-valuemax="100"></div>
-                    <div class="progress-bar bg-trans clientshare-success" role="progressbar" style="width: 33%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-warning" role="progressbar" style="width: 17%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-danger" role="progressbar" style="width: 50%; height: 1.25rem"></div>
-                  </div>
-                </div>
-                <div class="my-2">
-                  <label class="form-label my-0 py-0">Uncertain - 0%</label>
-                  <div class="progress position-relative" style="height: 1.3rem;">
-                    <div class="progress-bar position-absolute bg-success" role="progressbar" style="width: 0%; height: 1.25rem;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                    <div class="progress-bar bg-trans clientshare-success" role="progressbar" style="width: 33%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-warning" role="progressbar" style="width: 17%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-danger" role="progressbar" style="width: 50%; height: 1.25rem"></div>
-                  </div>
-                </div>
-                <div class="my-2">
-                  <label class="form-label my-0 py-0">Other - 0%</label>
-                  <div class="progress position-relative" style="height: 1.3rem;">
-                    <div class="progress-bar position-absolute bg-success" role="progressbar" style="width: 0%; height: 1.25rem;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                    <div class="progress-bar bg-trans clientshare-success" role="progressbar" style="width: 33%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-warning" role="progressbar" style="width: 17%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-danger" role="progressbar" style="width: 50%; height: 1.25rem"></div>
-                  </div>
-                </div>
+                {%- include partials/progress-bar.html data=site.data.fallback.blockprint -%}
               </div>
               <div class="text-center small">
                 Data provided by <a href="https://github.com/sigp/blockprint/blob/main/docs/api.md" target="_blank">Sigma Prime's Blockprint</a> — updated daily. <br>
                 Data may not be 100% accurate. (<a href="/client-fingerprinting">Read more</a>)
               </div>
             </div>
+            <!-- Select Data Source -->
             <div id="dataSourceOptionsCC" class="mt-4 text-start text-sm-center">
               <div class="alert alert-info" role="alert">
                 <div class="me-2 fw-bold">
@@ -255,6 +135,7 @@ layout: default
         <div class="card h-100 rounded-3 p-0 p-lg-2">
           <div class="card-body d-flex flex-column p-4">
             <h3 class="p-2 mb-4">Execution Clients</h3>
+            <!-- Execution Client Alerts -->
             <div id="marketshareAlertsEC">
               <a id="marketshareWarningEthernodes" href="#why" class="text-decoration-none">
                 <div class="alert alert-danger d-flex align-items-center" role="alert">
@@ -269,59 +150,17 @@ layout: default
                 </div>
               </a>
             </div>
+            <!-- Ethernodes Data -->
             <div id="distributionEthernodes" class="text-start flex-grow-1">
               <div id="distributionBarsEthernodes">
-                <div class="my-2">
-                  <label class="form-label my-0 py-0 fw-bold">Geth - 80.72%</label>
-                  <div class="progress position-relative" style="height: 1.3rem;">
-                    <div class="progress-bar position-absolute bg-danger" role="progressbar" style="width: 80.72%; height: 1.25rem;" aria-valuenow="80.72" aria-valuemin="0" aria-valuemax="100"></div>
-                    <div class="progress-bar bg-trans clientshare-success" role="progressbar" style="width: 33%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-warning" role="progressbar" style="width: 17%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-danger" role="progressbar" style="width: 50%; height: 1.25rem"></div>
-                  </div>
-                </div>
-                <div class="my-2">
-                  <label class="form-label my-0 py-0">Erigon - 8.24%</label>
-                  <div class="progress position-relative" style="height: 1.3rem;">
-                    <div class="progress-bar position-absolute bg-success" role="progressbar" style="width: 8.24%; height: 1.25rem;" aria-valuenow="8.24" aria-valuemin="0" aria-valuemax="100"></div>
-                    <div class="progress-bar bg-trans clientshare-success" role="progressbar" style="width: 33%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-warning" role="progressbar" style="width: 17%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-danger" role="progressbar" style="width: 50%; height: 1.25rem"></div>
-                  </div>
-                </div>
-                <div class="my-2">
-                  <label class="form-label my-0 py-0">Besu - 6.49%</label>
-                  <div class="progress position-relative" style="height: 1.3rem;">
-                    <div class="progress-bar position-absolute bg-success" role="progressbar" style="width: 6.49%; height: 1.25rem;" aria-valuenow="6.49" aria-valuemin="0" aria-valuemax="100"></div>
-                    <div class="progress-bar bg-trans clientshare-success" role="progressbar" style="width: 33%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-warning" role="progressbar" style="width: 17%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-danger" role="progressbar" style="width: 50%; height: 1.25rem"></div>
-                  </div>
-                </div>
-                <div class="my-2">
-                  <label class="form-label my-0 py-0">Nethermind - 4.16%</label>
-                  <div class="progress position-relative" style="height: 1.3rem;">
-                    <div class="progress-bar position-absolute bg-success" role="progressbar" style="width: 4.16%; height: 1.25rem;" aria-valuenow="4.16" aria-valuemin="0" aria-valuemax="100"></div>
-                    <div class="progress-bar bg-trans clientshare-success" role="progressbar" style="width: 33%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-warning" role="progressbar" style="width: 17%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-danger" role="progressbar" style="width: 50%; height: 1.25rem"></div>
-                  </div>
-                </div>
-                <div class="my-2">
-                  <label class="form-label my-0 py-0">Others - 0.39%</label>
-                  <div class="progress position-relative" style="height: 1.3rem;">
-                    <div class="progress-bar position-absolute bg-success" role="progressbar" style="width: 0.39%; height: 1.25rem;" aria-valuenow="0.39" aria-valuemin="0" aria-valuemax="100"></div>
-                    <div class="progress-bar bg-trans clientshare-success" role="progressbar" style="width: 33%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-warning" role="progressbar" style="width: 17%; height: 1.25rem"></div>
-                    <div class="progress-bar bg-trans clientshare-danger" role="progressbar" style="width: 50%; height: 1.25rem"></div>
-                  </div>
-                </div>
+                {%- include partials/progress-bar.html data=site.data.fallback.ethernodes -%}
               </div>
               <div class="text-center small">
                 Data provided by <a href="https://ethernodes.org" target="_blank">Ethernodes</a> — updated daily. <br>
                 Data may not be 100% accurate. (<a href="/client-fingerprinting">Read more</a>)
               </div>
             </div>
+            <!-- Select Data Source -->
             <div id="dataSourceOptionsEC" class="mt-4 text-start text-sm-center">
               <div class="alert alert-info" role="alert">
                 <div class="me-2 fw-bold">Data source:</div>
