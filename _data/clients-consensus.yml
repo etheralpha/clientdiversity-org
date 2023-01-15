@@ -39,7 +39,7 @@
   opensource: true
 - name: Nimbus
   link: https://nimbus.team/
-  github: https://github.com/status-im/nimbus
+  github: https://github.com/status-im/nimbus-eth2
   docs: https://nimbus.team/docs/
   chat: https://discord.gg/qnjVyhatUa
   status: stable
