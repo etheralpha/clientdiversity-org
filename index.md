@@ -607,6 +607,9 @@ layout: default
         <h5>Tools</h5>
         <ul class="">
           <li class="mb-2">
+            <a href="https://hackmd.io/@jyeAs_6oRjeDk2Mx5CZyBw/awesome-ethereum-staking" target="_blank" class="p-0 text-muted text-capitalize">Awesome Ethereum Staking Resources</a>
+          </li>
+          <li class="mb-2">
             <a href="https://stereum.net/" target="_blank" class="p-0 text-muted text-capitalize">Stereum</a>
           </li>
           <li class="mb-2">
