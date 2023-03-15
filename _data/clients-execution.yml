@@ -25,15 +25,17 @@
   chat: https://discord.com/invite/hyperledger
   status: stable
   support: Linux, Win, macOS
+  lang: Java
   donate: https://protocol-guild.readthedocs.io/en/latest/index.html
   opensource: true
-- name: Erigon (Turbo-Geth)
+- name: Erigon
   link: https://github.com/ledgerwatch/erigon#erigon
   github: https://github.com/ledgerwatch/erigon
   docs: https://github.com/ledgerwatch/erigon#usage
   chat: # invite only
   status: alpha & beta
   support: Linux, Win, macOS, ARM
+  lang: Golang
   donate: https://etherscan.io/address/0x8BFBB529A9E85fDC4b70A4FCdC0D68Bb298B8816 # funded by EF, Gnosis DAO
   opensource: true
 - name: EthereumJS
@@ -43,6 +45,7 @@
   chat: https://discord.gg/TNwARpR
   status: alpha
   support: Linux, Win, macOS
+  lang: TypeScript
   donate: funded # funded by EF
   opensource: true
 - name: Geth
@@ -52,6 +55,7 @@
   chat: https://discord.com/invite/nthXNEv
   status: stable
   support: Linux, Win, macOS, ARM
+  lang: Golang
   donate: https://gitcoin.co/grants/6128/go-ethereum-geth 
   opensource: true
 - name: Nethermind
@@ -61,6 +65,7 @@
   chat: https://discord.com/invite/PaCMRFdvWT
   status: stable
   support: Linux, Win, macOS, ARM
+  lang: .NET
   donate: https://gitcoin.co/grants/142/nethermind
   opensource: true
 - name: Nimbus
@@ -70,6 +75,7 @@
   chat: https://discord.gg/qnjVyhatUa
   status: pre-alpha
   support: 
+  lang: Nim
   donate: https://gitcoin.co/grants/137/nimbus-2
   opensource: true
 # - name: OpenEthereum
@@ -88,6 +94,7 @@
   chat: https://t.me/paradigm_reth
   status: pre-alpha
   support: Linux, macOS
+  lang: Rust
   donate:
   opensource: true
 - name: Silkworm
@@ -97,5 +104,6 @@
   chat: # invite only, channel in the erigon server
   status: pre-alpha
   support: Linux, Win, macOS
+  lang: C++
   donate: https://etherscan.io/address/0x8BFBB529A9E85fDC4b70A4FCdC0D68Bb298B8816
   opensource: true

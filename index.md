@@ -260,6 +260,7 @@ layout: default
                 <th scope="col">Chat</th>
                 <th scope="col">Status</th>
                 <th scope="col">Support</th>
+                <th scope="col">Language</th>
                 <th scope="col">Donate</th>
               </tr>
             </thead>
@@ -324,6 +325,11 @@ layout: default
                   {%- else -%}
                     <td>-</td>
                   {%- endif -%}
+                  {%- if client.lang -%}
+                    <td>{{client.lang}}</td>
+                  {%- else -%}
+                    <td>-</td>
+                  {%- endif -%}
                   {%- if client.donate -%}
                     {%- if client.donate contains "http" -%}
                       {%- assign donate_icon = site.data.icons.donate -%}
@@ -373,6 +379,7 @@ layout: default
                 <th scope="col">Chat</th>
                 <th scope="col">Status</th>
                 <th scope="col">Support</th>
+                <th scope="col">Language</th>
                 <th scope="col">Donate</th>
               </tr>
             </thead>
@@ -433,6 +440,11 @@ layout: default
                   {%- endif -%}
                   {%- if client.support -%}
                     <td>{{client.support}}</td>
+                  {%- else -%}
+                    <td>-</td>
+                  {%- endif -%}
+                  {%- if client.lang -%}
+                    <td>{{client.lang}}</td>
                   {%- else -%}
                     <td>-</td>
                   {%- endif -%}

@@ -5,6 +5,7 @@
 #   chat:       # link to community chat
 #   status:     # (select one) alpha, beta, stable
 #   support:    # Linux, Win, macOS, ARM
+#   lang        # programming language it's written in
 #   donate:     # link to gitcoin or etherscan address
 #   opensource: # true/false
 
@@ -25,6 +26,7 @@
   chat: https://discord.gg/cyAszAh
   status: stable
   support: Linux, Win, macOS, ARM
+  lang: Rust
   donate: https://gitcoin.co/grants/25/lighthouse-ethereum-20-client
   opensource: true
 - name: Lodestar
@@ -35,6 +37,7 @@
   chat: https://discord.gg/yjyvFRP
   status: stable
   support: Linux, Win, macOS # windows theoretically works but not tested yet https://github.com/ChainSafe/lodestar/issues/3519
+  lang: TypeScript
   donate: https://gitcoin.co/grants/6034/lodestar-typescript-ethereum-consensus-client
   opensource: true
 - name: Nimbus
@@ -44,6 +47,7 @@
   chat: https://discord.gg/qnjVyhatUa
   status: stable
   support: Linux, Win, macOS, ARM
+  lang: Nim
   donate: https://gitcoin.co/grants/137/nimbus-2
   opensource: true
 - name: Prysm
@@ -53,6 +57,7 @@
   chat: https://discord.gg/YMVYzv6
   status: stable
   support: Linux, Win, macOS
+  lang: Golang
   donate: https://gitcoin.co/grants/24/prysm-by-prysmatic-labs
   opensource: true
 - name: Teku
@@ -62,6 +67,7 @@
   chat: https://discord.gg/9mCVSY6
   status: stable
   support: Linux, Win, macOS
+  lang: Java
   donate: funded # funded by ConsenSys
   opensource: true
 
