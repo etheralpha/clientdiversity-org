@@ -2,6 +2,18 @@
 #   title:
 #   date:   # format: 04-Apr-2022
 
+- link: https://twitter.com/hanni_abu/status/1635761693195132930
+  title: "Update: Minority execution clients gaining marketshare"
+  date: 14-Mar-2023
+- link: https://www.diva-portal.org/smash/record.jsf?pid=diva2%3A1736078&dswid=4359
+  title: The State of Software Diversity in the Software Supply Chain of Ethereum Clients
+  date: 10-Feb-2023
+- link: https://twitter.com/gakonst/status/1595648232226291712
+  title: Reth, a new execution client written in Rust
+  date: 24-Nov-2022
+- link: https://www.youtube.com/watch?v=kX-Q2fiLecY
+  title: "Nimbus: Validating Made Light and Simple"
+  date: 11-Nov-2022
 - link: https://twitter.com/miga_labs/status/1550130663516282884
   title: "MigaLabs: Eth2.0 Fluid validator migration"
   date: 21-Jul-2022

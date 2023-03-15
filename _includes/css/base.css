@@ -3,7 +3,8 @@
 }
 @media (max-width: 25em) {
   .client-logos {
-    height: 2.2rem;
+    height: 2.6rem;
+    /*height: 2.2rem;*/
   }
 }
 

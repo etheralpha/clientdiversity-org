@@ -5,7 +5,7 @@ layout: default
 
 <header class="pb-md-3 pb-lg-5 mb-5 mb-md-0">
  <div class="px-4 py-5 my-4 my-md-5 text-center">
-    <h1 class="display-1 fw-bold mt-5">Diversify Now</h1>
+    <h1 class="display-1 fw-bold mt-sm-3 mt-md-4 mt-lg-5">Diversify Now</h1>
     <div class="col-lg-7 mx-auto">
       <p class="h4 fw-normal mb-4">Improve Ethereum's resilience by using a minority client</p>
       <a href="#switch" class="btn btn-dark btn-lg px-4 m-1">Switch Clients</a>
@@ -20,38 +20,36 @@ layout: default
 <!-- Logos -->
 <section class="bg-light">
   <div class="container my-5">
-    <div class="row text-center">
-      <div class="col">
-        <img src="/assets/img/consensus-clients/lighthouse-logo.png" alt="" class="my-2 client-logos">
+    <div class="row row-cols-3 row-cols-md-4 row-cols-lg-5 g-2 g-lg-3 justify-content-around">
+      <div class="col text-center">
+        <img class="my-1 client-logos" src="/assets/img/consensus-clients/lighthouse-logo.png" alt="">
       </div>
-      <div class="col">
-        <img src="/assets/img/consensus-clients/lodestar-logo-text.png" alt="" class="my-2 client-logos">
+      <div class="col text-center">
+        <img class="my-1 client-logos" src="/assets/img/execution-clients/nethermind-text-logo.png" alt="">
       </div>
-      <div class="col">
-        <img src="/assets/img/consensus-clients/prysm-logo.png" alt="" class="my-2 client-logos">
+      <div class="col text-center">
+        <img class="my-1 client-logos" src="/assets/img/consensus-clients/prysm-logo.png" alt="">
       </div>
-      <div class="col">
-        <img src="/assets/img/consensus-clients/nimbus-logo-text.png" alt="" class="my-2 client-logos">
+      <div class="col text-center">
+        <img class="my-1 client-logos" src="/assets/img/consensus-clients/lodestar-logo-text.png" alt="">
       </div>
-      <div class="col">
-        <img src="/assets/img/consensus-clients/teku-logo.png" alt="" class="my-2 client-logos">
+      <div class="col text-center">
+        <img class="my-1 client-logos" src="/assets/img/execution-clients/geth-logo.png" alt="">
       </div>
-    </div>
-    <div class="row text-center mt-2 d-none d-lg-flex">
-      <div class="col">
-        <img src="/assets/img/execution-clients/besu-text-logo.png" alt="" class="my-2 client-logos">
+      <div class="col text-center d-none d-sm-block">
+        <img class="my-1 client-logos" src="/assets/img/execution-clients/besu-text-logo.png" alt="">
       </div>
-      <div class="col">
-        <img src="/assets/img/execution-clients/nethermind-text-logo.png" alt="" class="my-2 client-logos">
+      <div class="col text-center d-none d-md-block">
+        <img class="my-1 client-logos rounded-circle" src="/assets/img/consensus-clients/nimbus-logo.svg" alt="">
       </div>
-      <div class="col">
-        <img src="/assets/img/execution-clients/erigon-text-logo.png" alt="" class="my-2 client-logos">
+      <div class="col text-center d-none d-lg-block">
+        <img class="my-1 client-logos" src="/assets/img/execution-clients/erigon-text-logo.png" alt="">
       </div>
-      <div class="col">
-        <img src="/assets/img/execution-clients/open-ethereum-text-logo.png" alt="" class="my-2 client-logos">
+      <div class="col text-center d-none d-lg-block">
+        <img class="my-1 client-logos" src="/assets/img/consensus-clients/teku-logo.png" alt="">
       </div>
-      <div class="col">
-        <img src="/assets/img/execution-clients/geth-logo.png" alt="" class="my-2 client-logos">
+      <div class="col text-center d-none d-lg-block">
+        <img class="my-1 client-logos" src="/assets/img/execution-clients/open-ethereum-text-logo.png" alt="">
       </div>
     </div>
   </div>
@@ -251,7 +249,7 @@ layout: default
       <div class="col col-xxl-8 col-xl-9 col-lg-10 col-md-11">
         <h3 class="mb-3">Consensus Clients</h3>
         <div class="table-responsive">
-          <table class="table table-bordered">
+          <table class="table table-bordered mb-2">
             <thead class="table-light">
               <tr>
                 <th scope="col" style="min-width: 8rem;">Client</th>
@@ -260,6 +258,7 @@ layout: default
                 <th scope="col">Chat</th>
                 <th scope="col">Status</th>
                 <th scope="col">Support</th>
+                <th scope="col">Language</th>
                 <th scope="col">Donate</th>
               </tr>
             </thead>
@@ -324,6 +323,11 @@ layout: default
                   {%- else -%}
                     <td>-</td>
                   {%- endif -%}
+                  {%- if client.lang -%}
+                    <td>{{client.lang}}</td>
+                  {%- else -%}
+                    <td>-</td>
+                  {%- endif -%}
                   {%- if client.donate -%}
                     {%- if client.donate contains "http" -%}
                       {%- assign donate_icon = site.data.icons.donate -%}
@@ -364,7 +368,7 @@ layout: default
       <div class="col col-xxl-8 col-xl-9 col-lg-10 col-md-11 mt-5">
         <h3 class="mb-3">Execution Clients</h3>
         <div class="table-responsive">
-          <table class="table table-bordered">
+          <table class="table table-bordered mb-2">
             <thead class="table-light">
               <tr>
                 <th scope="col" style="min-width: 8rem;">Client</th>
@@ -373,6 +377,7 @@ layout: default
                 <th scope="col">Chat</th>
                 <th scope="col">Status</th>
                 <th scope="col">Support</th>
+                <th scope="col">Language</th>
                 <th scope="col">Donate</th>
               </tr>
             </thead>
@@ -436,6 +441,11 @@ layout: default
                   {%- else -%}
                     <td>-</td>
                   {%- endif -%}
+                  {%- if client.lang -%}
+                    <td>{{client.lang}}</td>
+                  {%- else -%}
+                    <td>-</td>
+                  {%- endif -%}
                   {%- if client.donate -%}
                     {%- if client.donate contains "http" -%}
                       {%- assign donate_icon = site.data.icons.donate -%}
@@ -472,7 +482,7 @@ layout: default
       </div>
     </div>
     <div class="row justify-content-center mt-3">
-      <div class="col col-xl-6 col-lg-8 col-md-11 mt-5 text-md-center">
+      <div class="col col-xl-6 col-lg-8 col-md-11 mt-3 text-md-center">
         <p><strong>Note</strong>: Donations made to <a href="https://protocol-guild.readthedocs.io/en/latest/index.html" target="_blank">Protocol Guild</a> are distributed among Ethereum protocol contributors, including client teams. All recipients and splits can be <a href="https://protocol-guild.readthedocs.io/en/latest/9-membership.html" target="_blank">seen here</a>.</p>
       </div>
     </div>
@@ -606,6 +616,9 @@ layout: default
       <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
         <h5>Tools</h5>
         <ul class="">
+          <li class="mb-2">
+            <a href="https://hackmd.io/@jyeAs_6oRjeDk2Mx5CZyBw/awesome-ethereum-staking" target="_blank" class="p-0 text-muted text-capitalize">Awesome Ethereum Staking Resources</a>
+          </li>
           <li class="mb-2">
             <a href="https://stereum.net/" target="_blank" class="p-0 text-muted text-capitalize">Stereum</a>
           </li>

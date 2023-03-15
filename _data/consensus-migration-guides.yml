@@ -193,7 +193,7 @@ prysm_to_lighthouse:
     author: Yorick
     type: doc
     note: w/ ethdocker
-  - link: https://lighthouse.sigmaprime.io/switch-to-lighthouse.html
+  - link: https://lighthouse-blog.sigmaprime.io/switch-to-lighthouse.html
     author: Michael Sproul
     type: doc
   - link: https://github.com/cprest0n/eth-guides/blob/main/migrate-prysm-to-lighthouse.md
