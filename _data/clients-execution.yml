@@ -5,6 +5,7 @@
 #   chat:       # link to community chat
 #   status:     # (select one) alpha, beta, stable
 #   support:    # Linux, Win, macOS, ARM
+#   lang        # programming language it's written in
 #   donate:     # link to gitcoin or etherscan address
 #   opensource: # true/false
 
