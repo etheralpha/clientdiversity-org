@@ -58,7 +58,7 @@
   status: stable
   support: Linux, Win, macOS, ARM
   lang: Golang
-  donate: https://gitcoin.co/grants/24/prysm-by-prysmatic-labs
+  donate: funded # Supported by Offchain Labs
   opensource: true
 - name: Teku
   link: https://consensys.net/knowledge-base/ethereum-2/teku/
