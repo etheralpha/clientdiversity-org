@@ -56,7 +56,7 @@
   docs: https://docs.prylabs.network/docs/getting-started/
   chat: https://discord.gg/YMVYzv6
   status: stable
-  support: Linux, Win, macOS
+  support: Linux, Win, macOS, ARM
   lang: Golang
   donate: https://gitcoin.co/grants/24/prysm-by-prysmatic-labs
   opensource: true
