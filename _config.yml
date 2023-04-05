@@ -22,10 +22,19 @@ analytics_tag: |
     gtag('config', 'G-5YPSBBTM6W');
   </script>
 
-# Notifications
-notification_enabled: false
-notification_id: 1 # Increment value when new notification to show again
-notification_msg: This is a test notification message.<br>This is a test notification message.
+# Notification Bar
+enableNotification: false
+notificationMsgId: 1 # must increment when creating a new message
+notificationMsg: Join the community!<br><a href=""></a>.
+notificationExpiration: 3000000000 # epoch time in seconds
+
+# Toast
+enableToast: true
+toastMsgId: 1 # must increment when creating a new message
+toastTitle: We need your help!
+toastMsg: Support [Consensus Layer Withdrawal Protection](https://twitter.com/ethStaker/status/1643384655670833153) to help frontrun hackers that have compromised validator withdrawal addresses! # Best when under 100 characters
+toastLink: https://github.com/benjaminchodroff/ConsensusLayerWithdrawalProtection#consensus-layer-withdrawal-protection # Optional, leave blank to omit
+toastExpiration: 1681516800 # epoch time in seconds
 
 # Navigation
 nav_enabled: true
