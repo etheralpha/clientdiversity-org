@@ -60,7 +60,7 @@ layout: default
   <div class="container py-5 my-5">
     <div class="text-center mb-5">
       <h2 class="h1 fw-bold mb-2 text-center">Client Distribution</h2>
-      <a href="https://pools.invis.cloud/" target="_blank" class="btn btn-dark mt-2 mb-3">View Staking Pool Diversity</a>
+      <a href="https://www.rated.network/" target="_blank" class="btn btn-dark mt-2 mb-3">View Staking Pool Diversity</a>
       <p class="lead">Goal: &#60;33% <span class="mx-2">|</span> Danger: &#62;50%</p>
     </div>
     <div class="row justify-content-evenly">
@@ -640,7 +640,7 @@ layout: default
         <h5>Metrics</h5>
         <ul class="">
           <li class="mb-2">
-            <a href="https://pools.invis.cloud/" target="_blank" class="p-0 text-muted text-capitalize">Staking Pool Client Diversity</a>
+            <a href="https://www.rated.network/" target="_blank" class="p-0 text-muted text-capitalize">Staking Pool Client Diversity</a>
           </li>
           <li class="mb-2">
             <a href="https://migalabs.es/crawler/dashboard" target="_blank" class="p-0 text-muted text-capitalize">Miga Labs Dashboard</a>
