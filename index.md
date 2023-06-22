@@ -144,7 +144,7 @@ layout: default
               <a id="marketshareSuccessEC" href="#why" class="d-none text-decoration-none">
                 <div class="alert alert-info d-flex align-items-center" role="alert">
                   {{site.data.icons.info}}
-                  <div class="ms-2">The consensus client diversity has improved!</div>
+                  <div class="ms-2">The execution client diversity has improved!</div>
                 </div>
               </a>
             </div>
