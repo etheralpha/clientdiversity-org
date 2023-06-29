@@ -16,7 +16,7 @@ var migalabsData = {
     "Lighthouse": 1194,
     "Lodestar": 8,
     "Nimbus": 191,
-    "Others": 4,
+    "Unknown": 4,
     "Prysm": 2257,
     "Teku": 358
 };

@@ -22,6 +22,12 @@ exports.handler = async (event, context) => {
   const fetchData = async () => {
     try {
       const response = await fetch(API_ENDPOINT).then( response => response.json() );
+      let consensusClients = ["grandine","lighthouse","lodestar","nimbus","prysm","teku","unknown"];
+      for (const [key, value] of Object.entries(response)) {
+        if (!consensusClients.includes(key)) {
+          delete response[key];
+        }
+      }
       console.log({"migalabs":response});
       return response;
     } catch (err) {
