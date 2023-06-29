@@ -126,9 +126,15 @@ function createChart(data, datasource) {
     }
     if (datasource == "blockprint") {
       if (blockprintAccuracy && blockprintAccuracy[client]) {
-        let blocksTotal = blockprintAccuracy[client]['num_blocks'];
-        let blocksCorrect = blockprintAccuracy[client]['num_correct'];
-        accuracy = Math.round( blocksCorrect/blocksTotal*1000 ) / 10 + '%';
+        let truePositives = blockprintAccuracy[client]['true_positives'];
+        let falseNegatives = blockprintAccuracy[client]['false_negatives'];
+        accuracy = Math.round( truePositives/(truePositives+falseNegatives)*1000 ) / 10 + "%";
+        if (truePositives == 0 && falseNegatives == 0) {
+          accuracy = "no data";
+        } else if (truePositives == 0 && falseNegatives != 0) {
+          accuracy = "0%";
+        }
+        // console.log({"client": client, "accuracy": accuracy});
       }
     }
 
