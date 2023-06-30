@@ -10,6 +10,12 @@ livereload: true
 # port: 4400
 
 
+# Plugins
+plugins:
+  - jekyll-redirect-from # https://github.com/jekyll/jekyll-redirect-from
+redirect_from: # jekyll-redirect-from
+  json: false
+
 # Global variables
 analytics_tag: |
   <!-- Google tag (gtag.js) -->

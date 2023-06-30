@@ -1,6 +1,8 @@
 ---
 layout: default
 permalink: /contribute/
+
+redirect_to: https://github.com/etheralpha/clientdiversity-org
 ---
 
 

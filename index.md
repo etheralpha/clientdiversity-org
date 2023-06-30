@@ -96,7 +96,7 @@ layout: default
               </div>
               <div class="text-center small">
                 Data provided by <a href="https://migalabs.es/api-documentation" target="_blank">Miga Labs</a> — updated daily. <br>
-                Data may not be 100% accurate. (<a href="/client-fingerprinting">Read more</a>)
+                Data may not be 100% accurate. (<a href="/methodology">Read more</a>)
               </div>
             </div>
             <!-- Blockprint Data -->
@@ -106,7 +106,7 @@ layout: default
               </div>
               <div class="text-center small">
                 Data provided by <a href="https://github.com/sigp/blockprint/blob/main/docs/api.md" target="_blank">Sigma Prime's Blockprint</a> — updated daily. <br>
-                Data may not be 100% accurate. (<a href="/client-fingerprinting">Read more</a>)
+                Data may not be 100% accurate. (<a href="/methodology">Read more</a>)
               </div>
             </div>
             <!-- Select Data Source -->
@@ -114,7 +114,7 @@ layout: default
               <div class="alert alert-info" role="alert">
                 <div class="me-2 fw-bold">
                   <span>Data source </span>
-                  <a href="/client-fingerprinting" style="color: #055160;">(read more)</a>:
+                  <a href="/methodology" style="color: #055160;">(read more)</a>:
                 </div>
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="datasourcesCC" id="dataSource2" value="blockprint"  onclick="setDataSources();" checked>
@@ -155,7 +155,7 @@ layout: default
               </div>
               <div class="text-center small">
                 Data provided by <a href="https://ethernodes.org" target="_blank">Ethernodes</a> — updated daily. <br>
-                Data may not be 100% accurate. (<a href="/client-fingerprinting">Read more</a>)
+                Data may not be 100% accurate. (<a href="/methodology">Read more</a>)
               </div>
             </div>
             <!-- Select Data Source -->
@@ -643,7 +643,7 @@ layout: default
             <a href="https://www.rated.network/" target="_blank" class="p-0 text-muted text-capitalize">Staking Pool Client Diversity</a>
           </li>
           <li class="mb-2">
-            <a href="https://migalabs.es/crawler/dashboard" target="_blank" class="p-0 text-muted text-capitalize">Miga Labs Dashboard</a>
+            <a href="https://monitoreth.io/" target="_blank" class="p-0 text-muted text-capitalize">Miga Labs Dashboard</a>
           </li>
           <li class="mb-2">
             <a href="https://www.nodewatch.io/" target="_blank" class="p-0 text-muted text-capitalize">Chainsafe Nodewatch</a>
