@@ -25,6 +25,7 @@ exports.handler = async (event, context) => {
       let consensusClients = ["grandine","lighthouse","lodestar","nimbus","prysm","teku","unknown"];
       for (const [key, value] of Object.entries(response)) {
         if (!consensusClients.includes(key)) {
+          response["unknown"] += response[key];
           delete response[key];
         }
       }
