@@ -1,41 +1,41 @@
 blockprint:
   - name: Prysm
-    value: 39.17
+    value: 38.05
   - name: Lighthouse
-    value: 37.46
+    value: 36.39
   - name: Teku
-    value: 17.16
+    value: 17.27
   - name: Nimbus
-    value: 5.52
+    value: 7.09
   - name: Lodestar
-    value: 0.69
+    value: 1.2
   - name: Uncertain
     value: 0
   - name: Other
     value: 0
 migalabs:
-  - name: Lighthouse
-    value: 65.12
   - name: Prysm
-    value: 11.64
+    value: 38.56
+  - name: Lighthouse
+    value: 36.19
   - name: Teku
-    value: 18.84
-  - name: Grandine
-    value: 2.02
+    value: 14.57
   - name: Nimbus
+    value: 7.13
+  - name: Grandine
     value: 2.14
   - name: Lodestar
-    value: 0
+    value: 1.39
   - name: Other
-    value: 0.24
+    value: 0.02
 ethernodes:
   - name: Geth
-    value: 60.18
-  - name: Erigon
-    value: 12.66
-  - name: Besu
-    value: 7.22
+    value: 54.67
   - name: Nethermind
-    value: 19.82
+    value: 21.54
+  - name: Erigon
+    value: 12.59
+  - name: Besu
+    value: 10.93
   - name: Others
-    value: 0.12
+    value: 0.26

@@ -5,7 +5,7 @@
 
 
 # Example:
-# - link: https://eth-docker.net/docs/Support/SwitchClient
+# - link: https://eth-docker.net/Support/SwitchClient
 #   author: Yorick
 #   type: doc
 #   note: w/ ethdocker
@@ -99,12 +99,12 @@ blank_to_teku:
     note: w/ Ubuntu - Testnet
 blank_to_grandine:
 lighthouse_to_lodestar:
-  - link: https://eth-docker.net/docs/Support/SwitchClient
+  - link: https://eth-docker.net/Support/SwitchClient
     author: Yorick
     type: doc
     note: w/ ethdocker
 lighthouse_to_nimbus:
-  - link: https://eth-docker.net/docs/Support/SwitchClient
+  - link: https://eth-docker.net/Support/SwitchClient
     author: Yorick
     type: doc
     note: w/ ethdocker
@@ -116,7 +116,7 @@ lighthouse_to_nimbus:
     type: video
     note: w/ Rocket Pool
 lighthouse_to_prysm:
-  - link: https://eth-docker.net/docs/Support/SwitchClient
+  - link: https://eth-docker.net/Support/SwitchClient
     author: Yorick
     type: doc
     note: w/ ethdocker
@@ -125,7 +125,7 @@ lighthouse_to_prysm:
     type: video
     note: w/ Rocket Pool
 lighthouse_to_teku:
-  - link: https://eth-docker.net/docs/Support/SwitchClient
+  - link: https://eth-docker.net/Support/SwitchClient
     author: Yorick
     type: doc
     note: w/ ethdocker
@@ -135,28 +135,28 @@ lighthouse_to_teku:
     note: w/ Rocket Pool
 lighthouse_to_grandine:
 lodestar_to_lighthouse:
-  - link: https://eth-docker.net/docs/Support/SwitchClient
+  - link: https://eth-docker.net/Support/SwitchClient
     author: Yorick
     type: doc
     note: w/ ethdocker
 lodestar_to_nimbus:
-  - link: https://eth-docker.net/docs/Support/SwitchClient
+  - link: https://eth-docker.net/Support/SwitchClient
     author: Yorick
     type: doc
     note: w/ ethdocker
 lodestar_to_prysm:
-  - link: https://eth-docker.net/docs/Support/SwitchClient
+  - link: https://eth-docker.net/Support/SwitchClient
     author: Yorick
     type: doc
     note: w/ ethdocker
 lodestar_to_teku:
-  - link: https://eth-docker.net/docs/Support/SwitchClient
+  - link: https://eth-docker.net/Support/SwitchClient
     author: Yorick
     type: doc
     note: w/ ethdocker
 lodestar_to_grandine:
 nimbus_to_lighthouse:
-  - link: https://eth-docker.net/docs/Support/SwitchClient
+  - link: https://eth-docker.net/Support/SwitchClient
     author: Yorick
     type: doc
     note: w/ ethdocker
@@ -165,12 +165,12 @@ nimbus_to_lighthouse:
     type: video
     note: w/ Rocket Pool
 nimbus_to_lodestar:
-  - link: https://eth-docker.net/docs/Support/SwitchClient
+  - link: https://eth-docker.net/Support/SwitchClient
     author: Yorick
     type: doc
     note: w/ ethdocker
 nimbus_to_prysm:
-  - link: https://eth-docker.net/docs/Support/SwitchClient
+  - link: https://eth-docker.net/Support/SwitchClient
     author: Yorick
     type: doc
     note: w/ ethdocker
@@ -179,7 +179,7 @@ nimbus_to_prysm:
     type: video
     note: w/ Rocket Pool
 nimbus_to_teku:
-  - link: https://eth-docker.net/docs/Support/SwitchClient
+  - link: https://eth-docker.net/Support/SwitchClient
     author: Yorick
     type: doc
     note: w/ ethdocker
@@ -189,7 +189,7 @@ nimbus_to_teku:
     note: w/ Rocket Pool
 nimbus_to_grandine:
 prysm_to_lighthouse:
-  - link: https://eth-docker.net/docs/Support/SwitchClient
+  - link: https://eth-docker.net/Support/SwitchClient
     author: Yorick
     type: doc
     note: w/ ethdocker
@@ -204,12 +204,12 @@ prysm_to_lighthouse:
     type: video
     note: w/ Rocket Pool
 prysm_to_lodestar:
-  - link: https://eth-docker.net/docs/Support/SwitchClient
+  - link: https://eth-docker.net/Support/SwitchClient
     author: Yorick
     type: doc
     note: w/ ethdocker
 prysm_to_nimbus:
-  - link: https://eth-docker.net/docs/Support/SwitchClient
+  - link: https://eth-docker.net/Support/SwitchClient
     author: Yorick
     type: doc
     note: w/ ethdocker
@@ -224,7 +224,7 @@ prysm_to_nimbus:
     type: video
     note: w/ Rocket Pool
 prysm_to_teku:
-  - link: https://eth-docker.net/docs/Support/SwitchClient
+  - link: https://eth-docker.net/Support/SwitchClient
     author: Yorick
     type: doc
     note: w/ ethdocker
@@ -248,7 +248,7 @@ prysm_to_teku:
     note: w/ Rocket Pool
 prysm_to_grandine:
 teku_to_lighthouse:
-  - link: https://eth-docker.net/docs/Support/SwitchClient
+  - link: https://eth-docker.net/Support/SwitchClient
     author: Yorick
     type: doc
     note: w/ ethdocker
@@ -257,12 +257,12 @@ teku_to_lighthouse:
     type: video
     note: w/ Rocket Pool
 teku_to_lodestar:
-  - link: https://eth-docker.net/docs/Support/SwitchClient
+  - link: https://eth-docker.net/Support/SwitchClient
     author: Yorick
     type: doc
     note: w/ ethdocker
 teku_to_nimbus:
-  - link: https://eth-docker.net/docs/Support/SwitchClient
+  - link: https://eth-docker.net/Support/SwitchClient
     author: Yorick
     type: doc
     note: w/ ethdocker
@@ -274,7 +274,7 @@ teku_to_nimbus:
     type: video
     note: w/ Rocket Pool
 teku_to_prysm:
-  - link: https://eth-docker.net/docs/Support/SwitchClient
+  - link: https://eth-docker.net/Support/SwitchClient
     author: Yorick
     type: doc
     note: w/ ethdocker

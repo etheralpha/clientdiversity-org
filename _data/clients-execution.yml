@@ -3,7 +3,7 @@
 #   github:     # link to github
 #   docs:       # link to documentation
 #   chat:       # link to community chat
-#   status:     # (select one) alpha, beta, stable
+#   status:     # (select one) deprecated, pre-alpha, alpha, beta, stable
 #   support:    # Linux, Win, macOS, ARM
 #   lang        # programming language it's written in
 #   donate:     # link to gitcoin or etherscan address
@@ -93,7 +93,7 @@
   github: https://github.com/paradigmxyz/reth
   docs: https://github.com/paradigmxyz/reth/tree/main/docs
   chat: https://t.me/paradigm_reth
-  status: pre-alpha
+  status: alpha
   support: Linux, macOS
   lang: Rust
   donate:

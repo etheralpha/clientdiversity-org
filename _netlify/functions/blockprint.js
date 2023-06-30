@@ -48,7 +48,7 @@ exports.handler = async (event, context) => {
     const startEpoch = endEpoch - 3150;
     const blockprintMarketshareEndpoint = `https://api.blockprint.sigp.io/blocks_per_client/${startEpoch}/${endEpoch}`;
     // endpoint fo the accuracy of fingerprinting for each client
-    const blockprintAccuracyEndpoint = 'https://api.blockprint.sigp.io/accuracy';
+    const blockprintAccuracyEndpoint = 'https://api.blockprint.sigp.io/confusion';
 
     try {
       let response = [];
@@ -59,7 +59,7 @@ exports.handler = async (event, context) => {
       const blockprintMarketshareResponse = await blockprintMarketshare.json();
       const blockprintAccuracyResponse = await blockprintAccuracy.json();
       response[0] = blockprintMarketshareResponse;
-      response[1] = blockprintAccuracyResponse;
+      response[1] = blockprintAccuracyResponse["clients"];
       console.log({"blockprint":response});
       return response;
     } catch (err) {

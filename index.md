@@ -60,7 +60,7 @@ layout: default
   <div class="container py-5 my-5">
     <div class="text-center mb-5">
       <h2 class="h1 fw-bold mb-2 text-center">Client Distribution</h2>
-      <a href="https://pools.invis.cloud/" target="_blank" class="btn btn-dark mt-2 mb-3">View Staking Pool Diversity</a>
+      <a href="https://www.rated.network/" target="_blank" class="btn btn-dark mt-2 mb-3">View Staking Pool Diversity</a>
       <p class="lead">Goal: &#60;33% <span class="mx-2">|</span> Danger: &#62;50%</p>
     </div>
     <div class="row justify-content-evenly">
@@ -96,7 +96,7 @@ layout: default
               </div>
               <div class="text-center small">
                 Data provided by <a href="https://migalabs.es/api-documentation" target="_blank">Miga Labs</a> — updated daily. <br>
-                Data may not be 100% accurate. (<a href="/client-fingerprinting">Read more</a>)
+                Data may not be 100% accurate. (<a href="/methodology">Read more</a>)
               </div>
             </div>
             <!-- Blockprint Data -->
@@ -106,7 +106,7 @@ layout: default
               </div>
               <div class="text-center small">
                 Data provided by <a href="https://github.com/sigp/blockprint/blob/main/docs/api.md" target="_blank">Sigma Prime's Blockprint</a> — updated daily. <br>
-                Data may not be 100% accurate. (<a href="/client-fingerprinting">Read more</a>)
+                Data may not be 100% accurate. (<a href="/methodology">Read more</a>)
               </div>
             </div>
             <!-- Select Data Source -->
@@ -114,7 +114,7 @@ layout: default
               <div class="alert alert-info" role="alert">
                 <div class="me-2 fw-bold">
                   <span>Data source </span>
-                  <a href="/client-fingerprinting" style="color: #055160;">(read more)</a>:
+                  <a href="/methodology" style="color: #055160;">(read more)</a>:
                 </div>
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="datasourcesCC" id="dataSource2" value="blockprint"  onclick="setDataSources();" checked>
@@ -144,7 +144,7 @@ layout: default
               <a id="marketshareSuccessEC" href="#why" class="d-none text-decoration-none">
                 <div class="alert alert-info d-flex align-items-center" role="alert">
                   {{site.data.icons.info}}
-                  <div class="ms-2">The consensus client diversity has improved!</div>
+                  <div class="ms-2">The execution client diversity has improved!</div>
                 </div>
               </a>
             </div>
@@ -155,7 +155,7 @@ layout: default
               </div>
               <div class="text-center small">
                 Data provided by <a href="https://ethernodes.org" target="_blank">Ethernodes</a> — updated daily. <br>
-                Data may not be 100% accurate. (<a href="/client-fingerprinting">Read more</a>)
+                Data may not be 100% accurate. (<a href="/methodology">Read more</a>)
               </div>
             </div>
             <!-- Select Data Source -->
@@ -640,10 +640,10 @@ layout: default
         <h5>Metrics</h5>
         <ul class="">
           <li class="mb-2">
-            <a href="https://pools.invis.cloud/" target="_blank" class="p-0 text-muted text-capitalize">Staking Pool Client Diversity</a>
+            <a href="https://www.rated.network/" target="_blank" class="p-0 text-muted text-capitalize">Staking Pool Client Diversity</a>
           </li>
           <li class="mb-2">
-            <a href="https://migalabs.es/crawler/dashboard" target="_blank" class="p-0 text-muted text-capitalize">Miga Labs Dashboard</a>
+            <a href="https://monitoreth.io/" target="_blank" class="p-0 text-muted text-capitalize">Miga Labs Dashboard</a>
           </li>
           <li class="mb-2">
             <a href="https://www.nodewatch.io/" target="_blank" class="p-0 text-muted text-capitalize">Chainsafe Nodewatch</a>
