@@ -29,18 +29,20 @@ analytics_tag: |
   </script>
 
 # Notification Bar
-enableNotification: false
-notificationMsgId: 1 # must increment when creating a new message
-notificationMsg: Join the community!<br><a href=""></a>.
-notificationExpiration: 3000000000 # epoch time in seconds
+enable_notification: false
+notification_msg_id: 1 # must increment when creating a new message
+notification_msg: Join the community! <br><a href=""></a>.
+notification_expiration: 3000000000 # epoch time in seconds
 
 # Toast
-enableToast: true
-toastMsgId: 1 # must increment when creating a new message
-toastTitle: We need your help!
-toastMsg: Support [Consensus Layer Withdrawal Protection](https://twitter.com/ethStaker/status/1643384655670833153) to help frontrun hackers that have compromised validator withdrawal addresses! # Best when under 100 characters
-toastLink: https://github.com/benjaminchodroff/ConsensusLayerWithdrawalProtection#consensus-layer-withdrawal-protection # Optional, leave blank to omit
-toastExpiration: 1681516800 # epoch time in seconds
+enable_toast: true
+toast_msg_id: 3 # must increment when creating a new message
+toast_title: Lodestar User Incentive Program
+toast_msg: Try out Lodestar and promote client diversity for a chance at a prize pool of $25,000 USD! # Best when under 200 characters
+toast_link: https://blog.chainsafe.io/introducing-the-lodestar-user-incentive-program-bbaeaa3246eb # Optional, leave blank to omit
+toast_link_text: Learn more
+# August 23rd, 00:00:00 GMT+0
+toast_expiration: 1692748800 # epoch time in seconds
 
 # Navigation
 nav_enabled: true
