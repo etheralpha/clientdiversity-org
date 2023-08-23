@@ -1,0 +1,122 @@
+<!-- Client Distribution -->
+<section id="distribution" class="">
+  <div class="container py-5 my-5">
+    <div class="text-center mb-5">
+      <h2 class="h1 fw-bold mb-2 text-center">Client Distribution</h2>
+      <a href="https://www.rated.network/" target="_blank" class="btn btn-dark mt-2 mb-3">View Staking Pool Diversity</a>
+      <p class="lead">Goal: &#60;33% <span class="mx-2">|</span> Danger: &#62;50%</p>
+    </div>
+    <div class="row justify-content-evenly">
+      <div class="col-12 col-xl-5 col-lg-6 col-md-8 col-sm-12 text-center">
+        <div class="card h-100 rounded-3 p-0 p-lg-2">
+          <div class="card-body d-flex flex-column p-4">
+            <h3 class="p-2 mb-4">Consensus Clients</h3>
+            <!-- Consensus Client Alerts -->
+              {%- assign blockprint = site.data.blockprint | last -%}
+              {%- include partials/components/alert.html data=blockprint.data.other type="consensus" -%}
+              {%- assign migalabs = site.data.migalabs | last -%}
+              {%- include partials/components/alert.html data=migalabs.data.other type="consensus" -%}
+              {%- assign rated = site.data.rated | last -%}
+              {%- include partials/components/alert.html data=rated.data.other type="consensus" -%}
+            <!-- Blockprint Data -->
+            <div class="text-start flex-grow-1 blockprint consensus-data">
+              {%- assign blockprint = site.data.blockprint | last -%}
+              {%- include partials/components/progress-bar.html data=blockprint.data.distribution -%}
+              <div class="text-center small">
+                Data provided by <a href="https://github.com/sigp/blockprint/blob/main/docs/api.md" target="_blank">Sigma Prime's Blockprint</a> — updated daily. <br>
+                Data may not be 100% accurate. (<a href="/methodology">Read more</a>)
+              </div>
+            </div>
+            <!-- Miga Labs Data -->
+            <div class="d-none text-start flex-grow-1 migalabs consensus-data">
+              {%- assign migalabs = site.data.migalabs | last -%}
+              {%- include partials/components/progress-bar.html data=migalabs.data.distribution -%}
+              <div class="text-center small">
+                Data provided by <a href="https://migalabs.es/api-documentation" target="_blank">Miga Labs</a> — updated daily. <br>
+                Data may not be 100% accurate. (<a href="/methodology">Read more</a>)
+              </div>
+            </div>
+            <!-- Rated Data -->
+            <div class="d-none text-start flex-grow-1 rated consensus-data">
+              {%- assign rated = site.data.rated | last -%}
+              {%- include partials/components/progress-bar.html data=rated.data.distribution -%}
+              <div class="text-center small">
+                Data provided by <a href="https://rated.network" target="_blank">Rated.Network</a> — updated daily. <br>
+                Data may not be 100% accurate. (<a href="/methodology">Read more</a>)
+              </div>
+            </div>
+            <!-- Select Data Source -->
+            <div id="dataSourceOptionsCC" class="mt-4 text-start text-sm-center">
+              <div class="alert alert-info" role="alert">
+                <div class="me-2 fw-bold">
+                  <span>Data source </span>
+                  <a href="/methodology" style="color: #055160;">(read more)</a>:
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="datasourcesCC" id="dataSource1" value="blockprint"  onclick="setDataSource('blockprint', 'consensus');" checked>
+                  <label class="form-check-label" for="dataSource1">Sigma Prime's Blockprint</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="datasourcesCC" id="dataSource2" value="migalabs"  onclick="setDataSource('migalabs', 'consensus');">
+                  <label class="form-check-label" for="dataSource2">Miga Labs</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="datasourcesCC" id="dataSource3" value="rated"  onclick="setDataSource('rated', 'consensus');">
+                  <label class="form-check-label" for="dataSource3">Rated.Network</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-xl-5 col-lg-6 col-md-8 col-sm-12 mt-5 pt-3 mt-lg-0 pt-lg-0 text-center d-flex flex-column">
+        <div class="card h-100 rounded-3 p-0 p-lg-2">
+          <div class="card-body d-flex flex-column p-4">
+            <h3 class="p-2 mb-4">Execution Clients</h3>
+            <!-- Execution Client Alerts -->
+              {%- assign ethernodes = site.data.ethernodes | last -%}
+              {%- include partials/components/alert.html data=ethernodes.data.other type="execution" -%}
+              {%- assign edi = site.data.edi | last -%}
+              {%- include partials/components/alert.html data=edi.data.other type="execution" -%}
+            <!-- Ethernodes Data -->
+            <div class="text-start flex-grow-1 ethernodes execution-data">
+              {%- assign ethernodes = site.data.ethernodes | last -%}
+              {%- include partials/components/progress-bar.html data=ethernodes.data.distribution -%}
+              <div class="text-center small">
+                Data provided by <a href="https://ethernodes.org" target="_blank">Ethernodes</a> — updated daily. <br>
+                Data may not be 100% accurate. (<a href="/methodology">Read more</a>)
+              </div>
+            </div>
+            <!-- Execution-Diversity.info Data -->
+            <div class="d-none text-start flex-grow-1 edi execution-data">
+              {%- assign edi = site.data.edi | last -%}
+              {%- include partials/components/progress-bar.html data=edi.data.distribution -%}
+              <div class="text-center small">
+                Data provided by <a href="https://execution-diversity.info" target="_blank">execution-diversity.info</a> — updated daily. <br>
+                Data may not be 100% accurate. (<a href="/methodology">Read more</a>) <br>
+                <p class="mt-2 mb-0 fw-bold">Network coverage: {{edi.data.other.validators_percentage | times: 100 | round: 1 }}%</p>
+              </div>
+            </div>
+            <!-- Select Data Source -->
+            <div id="dataSourceOptionsEC" class="mt-4 text-start text-sm-center">
+              <div class="alert alert-info" role="alert">
+                <div class="me-2 fw-bold">
+                  <span>Data source </span>
+                  <a href="/methodology" style="color: #055160;">(read more)</a>:
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="datasourcesEC" id="dataSourceEC1" value="ethernodes"  onclick="setDataSource('ethernodes', 'execution');" checked>
+                  <label class="form-check-label" for="dataSource1">Ethernodes</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="datasourcesEC" id="dataSourceEC2" value="edi"  onclick="setDataSource('edi', 'execution');">
+                  <label class="form-check-label" for="dataSource2">Execution-Diversity.info</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

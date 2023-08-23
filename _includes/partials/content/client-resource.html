@@ -1,0 +1,249 @@
+<!-- Client Resources -->
+<section id="clients" class="">
+  <div class="container py-5 my-5">
+    <div class="text-center mb-5">
+      <h2 class="h1 fw-bold mb-2">Client Resources</h2>
+    </div>
+    <div class="row justify-content-evenly mt-4">
+      <div class="col col-xxl-8 col-xl-9 col-lg-10 col-md-11">
+        <h3 class="mb-3">Consensus Clients</h3>
+        <div class="table-responsive">
+          <table class="table table-bordered mb-2">
+            <thead class="table-light">
+              <tr>
+                <th scope="col" style="min-width: 8rem;">Client</th>
+                <th scope="col">Github</th>
+                <th scope="col" style="min-width: 3.8rem;">Docs</th>
+                <th scope="col">Chat</th>
+                <th scope="col">Status</th>
+                <th scope="col">Support</th>
+                <th scope="col">Language</th>
+                <th scope="col">Donate</th>
+              </tr>
+            </thead>
+            <tbody>
+              {%- for client in site.data.clients-consensus -%}
+                <tr>
+                  <th scope="row">
+                    {%- if client.name == "Grandine" -%}*{%- endif -%}
+                    {%- if client.link -%}
+                      <a href="{{client.link}}" class="text-body-color" target="_blank">
+                      {{client.name}}
+                      {{site.data.icons.new_tab}}
+                      </a>
+                    {%- else -%}
+                      {{client.name}}
+                    {%- endif -%}
+                  </th>
+                  {%- if client.github -%}
+                    <td>
+                      <a href="{{client.github}}" class="text-decoration-none text-body-color" target="_blank">
+                        {{site.data.icons.github}}
+                        {{site.data.icons.new_tab}}
+                      </a>
+                    </td>
+                  {%- else -%}
+                    <td>-</td>
+                  {%- endif -%}
+                  {%- if client.docs -%}
+                    <td>
+                      <a href="{{client.docs}}" class="text-decoration-none text-body-color" target="_blank">
+                        {{site.data.icons.docs}}
+                        {{site.data.icons.new_tab}}
+                      </a>
+                    </td>
+                  {%- else -%}
+                    <td>-</td>
+                  {%- endif -%}
+                  {%- if client.chat -%}
+                    {%- assign chat_icon = site.data.icons.chat -%}
+                    {%- if client.chat contains "discord" -%}
+                      {%- assign chat_icon = site.data.icons.discord -%}
+                    {%- endif -%}
+                    {%- if client.chat contains "t.me" -%}
+                      {%- assign chat_icon = site.data.icons.telegram -%}
+                    {%- endif -%}
+                    <td>
+                      <a href="{{client.chat}}" class="text-decoration-none text-body-color" target="_blank">
+                        {{chat_icon}}
+                        {{site.data.icons.new_tab}}
+                      </a>
+                    </td>
+                  {%- else -%}
+                    <td>-</td>
+                  {%- endif -%}
+                  {%- if client.status -%}
+                    <td>{{client.status}}</td>
+                  {%- else -%}
+                    <td>-</td>
+                  {%- endif -%}
+                  {%- if client.support -%}
+                    <td>{{client.support}}</td>
+                  {%- else -%}
+                    <td>-</td>
+                  {%- endif -%}
+                  {%- if client.lang -%}
+                    <td>{{client.lang}}</td>
+                  {%- else -%}
+                    <td>-</td>
+                  {%- endif -%}
+                  {%- if client.donate -%}
+                    {%- if client.donate contains "http" -%}
+                      {%- assign donate_icon = site.data.icons.donate -%}
+                      {%- if client.donate contains "etherscan.io" -%}
+                        {%- assign donate_icon = site.data.icons.etherscan -%}
+                      {%- endif -%}
+                      {%- if client.donate contains "gitcoin.co" -%}
+                        {%- assign donate_icon = site.data.icons.gitcoin -%}
+                      {%- endif -%}
+                      {%- if client.donate contains "protocol-guild" -%}
+                        {%- assign donate_icon = '<img src="/assets/img/protocol-guild.png" style="width:1.4rem;height:1.4rem;">' -%}
+                      {%- endif -%}
+                      <td>
+                        <a href="{{client.donate}}" class="text-decoration-none text-body-color" target="_blank">
+                          {{donate_icon}}
+                          {{site.data.icons.new_tab}}
+                        </a>
+                      </td>
+                    {%- else -%}
+                      {%- if client.donate == "funded" -%}
+                        <td><span class="text-success" title="funded">{{site.data.icons.checkmark}}</span></td>
+                      {%- else -%}
+                        <td>{{client.donate}}</td>
+                      {%- endif -%}
+                    {%- endif -%}
+                  {%- else -%}
+                    <td>-</td>
+                  {%- endif -%}
+                </tr>
+              {%- endfor -%}
+            </tbody>
+          </table>
+        </div>
+        <div class="text-center">
+          <small>* Grandine is not open sourced</small>
+        </div>
+      </div>
+      <div class="col col-xxl-8 col-xl-9 col-lg-10 col-md-11 mt-5">
+        <h3 class="mb-3">Execution Clients</h3>
+        <div class="table-responsive">
+          <table class="table table-bordered mb-2">
+            <thead class="table-light">
+              <tr>
+                <th scope="col" style="min-width: 8rem;">Client</th>
+                <th scope="col">Github</th>
+                <th scope="col" style="min-width: 3.8rem;">Docs</th>
+                <th scope="col">Chat</th>
+                <th scope="col">Status</th>
+                <th scope="col">Support</th>
+                <th scope="col">Language</th>
+                <th scope="col">Donate</th>
+              </tr>
+            </thead>
+            <tbody>
+              {%- for client in site.data.clients-execution -%}
+                <tr>
+                  <th scope="row">
+                    {%- if client.link -%}
+                      <a href="{{client.link}}" class="text-body-color" target="_blank">
+                        {{client.name}}
+                        {{site.data.icons.new_tab}}
+                      </a>
+                    {%- else -%}
+                      {{client.name}}
+                    {%- endif -%}
+                  </th>
+                  {%- if client.github -%}
+                    <td>
+                      <a href="{{client.github}}" class="text-decoration-none text-body-color" target="_blank">
+                        {{site.data.icons.github}}
+                        {{site.data.icons.new_tab}}
+                      </a>
+                    </td>
+                  {%- else -%}
+                    <td>-</td>
+                  {%- endif -%}
+                  {%- if client.docs -%}
+                    <td>
+                      <a href="{{client.docs}}" class="text-decoration-none text-body-color" target="_blank">
+                        {{site.data.icons.docs}}
+                        {{site.data.icons.new_tab}}
+                      </a>
+                    </td>
+                  {%- else -%}
+                    <td>-</td>
+                  {%- endif -%}
+                  {%- if client.chat -%}
+                    {%- assign chat_icon = site.data.icons.chat -%}
+                    {%- if client.chat contains "discord" -%}
+                      {%- assign chat_icon = site.data.icons.discord -%}
+                    {%- endif -%}
+                    {%- if client.chat contains "t.me" -%}
+                      {%- assign chat_icon = site.data.icons.telegram -%}
+                    {%- endif -%}
+                    <td>
+                      <a href="{{client.chat}}" class="text-decoration-none text-body-color" target="_blank">
+                        {{chat_icon}}
+                        {{site.data.icons.new_tab}}
+                      </a>
+                    </td>
+                  {%- else -%}
+                    <td>-</td>
+                  {%- endif -%}
+                  {%- if client.status -%}
+                    <td>{{client.status}}</td>
+                  {%- else -%}
+                    <td>-</td>
+                  {%- endif -%}
+                  {%- if client.support -%}
+                    <td>{{client.support}}</td>
+                  {%- else -%}
+                    <td>-</td>
+                  {%- endif -%}
+                  {%- if client.lang -%}
+                    <td>{{client.lang}}</td>
+                  {%- else -%}
+                    <td>-</td>
+                  {%- endif -%}
+                  {%- if client.donate -%}
+                    {%- if client.donate contains "http" -%}
+                      {%- assign donate_icon = site.data.icons.donate -%}
+                      {%- if client.donate contains "etherscan.io" -%}
+                        {%- assign donate_icon = site.data.icons.etherscan -%}
+                      {%- endif -%}
+                      {%- if client.donate contains "gitcoin.co" -%}
+                        {%- assign donate_icon = site.data.icons.gitcoin -%}
+                      {%- endif -%}
+                      {%- if client.donate contains "protocol-guild" -%}
+                        {%- assign donate_icon = '<img src="/assets/img/protocol-guild.png" style="width:1.4rem;height:1.4rem;">' -%}
+                      {%- endif -%}
+                      <td>
+                        <a href="{{client.donate}}" class="text-decoration-none text-body-color" target="_blank">
+                          {{donate_icon}}
+                          {{site.data.icons.new_tab}}
+                        </a>
+                      </td>
+                    {%- else -%}
+                      {%- if client.donate == "funded" -%}
+                        <td><span class="text-success" title="funded">{{site.data.icons.checkmark}}</span></td>
+                      {%- else -%}
+                        <td>{{client.donate}}</td>
+                      {%- endif -%}
+                    {%- endif -%}
+                  {%- else -%}
+                    <td>-</td>
+                  {%- endif -%}
+                </tr>
+              {%- endfor -%}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center mt-3">
+      <div class="col col-xl-6 col-lg-8 col-md-11 mt-3 text-md-center">
+        <p><strong>Note</strong>: Donations made to <a href="https://protocol-guild.readthedocs.io/en/latest/index.html" target="_blank">Protocol Guild</a> are distributed among Ethereum protocol contributors, including client teams. All recipients and splits can be <a href="https://protocol-guild.readthedocs.io/en/latest/9-membership.html" target="_blank">seen here</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>

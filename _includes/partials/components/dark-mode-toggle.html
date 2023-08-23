@@ -1,0 +1,83 @@
+{%- comment -%}
+<!-- 
+Adds a dark mode theme. 
+Defaults to system preference and overridden by manual toggle.
+Adds a .dark-mode class to html element.
+-->
+{%- endcomment -%}
+
+<style type="text/css">
+  #darkModeToggle {
+    position: absolute;
+    padding: 5px;
+    cursor: pointer;
+    margin-left: 1.5rem;
+    right: 1rem;
+    top: 0.5rem;
+    z-index: 20;
+  }
+  @media only screen and (max-width: 991px) {
+    #darkModeToggle {
+      margin-right: 1rem;
+      margin-left: auto!important;
+    }
+  }
+  #darkModeToggle svg {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  .d-dark,
+  .dark-mode .d-light {
+    display: none !important;
+  }
+  .d-light,
+  .dark-mode .d-dark {
+    display: unset !important;
+  }
+</style>
+
+
+<div id="darkModeToggle" class="">
+    <span id="enableDarkMode" onclick="setDarkMode('true')">{{site.data.icons.sun}}</span>
+    <span id="disableDarkMode" class="d-none" onclick="setDarkMode('false')">{{site.data.icons.sun}}</span>
+</div>
+
+
+<script type="text/javascript">
+  checkDarkMode();
+  
+  // Check if dark mode is set
+  function checkDarkMode() {
+    let darkModeEnabled = localStorage.getItem("darkModeEnabled");
+    if (darkModeEnabled === null) {
+      let matched = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      if(matched) {
+        setDarkMode("true");
+      } else {
+        setDarkMode("false");
+      }
+    } else {
+      setDarkMode(darkModeEnabled);
+    }
+  }
+
+  // Toggle dark mode theme
+  function setDarkMode(enabled) {
+    document.getElementById("enableDarkMode").classList.add("d-none");
+    document.getElementById("disableDarkMode").classList.add("d-none");
+    var root = document.getElementsByTagName("html")[0];
+    if (enabled == "true") {
+      // log("Dark Mode enabled");
+      root.setAttribute("data-bs-theme", "dark"); 
+      root.classList.add("dark-mode");
+      document.getElementById("disableDarkMode").classList.remove("d-none");
+      localStorage.setItem("darkModeEnabled", "true");
+    } else if (enabled == "false") {
+      // log("Dark Mode disabled");
+      root.setAttribute("data-bs-theme", "light"); 
+      root.classList.remove("dark-mode");
+      document.getElementById("enableDarkMode").classList.remove("d-none");
+      localStorage.setItem("darkModeEnabled", "false");
+    }
+  }
+</script>

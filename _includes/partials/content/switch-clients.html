@@ -1,0 +1,118 @@
+<!-- Switch Clients -->
+<section id="switch" class="bg-contrast">
+  <div class="container py-5 my-5">
+    <h2 class="h1 fw-bold mb-3 text-center">Switch Clients</h2>
+    <div class="text-center">
+      <a href="/contribute/" class="btn btn-outline-dark btn-sm px-4 m-1">Submit Guide</a>
+    </div>
+    <div class="row justify-content-center mt-4">
+      <div class="col col-lg-6 col-md-8">
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="typeSelect">Type</label>
+          <select class="form-select" id="typeSelect" onchange="setSwitchType()">
+            <option value="consensus" selected>Consensus Client</option>
+            <option value="execution">Execution Client</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!-- Consensus Clients - From -->
+    <div id="switchFromConsensus" class="row justify-content-center mt-3">
+      <div class="col col-lg-6 col-md-8">
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="fromSelectCC">From</label>
+          <select class="form-select" id="fromSelectCC" onchange="preventDoubleClientSelect('fromSelect')">
+            <option value="none" selected disabled hidden>Choose...</option>
+            <option value="blank">Fresh Install</option>
+            <option value="lighthouse">Lighthouse</option>
+            <option value="lodestar">Lodestar</option>
+            <option value="nimbus">Nimbus</option>
+            <option value="prysm">Prysm</option>
+            <option value="teku">Teku</option>
+            <option value="grandine">Grandine</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!-- Consensus Clients - To -->
+    <div id="switchToConsensus" class="row justify-content-center">
+      <div class="col col-lg-6 col-md-8">
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="toSelectCC">To</label>
+          <select class="form-select" id="toSelectCC" onchange="preventDoubleClientSelect('toSelect')">
+            <option value="none" selected disabled hidden>Choose...</option>
+            <option value="lighthouse">Lighthouse</option>
+            <option value="lodestar">Lodestar</option>
+            <option value="nimbus">Nimbus</option>
+            <option value="prysm">Prysm</option>
+            <option value="teku">Teku</option>
+            <option value="grandine">Grandine</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!-- Execution Clients - From -->
+    <div id="switchFromExecution" class="d-none row justify-content-center mt-3">
+      <div class="col col-lg-6 col-md-8">
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="fromSelectEC">From</label>
+          <select class="form-select" id="fromSelectEC" onchange="preventDoubleClientSelect('fromSelect')">
+            <option value="none" disabled hidden>Choose...</option>
+            <option value="blank">Fresh Install</option>
+            <option value="geth" selected>Geth</option>
+            <option value="openethereum">Open Ethereum</option>
+            <option value="erigon">Erigon</option>
+            <option value="nethermind">Nethermind</option>
+            <option value="besu">Besu</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!-- Execution Clients - To -->
+    <div id="switchToExecution" class="d-none row justify-content-center">
+      <div class="col col-lg-6 col-md-8">
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="toSelectEC">To</label>
+          <select class="form-select" id="toSelectEC" onchange="preventDoubleClientSelect('toSelect')">
+            <option value="none" selected disabled hidden>Choose...</option>
+            <option value="geth">Geth</option>
+            <option value="openethereum" disabled>Open Ethereum (deprecated)</option>
+            <option value="erigon">Erigon</option>
+            <option value="nethermind">Nethermind</option>
+            <option value="besu">Besu</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center mt-2">
+      <div class="col col-lg-6 col-md-8">
+        <div class="text-center">
+          <a onclick="getGuides()" class="btn btn-dark btn-lg px-4 m-1">Search Guides</a>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col col-lg-8 col-md-10">
+        <div id="error" class="text-center mt-4 d-none">
+          <p class="my-2 text-danger fw-bold">Error: Select both To and From clients.</p>
+        </div>
+        <div id="migrationPath" class="text-center my-4 d-none">
+          <span class="d-block text-muted">
+            <span id="fromClient">From Client</span>
+            <span class="mx-2">{{site.data.icons.arrow_right}}</span>
+            <span id="toClient">To Client</span>
+          </span>
+        </div>
+        <div id="noGuides" class="text-center mt-4 d-none">
+          {{site.data.icons.sad_emoji}}
+          <p class="my-2">There are no guides for this migration yet.</p>
+          <!-- <a href="/contribute/" class="btn btn-primary btn-sm px-4 m-1">Submit one for a bounty!</a> -->
+          <a href="/contribute/" class="btn btn-primary btn-sm px-4 m-1">Submit Guide</a>
+        </div>
+        <div id="guideList" class="text-center mt-4 d-none">
+          <!-- Populated w/ JS based on matching results from _data/migration-guides.yml -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

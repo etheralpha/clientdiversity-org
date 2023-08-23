@@ -8,3 +8,11 @@ function enableTooltips() {
   })
 }
 
+function setDataSource(client, type) {
+  document.querySelectorAll(`.${type}-data`).forEach(el => {
+    el.classList.add("d-none")
+  });
+  document.querySelectorAll(`.${client}`).forEach(el => {
+    el.classList.remove("d-none")
+  });
+}

@@ -1,0 +1,90 @@
+{%- comment -%}
+<!-- 
+When creating new toast you must increase 
+the config.yml "toast_msg_id" value so it will
+show again for users that previously closed it 
+
+Add to config.yml:
+# Toast
+enable_toast: false
+toast_msg_id: 1 # must increment when creating a new message
+toast_title: Notice
+toast_msg: # Best when under 100 characters
+toast_link: # Optional, leave blank to omit
+toast_expiration: 3000000000 # epoch time in seconds
+-->
+{%- endcomment -%}
+
+
+{%- if site.enable_toast == true or site.enable_feedback_toast == true -%}
+<style type="text/css">
+  .toast-container {
+    z-index: 1090;
+  }
+  .toast {
+    border-radius: 0.5rem !important;
+    background-color: var(--bs-body-bg);
+  }
+  .toast-header {
+    
+  }
+  .toast-badge {
+    height: 17px;
+    width: 17px;
+  }
+</style>
+
+
+<!-- Toast -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+    <div class="toast-header">
+      <span class="toast-badge bg-info rounded-1"></span>
+      <strong class="toast-title me-auto ms-2">{{site.toast_title}}</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close" onclick="hidetoast()"></button>
+    </div>
+    <div class="toast-body">
+      <div class="toast-text">
+        {{site.toast_msg}}
+      </div>
+      {%- if site.toast_link -%}
+        <div class="toast-buttons d-flex gap-2 mt-2 pt-2">
+          <a href="{{site.toast_link}}" target="_blank" class="btn btn-dark btn-sm">{{site.toast_link_text}}</a>
+          <button type="button" class="btn btn-outline-dark btn-sm" data-bs-dismiss="toast" onclick="hidetoast()">Close</button>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+  const toastEl = document.getElementById('toast');
+  const toast = new bootstrap.Toast(toastEl);
+  showtoast();
+
+  // Loads/shows notification bar if users hasn't closed it yet
+  function showtoast() {
+    if ({{site.enable_toast}} == true) {
+      const toastName = "toast-{{site.toast_msg_id}}";
+      const hideToast = localStorage.getItem(toastName);
+      const timestamp = Math.round(Date.now()/10000)*10;
+      if (hideToast != "true" && timestamp < {{site.toast_expiration}}) {
+        toast.show();
+      }
+    }
+  }
+  // Hides toast bar when user closes it
+  function hidetoast(id=null) {
+    if (id) {
+      const toastName = `toast-${id}`;
+      const timestamp = Math.round(Date.now()/10000)*10;
+      localStorage.setItem(toastName, timestamp);
+    } else {
+      const toastName = "toast-{{site.toast_msg_id}}";
+      localStorage.setItem(toastName, "true");
+    }
+  }
+</script>
+{%- endif -%}
+
