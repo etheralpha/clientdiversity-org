@@ -14,13 +14,13 @@ print(f"Epoch: {current_time}")
 print(f"Date: {date}")
 
 pp = pprint.PrettyPrinter(indent=4)
-use_test_data = True
+use_test_data = False
 print_fetch_data = False
 print_processed_data = True
 pretty_print = True
 exit_on_fetch_error = True
 exit_on_save_error = True
-exit_on_report_error = True
+exit_on_report_error = False
 
 # enter values for local testing
 # rated_token = ""
@@ -31,7 +31,7 @@ def fetch_json(url, method="GET", payload={}, headers={}, retries=2):
   print(f"Fetch: {url}")
   response = {"status": 0, "attempts": 0, "data": None}
   try: 
-    while (response["attempts"] <= retries and response["status"] != 200 and response["data"] != None):
+    while response["attempts"] <= retries and (response["status"] != 200 or response["data"] == None):
       rate_limited_domains = ["rated.network"]
       rate_limited = any(domain in url for domain in rate_limited_domains)
       if (rate_limited or response["attempts"] > 0):
@@ -52,7 +52,7 @@ def fetch_json(url, method="GET", payload={}, headers={}, retries=2):
 
 def save_to_file(path, data):
   # skip file save if using test data
-  if not use_test_data:
+  if use_test_data:
     return
   else:
     todays_data =  {
@@ -514,7 +514,7 @@ def process_rated_marketshare_data(raw_data):
   # pprint(["sorted_data", sorted_data])
 
   # supplemental data
-  extra_data["data_source"] = "ethernodes"
+  extra_data["data_source"] = "rated"
   extra_data["has_majority"] = False
   extra_data["has_supermajority"] = False
   extra_data["danger_client"] = ""
@@ -612,7 +612,7 @@ def process_blockprint_accuracy_data(raw_data):
     elif (value["true_positives"] == 0 and value["false_negatives"] != 0):
       accuracy = "0";
     else:
-      accuracy = round(value["true_positives"] / (value["true_positives"] + value["false_negatives"]) * 100, 1)
+      accuracy = round(value["true_positives"] / (value["true_positives"] + value["false_negatives"]), 6)
     accuracy_data.append({"name": key.lower(), "value": accuracy})
   print_data("processed", accuracy_data, "blockprint_accuracy_data")
   return accuracy_data
@@ -685,7 +685,7 @@ def process_blockprint_marketshare_data(raw_marketshare_data, processed_accuracy
 
   # create final data dict
   final_data["distribution"] = sorted_data
-  final_data["accuracy"] = processed_accuracy_data
+  # final_data["accuracy"] = processed_accuracy_data
   final_data["other"] = extra_data
   print_data("processed", final_data, "final_data_blockprint")
 

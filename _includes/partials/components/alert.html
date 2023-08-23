@@ -1,0 +1,49 @@
+{%- assign data = include.data -%}
+
+{%- comment -%}
+{	
+	"data_source":"blockprint",
+	"has_majority":false,
+	"has_supermajority":false,
+	"danger_client":"",
+	"top_client":"prysm"
+}
+{%- endcomment -%}
+
+{%- assign alert_type = "danger" -%}
+{%- if data.danger_client == "" -%}
+	{%- assign alert_type = "info" -%}
+{%- endif -%}
+
+{%- assign alert_icon = site.data.icons.warning -%}
+{%- if data.danger_client == "" -%}
+	{%- assign alert_icon = site.data.icons.info -%}
+{%- endif -%}
+
+{%- assign danger_client = data.danger_client | capitalize -%}
+
+{%- assign alert_msg = "Switch from " | append: danger_client | append: " to a minority client!" -%}
+{%- if data.danger_client == "" -%}
+	{%- assign alert_msg = "The client diversity has improved!" -%}
+{%- endif -%}
+
+{%- assign alert_msg_padding = "" -%}
+{%- if data.danger_client == "" -%}
+	{%- assign alert_msg_padding = "ms-2" -%}
+{%- endif -%}
+
+{%- assign alert_style = "d-none" -%}
+{%- if data.data_source == "blockprint" -%}
+	{%- assign alert_style = "" -%}
+{%- endif -%}
+{%- if data.data_source == "ethernodes" -%}
+	{%- assign alert_style = "" -%}
+{%- endif -%}
+
+
+<a href="#why" class="{{alert_style}} {{data.data_source}} {{include.type}}-data text-decoration-none">
+  <div class="alert alert-{{alert_type}} d-flex align-items-center" role="alert">
+    {{alert_icon}}
+    <div class="{{alert_msg_padding}}">{{alert_msg}}</div>
+  </div>
+</a>

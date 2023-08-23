@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100">
-  {%- include partials/head.html -%}
+  {%- include partials/components/head.html -%}
   <body class="d-flex flex-column min-vh-100">
-    {%- include partials/component-notification.html -%}
-    {%- include partials/component-toast.html -%}
-  	{%- include partials/nav.html -%}
+    {%- include partials/components/dark-mode-toggle.html -%}
+    {%- include partials/components/notification.html -%}
+    {%- include partials/components/toast.html -%}
+  	{%- include partials/components/nav.html -%}
     {{content}}
-  	{%- include partials/footer.html -%}
+  	{%- include partials/components/footer.html -%}
     <!-- Custom JS -->
   	<script src="/assets/js/main.js" type="application/javascript"></script>
 
