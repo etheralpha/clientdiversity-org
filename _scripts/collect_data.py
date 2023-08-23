@@ -22,6 +22,9 @@ exit_on_fetch_error = True
 exit_on_save_error = True
 exit_on_report_error = False
 
+rated_token = os.environ.get("RATED_API_KEY")
+google_form_error_report_url = os.environ.get("ERROR_REPORT_ENDPOINT")
+
 # enter values for local testing
 # rated_token = ""
 # google_form_error_report_url = ""
