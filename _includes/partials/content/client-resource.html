@@ -9,7 +9,7 @@
         <h3 class="mb-3">Consensus Clients</h3>
         <div class="table-responsive">
           <table class="table table-bordered mb-2">
-            <thead class="table-light">
+            <thead class="">
               <tr>
                 <th scope="col" style="min-width: 8rem;">Client</th>
                 <th scope="col">Github</th>
@@ -27,7 +27,7 @@
                   <th scope="row">
                     {%- if client.name == "Grandine" -%}*{%- endif -%}
                     {%- if client.link -%}
-                      <a href="{{client.link}}" class="text-body-color" target="_blank">
+                      <a href="{{client.link}}" class="" target="_blank">
                       {{client.name}}
                       {{site.data.icons.new_tab}}
                       </a>
@@ -37,7 +37,7 @@
                   </th>
                   {%- if client.github -%}
                     <td>
-                      <a href="{{client.github}}" class="text-decoration-none text-body-color" target="_blank">
+                      <a href="{{client.github}}" class="text-decoration-none" target="_blank">
                         {{site.data.icons.github}}
                         {{site.data.icons.new_tab}}
                       </a>
@@ -47,7 +47,7 @@
                   {%- endif -%}
                   {%- if client.docs -%}
                     <td>
-                      <a href="{{client.docs}}" class="text-decoration-none text-body-color" target="_blank">
+                      <a href="{{client.docs}}" class="text-decoration-none" target="_blank">
                         {{site.data.icons.docs}}
                         {{site.data.icons.new_tab}}
                       </a>
@@ -64,7 +64,7 @@
                       {%- assign chat_icon = site.data.icons.telegram -%}
                     {%- endif -%}
                     <td>
-                      <a href="{{client.chat}}" class="text-decoration-none text-body-color" target="_blank">
+                      <a href="{{client.chat}}" class="text-decoration-none" target="_blank">
                         {{chat_icon}}
                         {{site.data.icons.new_tab}}
                       </a>
@@ -100,7 +100,7 @@
                         {%- assign donate_icon = '<img src="/assets/img/protocol-guild.png" style="width:1.4rem;height:1.4rem;">' -%}
                       {%- endif -%}
                       <td>
-                        <a href="{{client.donate}}" class="text-decoration-none text-body-color" target="_blank">
+                        <a href="{{client.donate}}" class="text-decoration-none" target="_blank">
                           {{donate_icon}}
                           {{site.data.icons.new_tab}}
                         </a>
@@ -128,7 +128,7 @@
         <h3 class="mb-3">Execution Clients</h3>
         <div class="table-responsive">
           <table class="table table-bordered mb-2">
-            <thead class="table-light">
+            <thead class="">
               <tr>
                 <th scope="col" style="min-width: 8rem;">Client</th>
                 <th scope="col">Github</th>
@@ -145,7 +145,7 @@
                 <tr>
                   <th scope="row">
                     {%- if client.link -%}
-                      <a href="{{client.link}}" class="text-body-color" target="_blank">
+                      <a href="{{client.link}}" class="" target="_blank">
                         {{client.name}}
                         {{site.data.icons.new_tab}}
                       </a>
@@ -155,7 +155,7 @@
                   </th>
                   {%- if client.github -%}
                     <td>
-                      <a href="{{client.github}}" class="text-decoration-none text-body-color" target="_blank">
+                      <a href="{{client.github}}" class="text-decoration-none" target="_blank">
                         {{site.data.icons.github}}
                         {{site.data.icons.new_tab}}
                       </a>
@@ -165,7 +165,7 @@
                   {%- endif -%}
                   {%- if client.docs -%}
                     <td>
-                      <a href="{{client.docs}}" class="text-decoration-none text-body-color" target="_blank">
+                      <a href="{{client.docs}}" class="text-decoration-none" target="_blank">
                         {{site.data.icons.docs}}
                         {{site.data.icons.new_tab}}
                       </a>
@@ -182,7 +182,7 @@
                       {%- assign chat_icon = site.data.icons.telegram -%}
                     {%- endif -%}
                     <td>
-                      <a href="{{client.chat}}" class="text-decoration-none text-body-color" target="_blank">
+                      <a href="{{client.chat}}" class="text-decoration-none" target="_blank">
                         {{chat_icon}}
                         {{site.data.icons.new_tab}}
                       </a>
@@ -218,7 +218,7 @@
                         {%- assign donate_icon = '<img src="/assets/img/protocol-guild.png" style="width:1.4rem;height:1.4rem;">' -%}
                       {%- endif -%}
                       <td>
-                        <a href="{{client.donate}}" class="text-decoration-none text-body-color" target="_blank">
+                        <a href="{{client.donate}}" class="text-decoration-none" target="_blank">
                           {{donate_icon}}
                           {{site.data.icons.new_tab}}
                         </a>
