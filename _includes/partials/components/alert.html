@@ -33,10 +33,10 @@
 {%- endif -%}
 
 {%- assign alert_style = "d-none" -%}
-{%- if data.data_source == "blockprint" -%}
+{%- if data.data_source == site.default_consensus_source -%}
 	{%- assign alert_style = "" -%}
 {%- endif -%}
-{%- if data.data_source == "ethernodes" -%}
+{%- if data.data_source == site.default_execution_source -%}
 	{%- assign alert_style = "" -%}
 {%- endif -%}
 
