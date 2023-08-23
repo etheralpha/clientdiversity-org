@@ -19,7 +19,11 @@
               {%- assign rated = site.data.rated | last -%}
               {%- include partials/components/alert.html data=rated.data.other type="consensus" -%}
             <!-- Blockprint Data -->
-            <div class="text-start flex-grow-1 blockprint consensus-data">
+            {%- assign visibility = "d-none" -%}
+            {%- if site.default_consensus_source == "blockprint" -%}
+              {%- assign visibility = "" -%}
+            {%- endif -%}
+            <div class="{{visibility}} text-start flex-grow-1 blockprint consensus-data">
               {%- assign blockprint = site.data.blockprint | last -%}
               {%- include partials/components/progress-bar.html data=blockprint.data.distribution -%}
               <div class="text-center small">
@@ -28,7 +32,11 @@
               </div>
             </div>
             <!-- Miga Labs Data -->
-            <div class="d-none text-start flex-grow-1 migalabs consensus-data">
+            {%- assign visibility = "d-none" -%}
+            {%- if site.default_consensus_source == "migalabs" -%}
+              {%- assign visibility = "" -%}
+            {%- endif -%}
+            <div class="{{visibility}} text-start flex-grow-1 migalabs consensus-data">
               {%- assign migalabs = site.data.migalabs | last -%}
               {%- include partials/components/progress-bar.html data=migalabs.data.distribution -%}
               <div class="text-center small">
@@ -37,7 +45,11 @@
               </div>
             </div>
             <!-- Rated Data -->
-            <div class="d-none text-start flex-grow-1 rated consensus-data">
+            {%- assign visibility = "d-none" -%}
+            {%- if site.default_consensus_source == "rated" -%}
+              {%- assign visibility = "" -%}
+            {%- endif -%}
+            <div class="{{visibility}} text-start flex-grow-1 rated consensus-data">
               {%- assign rated = site.data.rated | last -%}
               {%- include partials/components/progress-bar.html data=rated.data.distribution -%}
               <div class="text-center small">
@@ -52,16 +64,28 @@
                   <span>Data source </span>
                   <a href="/methodology" style="color: #055160;">(read more)</a>:
                 </div>
+                {%- assign checked = "" -%}
+                {%- if site.default_consensus_source == "blockprint" -%}
+                  {%- assign checked = "checked" -%}
+                {%- endif -%}
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="datasourcesCC" id="dataSource1" value="blockprint"  onclick="setDataSource('blockprint', 'consensus');" checked>
+                  <input class="form-check-input" type="radio" name="datasourcesCC" id="dataSource1" value="blockprint"  onclick="setDataSource('blockprint', 'consensus');" {{checked}}>
                   <label class="form-check-label" for="dataSource1">Sigma Prime's Blockprint</label>
                 </div>
+                {%- assign checked = "" -%}
+                {%- if site.default_consensus_source == "migalabs" -%}
+                  {%- assign checked = "checked" -%}
+                {%- endif -%}
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="datasourcesCC" id="dataSource2" value="migalabs"  onclick="setDataSource('migalabs', 'consensus');">
+                  <input class="form-check-input" type="radio" name="datasourcesCC" id="dataSource2" value="migalabs"  onclick="setDataSource('migalabs', 'consensus');" {{checked}}>
                   <label class="form-check-label" for="dataSource2">Miga Labs</label>
                 </div>
+                {%- assign checked = "" -%}
+                {%- if site.default_consensus_source == "rated" -%}
+                  {%- assign checked = "checked" -%}
+                {%- endif -%}
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="datasourcesCC" id="dataSource3" value="rated"  onclick="setDataSource('rated', 'consensus');">
+                  <input class="form-check-input" type="radio" name="datasourcesCC" id="dataSource3" value="rated"  onclick="setDataSource('rated', 'consensus');" {{checked}}>
                   <label class="form-check-label" for="dataSource3">Rated.Network</label>
                 </div>
               </div>
@@ -79,7 +103,11 @@
               {%- assign edi = site.data.edi | last -%}
               {%- include partials/components/alert.html data=edi.data.other type="execution" -%}
             <!-- Ethernodes Data -->
-            <div class="text-start flex-grow-1 ethernodes execution-data">
+            {%- assign visibility = "d-none" -%}
+            {%- if site.default_execution_source == "ethernodes" -%}
+              {%- assign visibility = "" -%}
+            {%- endif -%}
+            <div class="{{visibility}} text-start flex-grow-1 ethernodes execution-data">
               {%- assign ethernodes = site.data.ethernodes | last -%}
               {%- include partials/components/progress-bar.html data=ethernodes.data.distribution -%}
               <div class="text-center small">
@@ -88,7 +116,11 @@
               </div>
             </div>
             <!-- Execution-Diversity.info Data -->
-            <div class="d-none text-start flex-grow-1 edi execution-data">
+            {%- assign visibility = "d-none" -%}
+            {%- if site.default_execution_source == "edi" -%}
+              {%- assign visibility = "" -%}
+            {%- endif -%}
+            <div class="{{visibility}} text-start flex-grow-1 edi execution-data">
               {%- assign edi = site.data.edi | last -%}
               {%- include partials/components/progress-bar.html data=edi.data.distribution -%}
               <div class="text-center small">
@@ -104,12 +136,20 @@
                   <span>Data source </span>
                   <a href="/methodology" style="color: #055160;">(read more)</a>:
                 </div>
+                {%- assign checked = "" -%}
+                {%- if site.default_execution_source == "ethernodes" -%}
+                  {%- assign checked = "checked" -%}
+                {%- endif -%}
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="datasourcesEC" id="dataSourceEC1" value="ethernodes"  onclick="setDataSource('ethernodes', 'execution');" checked>
+                  <input class="form-check-input" type="radio" name="datasourcesEC" id="dataSourceEC1" value="ethernodes"  onclick="setDataSource('ethernodes', 'execution');" {{checked}}>
                   <label class="form-check-label" for="dataSource1">Ethernodes</label>
                 </div>
+                {%- assign checked = "" -%}
+                {%- if site.default_execution_source == "edi" -%}
+                  {%- assign checked = "checked" -%}
+                {%- endif -%}
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="datasourcesEC" id="dataSourceEC2" value="edi"  onclick="setDataSource('edi', 'execution');">
+                  <input class="form-check-input" type="radio" name="datasourcesEC" id="dataSourceEC2" value="edi"  onclick="setDataSource('edi', 'execution');" {{checked}}>
                   <label class="form-check-label" for="dataSource2">Execution-Diversity.info</label>
                 </div>
               </div>
