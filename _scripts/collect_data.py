@@ -53,7 +53,10 @@ def fetch_json(url, method="GET", payload={}, headers={}, retries=2):
     print_data("fetch", response, label=None)
     return response
 
-def save_to_file(path, data):
+def save_to_file(rel_path, data):
+  if not rel_path.startswith("/"):
+    rel_path = "/" + rel_path
+    abs_path = os.path.dirname(__file__) + rel_path
   # skip file save if using test data
   if use_test_data:
     return
@@ -64,32 +67,32 @@ def save_to_file(path, data):
       "data":data
     }
     # check if file exists yet
-    if os.path.isfile(path):
+    if os.path.isfile(abs_path):
       try:
-        with open(path, 'r') as f:
+        with open(abs_path, 'r') as f:
           all_data = json.load(f)
           # check if there's already data for today
           if date != all_data[-1]['date'] and all_data[-1]['data'] != None:
             # append todays data to historical data and write to file
             all_data.append(todays_data)
-            with open(path, 'w') as f:
+            with open(abs_path, 'w') as f:
               json.dump(all_data, f, indent=None, separators=(',', ':'))
             f.close()
-            print(f"{path} data has been updated")
+            print(f"{rel_path} data has been updated")
           # if the data was null then overwrite it
           elif date == all_data[-1]['date'] and all_data[-1]['data'] == None:
             del all_data[-1]
             # append todays data to historical data and write to file
             all_data.append(todays_data)
-            with open(path, 'w') as f:
+            with open(abs_path, 'w') as f:
               json.dump(all_data, f, indent=None, separators=(',', ':'))
             f.close()
-            print(f"{path} data has been updated")
+            print(f"{rel_path} data has been updated")
           else:
-            print(f"{path} data for the current date was already recorded")
+            print(f"{rel_path} data for the current date was already recorded")
       except:
         # file is empty or malformed data
-        error = f"ERROR: {path} file read error"
+        error = f"ERROR: {rel_path} file read error"
         report_error(error)
         if exit_on_save_error:
           raise SystemExit(error)
@@ -99,10 +102,10 @@ def save_to_file(path, data):
       # create new file with today's data
       all_data = []
       all_data.append(todays_data)
-      with open(path, 'w') as f:
+      with open(abs_path, 'w') as f:
         json.dump(all_data, f, indent=None, separators=(',', ':'))
       f.close()
-      print(f"{path} data has been updated")
+      print(f"{rel_path} data has been updated")
 
 def report_error(error, context=""):
   if use_test_data:
