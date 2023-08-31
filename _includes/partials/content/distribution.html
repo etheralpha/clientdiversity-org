@@ -98,8 +98,10 @@
           <div class="card-body d-flex flex-column p-4">
             <h3 class="p-2 mb-4">Execution Clients</h3>
             <!-- Execution Client Alerts -->
-              {%- assign ethernodes = site.data.ethernodes | last -%}
-              {%- include partials/components/alert.html data=ethernodes.data.other type="execution" -%}
+              <div class="d-none">
+                {%- assign ethernodes = site.data.ethernodes | last -%}
+                {%- include partials/components/alert.html data=ethernodes.data.other type="execution" -%}
+              </div>
               {%- assign edi = site.data.edi | last -%}
               {%- include partials/components/alert.html data=edi.data.other type="execution" -%}
             <!-- Ethernodes Data -->
@@ -108,9 +110,16 @@
               {%- assign visibility = "" -%}
             {%- endif -%}
             <div class="{{visibility}} text-start flex-grow-1 ethernodes execution-data">
-              {%- assign ethernodes = site.data.ethernodes | last -%}
-              {%- include partials/components/progress-bar.html data=ethernodes.data.distribution -%}
-              <div class="text-center small">
+              <div class="">
+                <p>The <a href="https://ethernodes.org" target="_blank">Ethernodes</a> data has been removed.</p>
+                <p>The data is a representation of what clients are showing free peers and it's not well understood how this correlates to an overall picture of what clients are currently in use. For now, survey data (from <a href="https://execution-diversity.info" target="_blank">execution-diversity.info</a>) is considered the most reliable source of information for the state of execution client diversity.</p>
+                <p><a class="new-tab" href="https://paragraph.xyz/@ethstaker/new-clientdiversity-data" target="_blank">Read more {{site.data.icons.arrow_right}}</a></p>
+              </div>
+              <div class="d-none">
+                {%- assign ethernodes = site.data.ethernodes | last -%}
+                {%- include partials/components/progress-bar.html data=ethernodes.data.distribution -%}
+              </div>
+              <div class="d-none text-center small">
                 Data provided by <a href="https://ethernodes.org" target="_blank">Ethernodes</a> — updated daily. <br>
                 Data may not be 100% accurate. (<a href="/methodology">Read more</a>)
               </div>
@@ -137,20 +146,20 @@
                   <a href="/methodology" style="color: #055160;">(read more)</a>:
                 </div>
                 {%- assign checked = "" -%}
-                {%- if site.default_execution_source == "ethernodes" -%}
-                  {%- assign checked = "checked" -%}
-                {%- endif -%}
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="datasourcesEC" id="dataSourceEC1" value="ethernodes"  onclick="setDataSource('ethernodes', 'execution');" {{checked}}>
-                  <label class="form-check-label" for="dataSource1">Ethernodes</label>
-                </div>
-                {%- assign checked = "" -%}
                 {%- if site.default_execution_source == "edi" -%}
                   {%- assign checked = "checked" -%}
                 {%- endif -%}
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="datasourcesEC" id="dataSourceEC2" value="edi"  onclick="setDataSource('edi', 'execution');" {{checked}}>
                   <label class="form-check-label" for="dataSource2">Execution-Diversity.info</label>
+                </div>
+                {%- assign checked = "" -%}
+                {%- if site.default_execution_source == "ethernodes" -%}
+                  {%- assign checked = "checked" -%}
+                {%- endif -%}
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="datasourcesEC" id="dataSourceEC1" value="ethernodes"  onclick="setDataSource('ethernodes', 'execution');" {{checked}}>
+                  <label class="form-check-label" for="dataSource1">Ethernodes</label>
                 </div>
               </div>
             </div>
