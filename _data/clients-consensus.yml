@@ -27,7 +27,7 @@
   status: stable
   support: Linux, Win, macOS, ARM
   lang: Rust
-  donate: https://gitcoin.co/grants/25/lighthouse-ethereum-20-client
+  donate: https://protocol-guild.readthedocs.io/en/latest/index.html
   opensource: true
 - name: Lodestar
   link: https://lodestar.chainsafe.io/
@@ -38,7 +38,7 @@
   status: stable
   support: Linux, Win, macOS # windows theoretically works but not tested yet https://github.com/ChainSafe/lodestar/issues/3519
   lang: TypeScript
-  donate: https://gitcoin.co/grants/6034/lodestar-typescript-ethereum-consensus-client
+  donate: https://protocol-guild.readthedocs.io/en/latest/index.html
   opensource: true
 - name: Nimbus
   link: https://nimbus.team/
@@ -48,7 +48,7 @@
   status: stable
   support: Linux, Win, macOS, ARM
   lang: Nim
-  donate: https://gitcoin.co/grants/137/nimbus-2
+  donate: 
   opensource: true
 - name: Prysm
   link: https://prysmaticlabs.com/
@@ -58,7 +58,8 @@
   status: stable
   support: Linux, Win, macOS, ARM
   lang: Golang
-  donate: funded # Supported by Offchain Labs
+  # donate: funded # Supported by Offchain Labs
+  donate: https://protocol-guild.readthedocs.io/en/latest/index.html
   opensource: true
 - name: Teku
   link: https://consensys.net/knowledge-base/ethereum-2/teku/
@@ -68,6 +69,7 @@
   status: stable
   support: Linux, Win, macOS
   lang: Java
-  donate: funded # funded by ConsenSys
+  # donate: funded # funded by ConsenSys
+  donate: https://protocol-guild.readthedocs.io/en/latest/index.html
   opensource: true
 

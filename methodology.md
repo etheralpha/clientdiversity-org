@@ -15,7 +15,7 @@ There's no inherent way to know exactly what client a validator is running. Rese
 
 ## Consensus Client Data
 
-[Blockprint](https://github.com/sigp/blockprint) - Developed by Sigma Prime's Michael Sproul, Blockprint  analyzes each client's block proposal style as described in [this Twitter thread](https://twitter.com/sproulM_/status/1440512518242197516) ([Nitter](https://nitter.snopyta.org/sproulM_/status/1440512518242197516)).
+[Blockprint](https://blockprint.sigp.io/) - Developed by Sigma Prime's Michael Sproul, Blockprint  analyzes each client's block proposal style as described in [this Twitter thread](https://twitter.com/sproulM_/status/1440512518242197516) ([Nitter](https://nitter.snopyta.org/sproulM_/status/1440512518242197516)).
 
 [Miga Labs](https://migalabs.io/) - A crawler is used to count beacon nodes and their self-reported identity. However, this means that validators sharing a node are counted only once and nodes with fewer validators have a greater influence on the estimate.
 
