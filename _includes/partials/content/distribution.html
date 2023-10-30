@@ -40,7 +40,7 @@
               {%- assign migalabs = site.data.migalabs | last -%}
               {%- include partials/components/progress-bar.html data=migalabs.data.distribution -%}
               <div class="text-center small">
-                Data provided by <a href="https://migalabs.io/" target="_blank">Miga Labs</a> — updated daily. <br>
+                Data provided by <a href="https://migalabs.io" target="_blank">Miga Labs</a> — updated daily. <br>
                 Data may not be 100% accurate. (<a href="/methodology">Read more</a>)
               </div>
             </div>
@@ -151,7 +151,7 @@
                 {%- endif -%}
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="datasourcesEC" id="dataSourceEC2" value="edi"  onclick="setDataSource('edi', 'execution');" {{checked}}>
-                  <label class="form-check-label" for="dataSource2">Execution-Diversity.info</label>
+                  <label class="form-check-label" for="dataSourceEC2">Execution-Diversity.info</label>
                 </div>
                 {%- assign checked = "" -%}
                 {%- if site.default_execution_source == "ethernodes" -%}
@@ -159,7 +159,7 @@
                 {%- endif -%}
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="datasourcesEC" id="dataSourceEC1" value="ethernodes"  onclick="setDataSource('ethernodes', 'execution');" {{checked}}>
-                  <label class="form-check-label" for="dataSource1">Ethernodes</label>
+                  <label class="form-check-label" for="dataSourceEC1">Ethernodes</label>
                 </div>
               </div>
             </div>

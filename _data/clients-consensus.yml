@@ -64,7 +64,7 @@
 - name: Teku
   link: https://consensys.net/knowledge-base/ethereum-2/teku/
   github: https://github.com/ConsenSys/teku
-  docs: https://docs.teku.consensys.net/en/latest/
+  docs: https://docs.teku.consensys.net
   chat: https://discord.gg/9mCVSY6
   status: stable
   support: Linux, Win, macOS
