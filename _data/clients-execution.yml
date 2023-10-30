@@ -57,7 +57,7 @@
   status: stable
   support: Linux, Win, macOS, ARM
   lang: Golang
-  donate: https://gitcoin.co/grants/6128/go-ethereum-geth 
+  donate: https://protocol-guild.readthedocs.io/en/latest/index.html
   opensource: true
 - name: Nethermind
   link: http://nethermind.io/
@@ -67,7 +67,7 @@
   status: stable
   support: Linux, Win, macOS, ARM
   lang: .NET
-  donate: https://gitcoin.co/grants/142/nethermind
+  donate: https://protocol-guild.readthedocs.io/en/latest/index.html
   opensource: true
 - name: Nimbus
   link: https://nimbus.team/
@@ -77,7 +77,7 @@
   status: pre-alpha
   support: 
   lang: Nim
-  donate: https://gitcoin.co/grants/137/nimbus-2
+  donate: 
   opensource: true
 # - name: OpenEthereum
 #   link: https://openethereum.org/

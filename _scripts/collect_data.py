@@ -18,11 +18,12 @@ use_test_data = False
 print_fetch_data = False
 print_processed_data = True
 pretty_print = True
-exit_on_fetch_error = True
+exit_on_fetch_error = False
 exit_on_save_error = True
 exit_on_report_error = False
 
 rated_token = os.environ.get("RATED_API_KEY")
+migalabs_token = os.environ.get("MIGALABS_API_KEY")
 google_form_error_report_url = os.environ.get("ERROR_REPORT_ENDPOINT")
 
 # enter values for local testing
@@ -800,26 +801,53 @@ def ethernodes_marketshare():
 
 def get_migalabs_marketshare_data():
   if use_test_data:
-    response = {'status': 200, 'attempts': 1, 'data': {'erigon': 53, 'grandine': 232, 'lighthouse': 3914, 'lodestar': 188, 'nimbus': 719, 'prysm': 4038, 'teku': 1476, 'unknown': 15}}
+    response = {'status': 200, 'attempts': 1, 'data': [{"timestamp":"2023-10-03T04:37:09Z","data":[{"client_name":"lighthouse","node_count":2867},{"client_name":"prysm","node_count":2206},{"client_name":"teku","node_count":1303},{"client_name":"nimbus","node_count":836},{"client_name":"lodestar","node_count":252},{"client_name":"grandine","node_count":213},{"client_name":"unknown","node_count":28}]}]}
     print_data("fetch", response)
     return response
   else:
-    url = "https://migalabs.es/api/v1/client-distribution"
-    response = fetch_json(url)
+    url = "https://monitoreth.io/data-api/api/eth/v1/nodes/consensus/validators/client_diversity"
+    payload = {}
+    headers = {
+      'X-Api-Key': migalabs_token
+    }
+    response = fetch_json(url, "GET", payload, headers)
     return response
 
 def process_migalabs_marketshare_data(raw_data):
   # example migalabs raw data:
-  # raw_data = {'status': 200, 'attempts': 1, 'data': {
-  #   'erigon': 53, 
-  #   'grandine': 232, 
-  #   'lighthouse': 3914, 
-  #   'lodestar': 188, 
-  #   'nimbus': 719, 
-  #   'prysm': 4038, 
-  #   'teku': 1476, 
-  #   'unknown': 15
-  #   }}
+    # raw_data = {'status': 200, 'attempts': 1, 'data': [{
+    #   "timestamp": "2023-10-03T04:37:09Z",
+    #   "data": [
+    #     {
+    #       "client_name": "lighthouse",
+    #       "node_count": 2867
+    #     },
+    #     {
+    #       "client_name": "prysm",
+    #       "node_count": 2206
+    #     },
+    #     {
+    #       "client_name": "teku",
+    #       "node_count": 1303
+    #     },
+    #     {
+    #       "client_name": "nimbus",
+    #       "node_count": 836
+    #     },
+    #     {
+    #       "client_name": "lodestar",
+    #       "node_count": 252
+    #     },
+    #     {
+    #       "client_name": "grandine",
+    #       "node_count": 213
+    #     },
+    #     {
+    #       "client_name": "unknown",
+    #       "node_count": 28
+    #     }
+    #   ]
+    # }]}
 
   main_clients = ["lighthouse", "nimbus", "teku", "prysm", "lodestar", "erigon", "grandine"]
   threshold_percentage = 0.5 # represented as a percent, not a decimal
@@ -831,9 +859,9 @@ def process_migalabs_marketshare_data(raw_data):
   final_data = {}
 
   # reformat data into a list of dicts
-  for key, value in raw_data["data"].items():
-    reformatted_data.append({"name": key.lower(), "value": value})
-    sample_size += value
+  for item in raw_data["data"][0]["data"]:
+    reformatted_data.append({"name": item["client_name"].lower(), "value": item["node_count"]})
+    sample_size += item["node_count"]
   # pprint(["reformatted_data", reformatted_data])
   # pprint(["sample_size", sample_size])
 

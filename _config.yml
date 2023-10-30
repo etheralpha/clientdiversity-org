@@ -1,6 +1,6 @@
 # Read about configuration here: https://jekyllrb.com/docs/configuration/options/
 title: Client Diversity | Ethereum
-description: Improve Etheruem's resilience and protect the network by using a minority client.
+description: Improve Ethereum's resilience and protect the network by using a minority client.
 keywords: ethereum, client, diversity, eth, beacon, chain
 url: https://clientdiversity.org
 permalink: pretty # Do not change this, it will break all links
@@ -37,7 +37,7 @@ notification_msg: Join the community! <br><a href=""></a>.
 notification_expiration: 3000000000 # epoch time in seconds
 
 # Toast
-enable_toast: true
+enable_toast: false
 toast_msg_id: 4 # must increment when creating a new message
 toast_title: Ether Alpha's Gitcoin grant is live!
 toast_msg: This round runs through August 29th. If you enjoy this or <a href='https://etheralpha.org/' target='_blank'>other tools</a> created, please support to help maintain existing projects and fund new ones. # Best when under 200 characters
