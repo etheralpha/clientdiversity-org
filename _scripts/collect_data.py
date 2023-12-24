@@ -10,8 +10,10 @@ from datetime import datetime, timezone
 
 current_time = round(time.time()) # seconds
 date = datetime.now(timezone.utc).strftime('%Y-%m-%d') # yyyy-mm-dd
+day = time.strftime('%A', time.localtime(current_time)) # Sunday
 print(f"Epoch: {current_time}")
 print(f"Date: {date}")
+print(f"Day: {day}")
 
 pp = pprint.PrettyPrinter(indent=4)
 use_test_data = False
@@ -916,8 +918,9 @@ def migalabs_marketshare():
 
 
 def get_data():
-  edi_marketshare()
-  rated_marketshare()
+  if day == "Saturday":
+    edi_marketshare()
+    rated_marketshare()
   blockprint_marketshare()
   ethernodes_marketshare()
   migalabs_marketshare()
