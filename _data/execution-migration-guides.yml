@@ -65,7 +65,7 @@ geth_to_besu:
     note: w/ Rocket Pool
 geth_to_erigon:
 geth_to_nethermind:
-  - link: https://docs.nethermind.io/nethermind/first-steps-with-nethermind/migrating-from-geth
+  - link: https://docs.nethermind.io/get-started/migrating-from-geth
     author: Nethermind
     type: doc
     note: w/ Ubuntu
