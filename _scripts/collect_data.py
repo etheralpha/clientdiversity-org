@@ -918,7 +918,7 @@ def migalabs_marketshare():
 
 
 def get_data():
-  if day == "Saturday":
+  if day == "Saturday" or current_time < 1706046158:
     edi_marketshare()
     rated_marketshare()
   blockprint_marketshare()
