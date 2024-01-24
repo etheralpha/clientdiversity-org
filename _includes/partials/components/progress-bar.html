@@ -1,8 +1,15 @@
 {%- assign data = include.data -%}
+{%- assign round = false -%}
+{%- if include.round -%}
+	{%- assign round = include.round -%}
+{%- endif -%}
 
 {%- for client in data -%}
 	{%- assign name = client.name | capitalize -%}
 	{%- assign value = client.value | times: 100 | round: 2 -%}
+	{%- if round -%}
+		{%- assign value = client.value | times: 100 | round: 0 -%}
+	{%- endif -%}
 	{%- assign accuracy = "no data" -%}
 	{%- if client.accuracy != "no data" -%}
 		{%- assign accuracy = client.accuracy | times: 100 | round: 1 | append: "%" -%}

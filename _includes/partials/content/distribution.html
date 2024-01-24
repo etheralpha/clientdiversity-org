@@ -131,7 +131,7 @@
             {%- endif -%}
             <div class="{{visibility}} text-start flex-grow-1 edi execution-data">
               {%- assign edi = site.data.edi | last -%}
-              {%- include partials/components/progress-bar.html data=edi.data.distribution -%}
+              {%- include partials/components/progress-bar.html data=edi.data.distribution round=true -%}
               <div class="text-center small">
                 Data provided by <a href="https://execution-diversity.info" target="_blank">execution-diversity.info</a> — updated daily. <br>
                 Data may not be 100% accurate. (<a href="/methodology">Read more</a>) <br>
