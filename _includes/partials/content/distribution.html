@@ -133,7 +133,7 @@
               {%- assign edi = site.data.edi | last -%}
               {%- include partials/components/progress-bar.html data=edi.data.distribution round=true -%}
               <div class="text-center small">
-                Data provided by <a href="https://execution-diversity.info" target="_blank">execution-diversity.info</a> — updated daily. <br>
+                Data provided by <a href="https://execution-diversity.info" target="_blank">execution-diversity.info</a> — updated manually. <br>
                 Data may not be 100% accurate. (<a href="/methodology">Read more</a>) <br>
                 <p class="mt-2 mb-0 fw-bold">Network coverage: {{edi.data.other.validators_percentage | times: 100 | round: 1 }}%</p>
               </div>
