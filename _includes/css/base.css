@@ -29,7 +29,7 @@ root {
 }
 
 
-a svg {
+#clients a svg {
   fill: var(--bs-body-color);
 }
 

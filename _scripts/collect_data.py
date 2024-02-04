@@ -33,7 +33,7 @@ google_form_error_report_url = os.environ.get("ERROR_REPORT_ENDPOINT")
 # google_form_error_report_url = ""
 
 
-def fetch_json(url, method="GET", payload={}, headers={}, retries=2):
+def fetch(url, method="GET", payload={}, headers={}, retries=2, data_type="json"):
   print(f"Fetch: {url}")
   response = {"status": 0, "attempts": 0, "data": None}
   try: 
@@ -44,7 +44,12 @@ def fetch_json(url, method="GET", payload={}, headers={}, retries=2):
         time.sleep(1.05)
       response["attempts"] = response["attempts"] + 1
       r = requests.request(method, url, headers=headers, data=payload)
-      response = {"status": r.status_code, "attempts": response["attempts"], "data": r.json()}
+      if data_type == "json":
+        response = {"status": r.status_code, "attempts": response["attempts"], "data": r.json()}
+      elif data_type == "text":
+        response = {"status": r.status_code, "attempts": response["attempts"], "data": r.text}
+      else:
+        response = {"status": r.status_code, "attempts": response["attempts"], "data": r.content}
   except:
     error = f"Fetch failed: {url}"
     report_error(error)
@@ -188,7 +193,7 @@ def get_rated_overview_data():
       'Content-Type': 'application/json',
       'Authorization': rated_token
     }
-    response = fetch_json(url, "GET", payload, headers)
+    response = fetch(url, "GET", payload, headers)
     return response
 
 def process_rated_overview_data(raw_data):
@@ -216,7 +221,7 @@ def get_rated_operator_pool_data():
       'Content-Type': 'application/json',
       'Authorization': rated_token
     }
-    response = fetch_json(url, "GET", payload, headers)
+    response = fetch(url, "GET", payload, headers)
     return response
 
 def process_rated_operator_pool_data(raw_data):
@@ -247,7 +252,7 @@ def get_rated_operator_node_data():
       'Content-Type': 'application/json',
       'Authorization': rated_token
     }
-    response = fetch_json(url, "GET", payload, headers)
+    response = fetch(url, "GET", payload, headers)
     return response
 
 def process_rated_operator_node_data(raw_data):
@@ -313,7 +318,7 @@ def get_edi_marketshare_data():
     return response
   else:
     url = "https://raw.githubusercontent.com/one-three-three-seven/execution-diversity/main/services.json"
-    response = fetch_json(url)
+    response = fetch(url)
     return response
 
 def process_edi_marketshare_data(raw_data, pool_validator_counts, total_validator_count):
@@ -470,7 +475,7 @@ def get_rated_marketshare_data():
       'Content-Type': 'application/json',
       'Authorization': rated_token
     }
-    response = fetch_json(url, "GET", payload, headers)
+    response = fetch(url, "GET", payload, headers)
     return response
 
 def process_rated_marketshare_data(raw_data):
@@ -552,6 +557,136 @@ def rated_marketshare():
 ########################################
 
 
+def get_supermajority_marketshare_data():
+  if use_test_data:
+    response = {'status': 200, 'attempts': 1, 'data': [
+      {"name":"Allnodes","website":"https://allnodes.com/eth2/staking","source":"https://twitter.com/Allnodes/status/1750519886286295117","twitter":"https://twitter.com/Allnodes","allocation":[{"name":"Besu","count":23895}]},{"name":"Blockdaemon","website":"https://blockdaemon.com","source":"https://app.hex.tech/8dedcd99-17f4-49d8-944e-4857a355b90a/app/3f7d6967-3ef6-4e69-8f7b-d02d903f045b/latest","twitter":"https://twitter.com/BlockdaemonHQ","allocation":[{"name":"Geth","count":9807}]},{"name":"Attestant","website":"https://www.attestant.io","source":"https://www.attestant.io/posts/helping-client-diversity","twitter":"https://twitter.com/attestantio","allocation":[{"name":"Nethermind","count":5000},{"name":"Besu","count":5001}]},{"name":"Blockscape","website":"https://blockscape.network","source":"https://app.hex.tech/8dedcd99-17f4-49d8-944e-4857a355b90a/app/3f7d6967-3ef6-4e69-8f7b-d02d903f045b/latest","twitter":"https://twitter.com/BlockscapeLab","allocation":[{"name":"Geth","count":8548},{"name":"Nethermind","count":1210}]},{"name":"BridgeTower","website":"https://bridgetowercapital.com","source":"https://app.hex.tech/8dedcd99-17f4-49d8-944e-4857a355b90a/app/3f7d6967-3ef6-4e69-8f7b-d02d903f045b/latest","twitter":"https://twitter.com/BridgeTowerCap","allocation":[{"name":"Geth","count":9600}]},{"name":"ChainLayer","website":"https://chainlayer.io","source":"https://app.hex.tech/8dedcd99-17f4-49d8-944e-4857a355b90a/app/3f7d6967-3ef6-4e69-8f7b-d02d903f045b/latest","twitter":"https://twitter.com/chainlayerio","allocation":[{"name":"Geth","count":8107},{"name":"Nethermind","count":1700}]},{"name":"ChainSafe","website":"https://chainsafe.io","source":"https://app.hex.tech/8dedcd99-17f4-49d8-944e-4857a355b90a/app/3f7d6967-3ef6-4e69-8f7b-d02d903f045b/latest","twitter":"https://twitter.com/ChainSafeth","allocation":[{"name":"Geth","count":6865},{"name":"Nethermind","count":2942}]},{"name":"Chorus One","website":"https://chorus.one","source":"https://app.hex.tech/8dedcd99-17f4-49d8-944e-4857a355b90a/app/3f7d6967-3ef6-4e69-8f7b-d02d903f045b/latest","twitter":"https://twitter.com/chorusone","allocation":[{"name":"Geth","count":9807}]},{"name":"Consensys","website":"https://consensys.io","source":"https://app.hex.tech/8dedcd99-17f4-49d8-944e-4857a355b90a/app/3f7d6967-3ef6-4e69-8f7b-d02d903f045b/latest","twitter":"https://twitter.com/consensys","allocation":[{"name":"Geth","count":8875}]},{"name":"CryptoManufaktur","website":"https://cryptomanufaktur.io","source":"https://app.hex.tech/8dedcd99-17f4-49d8-944e-4857a355b90a/app/3f7d6967-3ef6-4e69-8f7b-d02d903f045b/latest","twitter":"https://twitter.com/cryptomanuf","allocation":[{"name":"Nethermind","count":6538},{"name":"Besu","count":3269}]},{"name":"DSRV","website":"https://dsrvlabs.com","source":"https://app.hex.tech/8dedcd99-17f4-49d8-944e-4857a355b90a/app/3f7d6967-3ef6-4e69-8f7b-d02d903f045b/latest","twitter":"https://twitter.com/dsrvlabs","allocation":[{"name":"Geth","count":8024},{"name":"Nethermind","count":1783}]},{"name":"Everstake","website":"https://everstake.one","source":"https://app.hex.tech/8dedcd99-17f4-49d8-944e-4857a355b90a/app/3f7d6967-3ef6-4e69-8f7b-d02d903f045b/latest","twitter":"https://twitter.com/everstake_pool","allocation":[{"name":"Geth","count":9307},{"name":"Nethermind","count":500}]},{"name":"Figment","website":"https://figment.io","source":"https://app.hex.tech/8dedcd99-17f4-49d8-944e-4857a355b90a/app/3f7d6967-3ef6-4e69-8f7b-d02d903f045b/latest","twitter":"https://twitter.com/Figment_io","allocation":[{"name":"Geth","count":4904},{"name":"Erigon","count":4903}]},{"name":"HashKey Cloud","website":"https://hashkey.cloud/","source":"https://app.hex.tech/8dedcd99-17f4-49d8-944e-4857a355b90a/app/3f7d6967-3ef6-4e69-8f7b-d02d903f045b/latest","twitter":"https://twitter.com/HashKeyCloud","allocation":[{"name":"Geth","count":9807}]},{"name":"InfStones","website":"https://infstones.com","source":"https://app.hex.tech/8dedcd99-17f4-49d8-944e-4857a355b90a/app/3f7d6967-3ef6-4e69-8f7b-d02d903f045b/latest","twitter":"https://twitter.com/infstones","allocation":[{"name":"Geth","count":9807}]},{"name":"Jump Crypto","website":"https://jumpcrypto.com","source":"https://app.hex.tech/8dedcd99-17f4-49d8-944e-4857a355b90a/app/3f7d6967-3ef6-4e69-8f7b-d02d903f045b/latest","twitter":"https://twitter.com/jump_","allocation":[{"name":"Geth","count":1000}]},{"name":"Kiln","website":"https://kiln.fi","source":"https://app.hex.tech/8dedcd99-17f4-49d8-944e-4857a355b90a/app/3f7d6967-3ef6-4e69-8f7b-d02d903f045b/latest","twitter":"https://twitter.com/Kiln_finance","allocation":[{"name":"Geth","count":36754}]},{"name":"Kukis Global","website":"https://kukis-global.com","source":"https://app.hex.tech/8dedcd99-17f4-49d8-944e-4857a355b90a/app/3f7d6967-3ef6-4e69-8f7b-d02d903f045b/latest","twitter":"https://twitter.com/KukisGlobal","allocation":[{"name":"Geth","count":9807}]},{"name":"Launchnodes","website":"https://launchnodes.com","source":"https://app.hex.tech/8dedcd99-17f4-49d8-944e-4857a355b90a/app/3f7d6967-3ef6-4e69-8f7b-d02d903f045b/latest","twitter":"https://twitter.com/launchnodes","allocation":[{"name":"Besu","count":2562}]},{"name":"Nethermind","website":"https://nethermind.io","source":"https://twitter.com/tkstanczak/status/1750026116470030360","twitter":"https://twitter.com/NethermindEth","allocation":[{"name":"Nethermind","count":10001}]},{"name":"P2P.org","website":"https://p2p.org/networks/ethereum","source":"https://twitter.com/P2Pvalidator/status/1750550082934472885","twitter":"https://twitter.com/p2pvalidator","allocation":[{"name":"Besu","count":17927}]},{"name":"Prysmatic Labs","website":"https://prysmaticlabs.com","source":"https://app.hex.tech/8dedcd99-17f4-49d8-944e-4857a355b90a/app/3f7d6967-3ef6-4e69-8f7b-d02d903f045b/latest","twitter":"https://twitter.com/prylabs","allocation":[{"name":"Geth","count":9807}]},{"name":"RockLogic","website":"https://rocklogic.at","source":"https://app.hex.tech/8dedcd99-17f4-49d8-944e-4857a355b90a/app/3f7d6967-3ef6-4e69-8f7b-d02d903f045b/latest","twitter":"https://twitter.com/rocklogicgmbh","allocation":[{"name":"Geth","count":800},{"name":"Nethermind","count":2000},{"name":"Besu","count":1500},{"name":"Besu","count":1489}]},{"name":"RockX","website":"https://rockx.com","source":"https://app.hex.tech/8dedcd99-17f4-49d8-944e-4857a355b90a/app/3f7d6967-3ef6-4e69-8f7b-d02d903f045b/latest","twitter":"https://twitter.com/rockx_official","allocation":[{"name":"Geth","count":9107},{"name":"Nethermind","count":701}]},{"name":"SenseiNode","website":"https://senseinode.com","source":"https://app.hex.tech/8dedcd99-17f4-49d8-944e-4857a355b90a/app/3f7d6967-3ef6-4e69-8f7b-d02d903f045b/latest","twitter":"https://twitter.com/senseinode","allocation":[{"name":"Nethermind","count":100}]},{"name":"Sigma Prime","website":"https://sigmaprime.io","source":"https://app.hex.tech/8dedcd99-17f4-49d8-944e-4857a355b90a/app/3f7d6967-3ef6-4e69-8f7b-d02d903f045b/latest","twitter":"https://twitter.com/sigp_io","allocation":[{"name":"Geth","count":7043},{"name":"Nethermind","count":2764}]},{"name":"Simply Staking","website":"https://simplystaking.com","source":"https://app.hex.tech/8dedcd99-17f4-49d8-944e-4857a355b90a/app/3f7d6967-3ef6-4e69-8f7b-d02d903f045b/latest","twitter":"https://twitter.com/SimplyStaking","allocation":[{"name":"Geth","count":6465},{"name":"Nethermind","count":3036}]},{"name":"Stakefish","website":"https://stake.fish","source":"https://app.hex.tech/8dedcd99-17f4-49d8-944e-4857a355b90a/app/3f7d6967-3ef6-4e69-8f7b-d02d903f045b/latest","twitter":"https://twitter.com/stakefish","allocation":[{"name":"Geth","count":5878},{"name":"Nethermind","count":2938}]},{"name":"Stakely","website":"https://stakely.io","source":"https://app.hex.tech/8dedcd99-17f4-49d8-944e-4857a355b90a/app/3f7d6967-3ef6-4e69-8f7b-d02d903f045b/latest","twitter":"https://twitter.com/Stakely_io","allocation":[{"name":"Geth","count":3000},{"name":"Nethermind","count":4807},{"name":"Erigon","count":2000}]},{"name":"Stakin","website":"https://stakin.com","source":"https://app.hex.tech/8dedcd99-17f4-49d8-944e-4857a355b90a/app/3f7d6967-3ef6-4e69-8f7b-d02d903f045b/latest","twitter":"https://twitter.com/StakinOfficial","allocation":[{"name":"Besu","count":9807}]},{"name":"Staking Facilities","website":"https://stakingfacilities.com","source":"https://app.hex.tech/8dedcd99-17f4-49d8-944e-4857a355b90a/app/3f7d6967-3ef6-4e69-8f7b-d02d903f045b/latest","twitter":"https://twitter.com/stakingfac","allocation":[{"name":"Geth","count":8400}]},{"name":"Ethpool","website":"https://ethpool.org","source":"https://ethpool.org/faq","twitter":"https://twitter.com/ethpool_staking","allocation":[{"name":"Nethermind","count":3314}]},{"name":"Rocket Pool","website":"https://rocketpool.net","source":"https://discord.gg/BH2neAuw","twitter":"https://twitter.com/Rocket_Pool","allocation":[{"name":"Geth","count":7995},{"name":"Nethermind","count":6394},{"name":"Besu","count":2859},{"name":"Unknown","count":6405}]},{"name":"Coinbase","website":"https://www.coinbase.com/earn/staking/ethereum","source":"https://www.coinbase.com/de/cloud/discover/customer-stories/cb-wallet","twitter":"https://twitter.com/coinbase","allocation":[{"name":"Geth","count":135902}]},{"name":"Bitcoin Suisse","website":"https://bitcoinsuisse.com","twitter":"https://twitter.com/bitcoinsuisseag","allocation":[{"name":"Unknown","count":14602}]},{"name":"Kraken","website":"https://kraken.com","twitter":"https://twitter.com/krakenfx","allocation":[{"name":"Unknown","count":25968}]},{"name":"Binance","website":"https://binance.com","twitter":"https://twitter.com/binance","allocation":[{"name":"Unknown","count":34945}]},{"name":"OKX","website":"https://okx.com","twitter":"https://twitter.com/okx","allocation":[{"name":"Unknown","count":16141}]},{"name":"Blox Staking","website":"https://bloxstaking.com","source":"https://discord.com/channels/973544250828546069/1146751094433787964/1199615241949036604","allocation":[{"name":"Geth","count":4801}]}
+    ]}
+    print_data("fetch", response)
+    return response
+  else:
+    url = "https://raw.githubusercontent.com/one-three-three-seven/Supermajority/main/public/services.json"
+    response = fetch(url)
+    return response
+
+def get_supermajority_total_validators():
+  if use_test_data:
+    response = {'status': 200, 'attempts': 1, 'data': "import { numberToPercent, type Distribution, type Service } from '@/lib'\nimport { ref, computed, type Ref } from 'vue'\nimport { defineStore } from 'pinia'\n\nconst totalValidators = 914433\n\nexport const useDistributionStore = defineStore('distribution', () => {\n    const services: Ref<Service[]> = ref([])\n\n    const allocation = computed(() => {\n        const map = new Map<string, number>().set('Unknown', 0).set('Geth', 0).set('Nethermind', 0).set('Besu', 0).set('Erigon', 0).set('Reth', 0)\n\n        services.value.forEach(service => {\n            service.allocation.forEach(client => {\n                map.set(client.name, (map.get(client.name) || 0) + client.count);\n            })\n        })\n\n        return map\n    })\n\n    const knwonDistribution = computed(() => distribution(true))\n    const completeDistribution = computed(() => distribution(false))\n\n    const distribution = (knownOnly = false) => {\n        const list: Distribution[] = []\n\n        allocation.value.forEach((count, name) => {\n            if (count && !(knownOnly && name === 'Unknown')) {\n                const share = count / ((knownOnly) ? knownValidators.value : totalValidators)\n\n                list.push({\n                    name,\n                    count,\n                    share: share * 100,\n                    shareFormatted: numberToPercent.format(share)\n                })\n            }\n        })\n\n        return list\n    }\n\n    const knownValidators = computed(() => {\n        let known = 0;\n\n        allocation.value.forEach((count, name) => {\n            if (name !== 'Unknown') {\n                known += count;\n            }\n        })\n\n        return known\n    })\n\n    const knownDistributionShareFormatted = computed(() => {\n        return numberToPercent.format(knownValidators.value / totalValidators)\n    })\n\n    const sortedServices = computed(() => {\n        const copy = [...services.value]\n\n        // Calculate total number of validators and the market share\n        const count = (service: Service) => service.allocation.reduce((total, client) => total + client.count, 0)\n        copy.forEach(service => {\n            const validators = count(service)\n            service.validators = validators\n            service.marketShareFormatted = numberToPercent.format(validators / totalValidators)\n        })\n\n        copy.sort((a, b) => {\n            if (a.validators === b.validators)"}
+    print_data("fetch", response)
+    return response
+  else:
+    url = "https://raw.githubusercontent.com/one-three-three-seven/Supermajority/47cfc175d15764b3dca30cf1e0a24c7abc2379ab/src/stores/distribution.ts"
+    response = fetch(url, data_type="text")
+    return response
+
+def process_supermajority_total_validators(raw_data):
+  before = "const totalValidators = "
+  after = "\n"
+  total_validators = raw_data["data"].split(before)[1].split(after)[0]
+  # pprint(["total_validators", total_validators])
+  return int(total_validators)
+
+def process_supermajority_marketshare_data(raw_data, total_validators):
+  # example supermajority raw data:
+    # raw_data = {'status': 200, 'attempts': 1, 'data': [
+    #   {
+    #     "name":"Allnodes",
+    #     "website":"https://allnodes.com/eth2/staking",
+    #     "source":"https://twitter.com/Allnodes/status/1750519886286295117",
+    #     "twitter":"https://twitter.com/Allnodes",
+    #     "allocation":[
+    #       {"name":"Besu","count":23895}
+    #     ]
+    #   }
+    #   ...
+    #   ]}
+
+  main_clients = ["geth", "erigon", "nethermind", "besu", "reth"]
+  threshold_percentage = 0.5 # represented as a percent, not a decimal
+  cleaned_data = {}
+  sample_size = 0
+  sample_size_all = 0
+  reformatted_data = []
+  filtered_data = [{"name": "other", "value": 0}]
+  marketshare_data = []
+  extra_data = {}
+  final_data = {}
+
+  # clean data
+  for item in raw_data["data"]:
+    for client in item["allocation"]:
+      if client["name"].lower() in cleaned_data:
+        cleaned_data[client["name"].lower()] += client["count"]
+      else:
+        cleaned_data[client["name"].lower()] = client["count"]
+      sample_size_all += client["count"]
+      if client["name"].lower() != "unknown":
+        sample_size += client["count"]
+  # pprint(["cleaned_data", cleaned_data])
+  # pprint(["sample_size", sample_size])
+  # pprint(["sample_size_all", sample_size_all])
+
+  # reformat data into a list of dicts
+  for key, value in cleaned_data.items():
+    reformatted_data.append({"name": key, "value": value})
+  # pprint(["reformatted_data", reformatted_data])
+
+  # filter out items either under the threshold and not in the main_clients list
+  for item in reformatted_data:
+    if item["name"] in main_clients:
+      filtered_data.append({"name": item["name"], "value": item["value"]})
+    elif (item["value"] / sample_size * 100) >= threshold_percentage and item["name"] != "unknown":
+      filtered_data.append({"name": item["name"], "value": item["value"]})
+    elif item["name"] != "unknown":
+      filtered_data[0]["value"] += item["value"]
+  # pprint(["filtered_data", filtered_data])
+
+  # calculate the marketshare for each client
+  for item in filtered_data:
+    marketshare = item["value"] / sample_size
+    marketshare_data.append({"name": item["name"], "value": marketshare, "accuracy": "no data"})
+  # pprint(["marketshare_data", marketshare_data])
+
+  # sort the list by marketshare descending
+  sorted_data = sorted(marketshare_data, key=lambda k : k['value'], reverse=True)
+  # pprint(["sorted_data", sorted_data])
+
+  # supplemental data
+  extra_data["data_source"] = "supermajority"
+  extra_data["has_majority"] = False
+  extra_data["has_supermajority"] = False
+  extra_data["danger_client"] = ""
+  if sorted_data[0]["value"] >= .50:
+    extra_data["has_majority"] = True
+    extra_data["danger_client"] = sorted_data[0]["name"]
+  if sorted_data[0]["value"] >= .66:
+    extra_data["has_supermajority"] = True
+  extra_data["top_client"] = sorted_data[0]["name"]
+  extra_data["validators_represented"] = sample_size
+  extra_data["validators_total"] = total_validators
+  validators_percentage = sample_size / total_validators
+  extra_data["validators_percentage"] = validators_percentage
+  # pprint(["extra_data", extra_data])
+
+  # create final data dict
+  final_data["distribution"] = sorted_data
+  final_data["other"] = extra_data
+  print_data("processed", final_data, "final_data_supermajority")
+
+  return final_data
+
+def supermajority_marketshare():
+  raw_data = get_supermajority_marketshare_data()
+  save_to_file("../_data/raw/supermajority_raw.json", raw_data)
+  raw_total_validators = get_supermajority_total_validators()
+  total_validators = process_supermajority_total_validators(raw_total_validators)
+  processed_data = process_supermajority_marketshare_data(raw_data, total_validators)
+  save_to_file("../_data/supermajority.json", processed_data)
+
+
+########################################
+
+
 def get_blockprint_marketshare_data():
   if use_test_data:
     response = {'status': 200, 'attempts': 1, 'data': {'Uncertain': 0, 'Grandine': 0, 'Lighthouse': 33411, 'Lodestar': 1145, 'Nimbus': 4862, 'Other': 0, 'Prysm': 45450, 'Teku': 15458}}
@@ -570,7 +705,7 @@ def get_blockprint_marketshare_data():
     end_epoch = math.floor(current_epoch / 225) * 225
     start_epoch = end_epoch - 3150
     url = f"https://api.blockprint.sigp.io/blocks_per_client/{start_epoch}/{end_epoch}"
-    response = fetch_json(url)
+    response = fetch(url)
     return response
 
 def get_blockprint_accuracy_data():
@@ -581,7 +716,7 @@ def get_blockprint_accuracy_data():
     return response
   else:
     url = "https://api.blockprint.sigp.io/confusion"
-    response = fetch_json(url)
+    response = fetch(url)
     return response
 
 
@@ -721,7 +856,7 @@ def get_ethernodes_marketshare_data():
     return response
   else:
     url = "https://ethernodes.org/api/clients"
-    response = fetch_json(url)
+    response = fetch(url)
     return response
 
 def process_ethernodes_marketshare_data(raw_data):
@@ -812,7 +947,7 @@ def get_migalabs_marketshare_data():
     headers = {
       'X-Api-Key': migalabs_token
     }
-    response = fetch_json(url, "GET", payload, headers)
+    response = fetch(url, "GET", payload, headers)
     return response
 
 def process_migalabs_marketshare_data(raw_data):
@@ -918,9 +1053,10 @@ def migalabs_marketshare():
 
 
 def get_data():
-  if day == "Saturday" or current_time < 1706217143:
-    edi_marketshare()
-    rated_marketshare()
+  # if day == "Saturday" or current_time < 1706217143:
+  #   edi_marketshare()
+  #   rated_marketshare()
+  supermajority_marketshare()
   blockprint_marketshare()
   ethernodes_marketshare()
   migalabs_marketshare()

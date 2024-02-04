@@ -102,8 +102,8 @@
                 {%- assign ethernodes = site.data.ethernodes | last -%}
                 {%- include partials/components/alert.html data=ethernodes.data.other type="execution" -%}
               </div>
-              {%- assign edi = site.data.edi | last -%}
-              {%- include partials/components/alert.html data=edi.data.other type="execution" -%}
+              {%- assign supermajority = site.data.supermajority | last -%}
+              {%- include partials/components/alert.html data=supermajority.data.other type="execution" -%}
             <!-- Ethernodes Data -->
             {%- assign visibility = "d-none" -%}
             {%- if site.default_execution_source == "ethernodes" -%}
@@ -126,16 +126,16 @@
             </div>
             <!-- Execution-Diversity.info Data -->
             {%- assign visibility = "d-none" -%}
-            {%- if site.default_execution_source == "edi" -%}
+            {%- if site.default_execution_source == "supermajority" -%}
               {%- assign visibility = "" -%}
             {%- endif -%}
-            <div class="{{visibility}} text-start flex-grow-1 edi execution-data">
-              {%- assign edi = site.data.edi | last -%}
-              {%- include partials/components/progress-bar.html data=edi.data.distribution round=true -%}
+            <div class="{{visibility}} text-start flex-grow-1 supermajority execution-data">
+              {%- assign supermajority = site.data.supermajority | last -%}
+              {%- include partials/components/progress-bar.html data=supermajority.data.distribution round=true -%}
               <div class="text-center small">
-                Data provided by <a href="https://execution-diversity.info" target="_blank">execution-diversity.info</a> — updated manually. <br>
+                Data provided by <a href="http://supermajority.info/" target="_blank">supermajority.info</a> — updated manually. <br>
                 Data may not be 100% accurate. (<a href="/methodology">Read more</a>) <br>
-                <p class="mt-2 mb-0 fw-bold">Network coverage: {{edi.data.other.validators_percentage | times: 100 | round: 1 }}%</p>
+                <p class="mt-2 mb-0 fw-bold">Network coverage: {{supermajority.data.other.validators_percentage | times: 100 | round: 1 }}%</p>
               </div>
             </div>
             <!-- Select Data Source -->
@@ -146,12 +146,12 @@
                   <a href="/methodology" style="color: #055160;">(read more)</a>:
                 </div>
                 {%- assign checked = "" -%}
-                {%- if site.default_execution_source == "edi" -%}
+                {%- if site.default_execution_source == "supermajority" -%}
                   {%- assign checked = "checked" -%}
                 {%- endif -%}
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="datasourcesEC" id="dataSourceEC2" value="edi"  onclick="setDataSource('edi', 'execution');" {{checked}}>
-                  <label class="form-check-label" for="dataSourceEC2">Execution-Diversity.info</label>
+                  <input class="form-check-input" type="radio" name="datasourcesEC" id="dataSourceEC2" value="supermajority"  onclick="setDataSource('supermajority', 'execution');" {{checked}}>
+                  <label class="form-check-label" for="dataSourceEC2">Supermajority.info</label>
                 </div>
                 {%- assign checked = "" -%}
                 {%- if site.default_execution_source == "ethernodes" -%}
