@@ -26,4 +26,4 @@ There's no inherent way to know exactly what client a validator is running. Rese
 
 [Ethernodes](https://ethernodes.org/) - Methodology unknown.
 
-[execution-diversity.info](https://execution-diversity.info/) - Through social effort, execution-diversity.info (lead by Sonic) gathers **self-reported** client breakdown data. From there, Clientdiversity.org takes their data relating to pools and uses validator counts from [Rated Network](https://rated.network/) to weight the data. While this doesn't capture data on the entire network, the marketshare from the entities involved is substantial enough to be considered representative. Operator data is omitted due to unknown overlap between pool data.
+[supermajority.info](https://supermajority.info) - Through social effort, supermajority.info (lead by Sonic) gathers **self-reported** client breakdown data and weighted against how many validators each entity has. While this doesn't capture data on the entire network, the marketshare from the entities involved is substantial enough to be considered representative.
