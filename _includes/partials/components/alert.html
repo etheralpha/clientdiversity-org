@@ -22,9 +22,16 @@
 
 {%- assign danger_client = data.danger_client | capitalize -%}
 
-{%- assign alert_msg = "Switch from " | append: danger_client | append: " to a minority client!" -%}
-{%- if data.danger_client == "" -%}
-	{%- assign alert_msg = "The client diversity has improved!" -%}
+{%- capture alert_msg -%}
+	Switch from {{danger_client}} to a minority client!
+{%- endcapture -%}
+{%- if data.has_supermajority == true -%}
+	{%- capture alert_msg -%}
+		{{danger_client}} has a supermajority, switch to a minority client!
+	{%- endcapture -%}
+{%- endif -%}
+{%- if data.has_majority == false -%}
+	{%- assign alert_msg = "Client diversity has improved!" -%}
 {%- endif -%}
 
 {%- assign alert_msg_padding = "" -%}
