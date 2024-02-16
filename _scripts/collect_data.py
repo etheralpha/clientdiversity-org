@@ -9,6 +9,7 @@ from datetime import datetime, timezone
 
 
 current_time = round(time.time()) # seconds
+override_before_epoch = current_time < 1708115400
 date = datetime.now(timezone.utc).strftime('%Y-%m-%d') # yyyy-mm-dd
 day = time.strftime('%A', time.localtime(current_time)) # Sunday
 print(f"Epoch: {current_time}")
@@ -87,8 +88,8 @@ def save_to_file(rel_path, data):
               json.dump(all_data, f, indent=None, separators=(',', ':'))
             f.close()
             print(f"{rel_path} data has been updated")
-          # if the data was null then overwrite it
-          elif date == all_data[-1]['date'] and all_data[-1]['data'] == None:
+          # if the data was null or override set then overwrite last entry
+          elif date == all_data[-1]['date'] and (all_data[-1]['data'] == None or override_before_epoch):
             del all_data[-1]
             # append todays data to historical data and write to file
             all_data.append(todays_data)
