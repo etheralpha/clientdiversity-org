@@ -609,17 +609,22 @@ def process_supermajority_marketshare_data(raw_data, total_validators):
   sample_size_all = 0
   reformatted_data = []
   filtered_data = [{"name": "other", "value": 0}]
+  adjusted_data = []
   marketshare_data = []
   extra_data = {}
   final_data = {}
+  # pprint(["total_validators", total_validators])
 
   # clean data
   for item in raw_data["data"]:
     for client in item["allocation"]:
-      if client["name"].lower() in cleaned_data:
-        cleaned_data[client["name"].lower()] += client["count"]
+      client_name = client["name"].lower()
+      if client_name == "unknown":
+        client_name = "geth"
+      if client_name in cleaned_data:
+        cleaned_data[client_name] += client["count"]
       else:
-        cleaned_data[client["name"].lower()] = client["count"]
+        cleaned_data[client_name] = client["count"]
       sample_size_all += client["count"]
       if client["name"].lower() != "unknown":
         sample_size += client["count"]
@@ -642,9 +647,30 @@ def process_supermajority_marketshare_data(raw_data, total_validators):
       filtered_data[0]["value"] += item["value"]
   # pprint(["filtered_data", filtered_data])
 
-  # calculate the marketshare for each client
+  # adjust data where 80% of unaccounted for validators are assumed geth, and the rest is split
+  remaining_validators = total_validators - sample_size
+  geth_adjusted = round(remaining_validators * 0.8)
+  spit_size = 0
   for item in filtered_data:
-    marketshare = item["value"] / sample_size
+    if item["name"] != "geth" and item["name"] != "unknown" and item["name"] != "other":
+      spit_size += 1
+  for item in filtered_data:
+    if item["name"] == "geth":
+      geth_adjusted += item["value"]
+      adjusted_data.append({"name": item["name"], "value": geth_adjusted})
+    elif item["name"] != "unknown" and item["name"] != "other":
+      adjusted_value = round(remaining_validators * 0.2 / spit_size) + item["value"]
+      adjusted_data.append({"name": item["name"], "value": adjusted_value})
+    else:
+      adjusted_data.append({"name": item["name"], "value": item["value"]})
+  # pprint(["remaining_validators", remaining_validators])
+  # pprint(["spit_size", spit_size])
+  # pprint(["adjusted_data", adjusted_data])
+
+
+  # calculate the marketshare for each client
+  for item in adjusted_data:
+    marketshare = item["value"] / total_validators
     marketshare_data.append({"name": item["name"], "value": marketshare, "accuracy": "no data"})
   # pprint(["marketshare_data", marketshare_data])
 
