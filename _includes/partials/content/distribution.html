@@ -131,11 +131,12 @@
             {%- endif -%}
             <div class="{{visibility}} text-start flex-grow-1 supermajority execution-data">
               {%- assign supermajority = site.data.supermajority | last -%}
+              {%- assign supermajority_coverage = supermajority.data.other.validators_percentage | times: 100 | round: 1 -%}
               {%- include partials/components/progress-bar.html data=supermajority.data.distribution round=true -%}
               <div class="text-center small">
                 Data provided by <a href="http://supermajority.info/" target="_blank">supermajority.info</a> — updated manually. <br>
                 Data may not be 100% accurate. (<a href="/methodology">Read more</a>) <br>
-                <p class="mt-2 mb-0 fw-bold">Network coverage: {{supermajority.data.other.validators_percentage | times: 100 | round: 1 }}%</p>
+                <p class="mt-2 mb-0 fw-bold">Based on {{supermajority_coverage}}% self-reported network coverage with the remaining assumed to be mostly Geth.</p>
               </div>
             </div>
             <!-- Select Data Source -->
