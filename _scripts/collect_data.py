@@ -646,7 +646,7 @@ def process_supermajority_marketshare_data(raw_data, total_validators):
   # pprint(["filtered_data", filtered_data])
 
   # adjust data where 80% of unaccounted for validators are assumed geth, and the rest is split
-  remaining_validators = total_validators - sample_size
+  remaining_validators = total_validators - sample_size_all
   remaining_geth_validators = round(remaining_validators * 0.8)
   unknown_validators = next((item for item in filtered_data if item['name'] == "unknown"), None)["value"]
   geth_adjusted = remaining_geth_validators + unknown_validators
