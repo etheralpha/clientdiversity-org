@@ -619,8 +619,6 @@ def process_supermajority_marketshare_data(raw_data, total_validators):
   for item in raw_data["data"]:
     for client in item["allocation"]:
       client_name = client["name"].lower()
-      if client_name == "unknown":
-        client_name = "geth"
       if client_name in cleaned_data:
         cleaned_data[client_name] += client["count"]
       else:
@@ -639,7 +637,7 @@ def process_supermajority_marketshare_data(raw_data, total_validators):
 
   # filter out items either under the threshold and not in the main_clients list
   for item in reformatted_data:
-    if item["name"] in main_clients:
+    if item["name"] in main_clients or item["name"] == "unknown":
       filtered_data.append({"name": item["name"], "value": item["value"]})
     elif (item["value"] / sample_size * 100) >= threshold_percentage and item["name"] != "unknown":
       filtered_data.append({"name": item["name"], "value": item["value"]})
@@ -649,7 +647,9 @@ def process_supermajority_marketshare_data(raw_data, total_validators):
 
   # adjust data where 80% of unaccounted for validators are assumed geth, and the rest is split
   remaining_validators = total_validators - sample_size
-  geth_adjusted = round(remaining_validators * 0.8)
+  remaining_geth_validators = round(remaining_validators * 0.8)
+  unknown_validators = next((item for item in filtered_data if item['name'] == "unknown"), None)["value"]
+  geth_adjusted = remaining_geth_validators + unknown_validators
   spit_size = 0
   for item in filtered_data:
     if item["name"] != "geth" and item["name"] != "unknown" and item["name"] != "other":
@@ -658,12 +658,15 @@ def process_supermajority_marketshare_data(raw_data, total_validators):
     if item["name"] == "geth":
       geth_adjusted += item["value"]
       adjusted_data.append({"name": item["name"], "value": geth_adjusted})
-    elif item["name"] != "unknown" and item["name"] != "other":
+    elif item["name"] == "other":
+      adjusted_data.append({"name": item["name"], "value": item["value"]})
+    elif item["name"] != "unknown":
       adjusted_value = round(remaining_validators * 0.2 / spit_size) + item["value"]
       adjusted_data.append({"name": item["name"], "value": adjusted_value})
-    else:
-      adjusted_data.append({"name": item["name"], "value": item["value"]})
   # pprint(["remaining_validators", remaining_validators])
+  # pprint(["remaining_geth_validators", remaining_geth_validators])
+  # pprint(["unknown_validators", unknown_validators])
+  # pprint(["geth_adjusted", geth_adjusted])
   # pprint(["spit_size", spit_size])
   # pprint(["adjusted_data", adjusted_data])
 
