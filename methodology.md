@@ -26,6 +26,7 @@ There's no inherent way to know exactly what client a validator is running. Rese
 
 [Ethernodes](https://ethernodes.org/) - Methodology unknown.
 
+{% assign supermajority = site.data.supermajority | last %}
 {% assign supermajority_geth = supermajority.data.other.validators_percentage | times: 100 | round: 1 %}
 {% assign supermajority_other = 100 | minus: supermajority_geth %}
 
