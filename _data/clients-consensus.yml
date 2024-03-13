@@ -11,14 +11,14 @@
 
 
 - name: Grandine
-  link: https://sifrai.com/
-  github: https://github.com/sifraitech/grandine
-  docs: https://github.com/sifraitech/grandine
+  link: https://grandine.io/
+  github: https://github.com/grandinetech/grandine
+  docs: https://docs.grandine.io/
   chat: https://discord.gg/H9XCdUSyZd
   status: beta
   support: Linux, Win, macOS
   donate: 
-  opensource: false
+  opensource: true
 - name: Lighthouse
   link: https://lighthouse.sigmaprime.io/
   github: https://github.com/sigp/lighthouse/
