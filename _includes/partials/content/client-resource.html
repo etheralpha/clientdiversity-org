@@ -25,7 +25,6 @@
               {%- for client in site.data.clients-consensus -%}
                 <tr>
                   <th scope="row">
-                    {%- if client.name == "Grandine" -%}*{%- endif -%}
                     {%- if client.link -%}
                       <a href="{{client.link}}" class="" target="_blank">
                       {{client.name}}
@@ -119,9 +118,6 @@
               {%- endfor -%}
             </tbody>
           </table>
-        </div>
-        <div class="text-center">
-          <small>* Grandine is not open sourced</small>
         </div>
       </div>
       <div class="col col-xxl-8 col-xl-9 col-lg-10 col-md-11 mt-5">
