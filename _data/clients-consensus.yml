@@ -16,8 +16,9 @@
   docs: https://docs.grandine.io/
   chat: https://discord.gg/H9XCdUSyZd
   status: beta
-  support: Linux, Win, macOS
-  donate: 
+  support: Linux, macOS, ARM
+  lang: Rust
+  donate: https://etherscan.io/address/0x93b10cc89A3D3b5bb6bBB04EfFe104873EF002A9
   opensource: true
 - name: Lighthouse
   link: https://lighthouse.sigmaprime.io/
