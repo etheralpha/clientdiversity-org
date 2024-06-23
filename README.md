@@ -7,12 +7,21 @@ This is the repo for <https://clientdiversity.org>, a resource site to assist cl
 ### Just Using Jekyll
 
 1. Clone the repo (or fork the repo to your account)
-1. Install dependencies: `bundle install`
-1. Create a feature branch off of the latest version branch
-1. Start the local server: `bundle exec jekyll serve`
-1. Go to <http://localhost:4000/> to view changes
+2. Install dependencies:
+```
+bundle install
+```
+3. Create a feature branch off of the latest version branch
+4. Start the local server:
+```
+bundle exec jekyll serve
+```
+5. Go to <http://localhost:4000/> to view changes
 
-To build the site use `bundle exec jekyll build`. 
+To build the site use the following command
+```
+bundle exec jekyll build
+```
 
 
 Resources:
