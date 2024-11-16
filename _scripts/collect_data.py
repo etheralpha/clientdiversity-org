@@ -1096,7 +1096,7 @@ def get_data():
   supermajority_marketshare()
   blockprint_marketshare()
   ethernodes_marketshare()
-  migalabs_marketshare()
+  #migalabs_marketshare()
 
 
 get_data()
