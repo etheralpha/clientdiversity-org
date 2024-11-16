@@ -18,7 +18,7 @@
 
   {%- assign color = "success" -%}
   {%- assign status = "great!" -%}
-  {%- if value > 50 -%}
+  {%- if value > 66 -%}
 		{%- assign color = "danger" -%}
 		{%- assign status = "danger!" -%}
   {%- elsif value > 33 -%}
@@ -37,10 +37,10 @@
 	            <span class="me-2">great:</span><span>0-33%</span>
 	          </div>
 	          <div class="d-flex justify-content-between">
-	            <span class="me-2">caution:</span><span>33-50%</span>
+	            <span class="me-2">caution:</span><span>33-66%</span>
 	          </div>
 	          <div class="d-flex justify-content-between mb-1 pb-1 border-bottom border-secondary">
-	          <span class="me-2">danger:</span><span>50-100%</span>
+	          <span class="me-2">danger:</span><span>66-100%</span>
 	          </div>
 	          <div class="d-flex justify-content-between">
 	            <span class="me-2">accuracy:</span><span>{{accuracy}}</span>
@@ -48,8 +48,8 @@
 	        </div>'>
       <div class="progress-bar position-absolute bg-{{color}}" role="progressbar" style="width: {{value}}%; height: 1.25rem;" aria-valuenow="{{value}}" aria-valuemin="0" aria-valuemax="100"></div>
       <div class="progress-bar bg-trans clientshare-success" role="progressbar" style="width: 33%; height: 1.25rem"></div>
-      <div class="progress-bar bg-trans clientshare-warning" role="progressbar" style="width: 17%; height: 1.25rem"></div>
-      <div class="progress-bar bg-trans clientshare-danger" role="progressbar" style="width: 50%; height: 1.25rem"></div>
+      <div class="progress-bar bg-trans clientshare-warning" role="progressbar" style="width: 33%; height: 1.25rem"></div>
+      <div class="progress-bar bg-trans clientshare-danger" role="progressbar" style="width: 34%; height: 1.25rem"></div>
     </div>
   </div>
 {%- endfor -%}

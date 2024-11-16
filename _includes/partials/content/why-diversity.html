@@ -6,7 +6,7 @@
       <div class="col col-lg-10">
         <p class="mb-4">Many know client diversity is important for a more resilient network, but they don't understand why or just how essential it is. It's not only important &#8212; <span class="fw-bold fst-italic">it's critical</span>. If a single client is used by 2/3rds (66%) of validators, there's a very real risk this can result in disrupting the chain and monetary loss [<a href="https://www.slashed.info/" target="_blank">1</a>, <a href="https://nitter.net/_crypto_crack/status/1504459918539120643" target="_blank">2</a>] for node operators.</p>
         <p class="mb-4">It takes 2/3rds of validators to reach finality. If a client with 66%+ of marketshare has a bug and forks to its own chain, it'll be capable of finalizing. Once the fork finalizes, the <strong>validators cannot return to the real chain without being slashed</strong><!--  or exiting and watching their funds drain while in queue -->. If 66% of the chain gets slashed simultaneously, the penalty is the whole 32 ETH.</p>
-        <p class="mb-4">So why is >50% marketshare still dangerous? If a minority client forks, the 50%+ majority client can obtain a 66%+ majority. With no client having a marketshare over 33%, these scenarios are avoided. That's why <strong>&#60;33% marketshare is the goal for all clients</strong>.</p>
+        <p class="mb-4">So why is >33% marketshare still undesirable? If a client with >33% marketshare forks, it will prevent the chain from finalizing. That's why <strong>&#60;33% marketshare is the goal for all clients</strong>.</p>
         <p><strong>Execution clients are not immune.</strong> The risks mentioned above apply to both consensus clients and execution clients equally.</p>
       </div>
     </div>
@@ -32,10 +32,6 @@
                 <a class="d-block my-2 text-capitalize" target="_blank"
                     href="https://our.status.im/the-importance-of-client-diversity/">
                     Nimbus: The Importance of Client Diversity {{site.data.icons.new_tab}}
-                </a>
-                <a class="d-block my-2 text-capitalize" target="_blank"
-                    href="https://lighthouse.sigmaprime.io/switch-to-lighthouse.html">
-                    Lighthouse: Why You Should Switch to Lighthouse {{site.data.icons.new_tab}}
                 </a>
                 <a class="d-block my-2 text-capitalize" target="_blank"
                     href="https://medium.com/chainsafe-systems/on-client-diversity-in-decentralized-networks-848aeedfb49d">

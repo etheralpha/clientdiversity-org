@@ -645,29 +645,36 @@ def process_supermajority_marketshare_data(raw_data, total_validators):
       filtered_data[0]["value"] += item["value"]
   # pprint(["filtered_data", filtered_data])
 
-  # adjust data where 80% of unaccounted for validators are assumed geth, and the rest is split
+  # adjust data where unaccounted validators are assumed 40% geth, 40% nethermind, and the rest is split
   remaining_validators = total_validators - sample_size_all
-  remaining_geth_validators = round(remaining_validators * 0.8)
+  remaining_geth_validators = round(remaining_validators * 0.4)
+  remaining_nethermind_validators = round(remaining_validators * 0.4)
   unknown_validators = next((item for item in filtered_data if item['name'] == "unknown"), None)["value"]
   geth_adjusted = remaining_geth_validators + unknown_validators
-  spit_size = 0
+  nethermind_adjusted = remaining_nethermind_validators
+
+  split_size = 0
   for item in filtered_data:
-    if item["name"] != "geth" and item["name"] != "unknown" and item["name"] != "other":
-      spit_size += 1
+    if item["name"] != "geth" and item["name"] != "nethermind" and item["name"] != "unknown" and item["name"] != "other":
+      split_size += 1
   for item in filtered_data:
     if item["name"] == "geth":
       geth_adjusted += item["value"]
       adjusted_data.append({"name": item["name"], "value": geth_adjusted})
+    elif item["name"] == "nethermind":
+      nethermind_adjusted += item["value"]
+      adjusted_data.append({"name": item["name"], "value": nethermind_adjusted})
     elif item["name"] == "other":
       adjusted_data.append({"name": item["name"], "value": item["value"]})
     elif item["name"] != "unknown":
-      adjusted_value = round(remaining_validators * 0.2 / spit_size) + item["value"]
+      adjusted_value = round(remaining_validators * 0.2 / split_size) + item["value"]
       adjusted_data.append({"name": item["name"], "value": adjusted_value})
   # pprint(["remaining_validators", remaining_validators])
   # pprint(["remaining_geth_validators", remaining_geth_validators])
   # pprint(["unknown_validators", unknown_validators])
   # pprint(["geth_adjusted", geth_adjusted])
-  # pprint(["spit_size", spit_size])
+  # pprint(["nethermind_adjusted", nethermind_adjusted])
+  # pprint(["split_size", split_size])
   # pprint(["adjusted_data", adjusted_data])
 
 
