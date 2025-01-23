@@ -59,16 +59,6 @@
   lang: Golang
   donate: https://protocol-guild.readthedocs.io/en/latest/index.html
   opensource: true
-- name: Lambda
-  link: https://github.com/lambdaclass/lambda_ethereum_consensus
-  github: https://github.com/lambdaclass/lambda_ethereum_consensus
-  docs: https://github.com/lambdaclass/lambda_ethereum_consensus
-  chat: https://t.me/lambdaconsensus
-  status: Pre-Alpha
-  support: Linux, macOS, Win
-  lang: Elixir
-  donate: # funded by Lambda
-  opensource: true
 - name: Nethermind
   link: http://nethermind.io/
   github: https://github.com/NethermindEth/nethermind

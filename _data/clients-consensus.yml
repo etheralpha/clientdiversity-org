@@ -20,6 +20,16 @@
   lang: Rust
   donate: https://etherscan.io/address/0x93b10cc89A3D3b5bb6bBB04EfFe104873EF002A9
   opensource: true
+- name: Lambda
+  link: https://github.com/lambdaclass/lambda_ethereum_consensus
+  github: https://github.com/lambdaclass/lambda_ethereum_consensus
+  docs: https://github.com/lambdaclass/lambda_ethereum_consensus
+  chat: https://t.me/lambdaconsensus
+  status: Pre-Alpha
+  support: Linux, macOS, Win
+  lang: Elixir
+  donate: # funded by Lambda
+  opensource: true
 - name: Lighthouse
   link: https://lighthouse.sigmaprime.io/
   github: https://github.com/sigp/lighthouse/
