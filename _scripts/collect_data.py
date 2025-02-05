@@ -349,7 +349,7 @@ def process_edi_marketshare_data(raw_data, pool_validator_counts, total_validato
   # cleaned data
   cleaned_data = copy.deepcopy(raw_data["data"])
   for item in cleaned_data:
-    # delete irrelevent keys
+    # delete irrelevant keys
     delete_keys = ["source", "sourceLink", "twitter", "website"]
     for key in delete_keys:
       if key in item:
