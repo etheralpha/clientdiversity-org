@@ -15,7 +15,7 @@
   github: https://github.com/grandinetech/grandine
   docs: https://docs.grandine.io/
   chat: https://discord.gg/H9XCdUSyZd
-  status: beta
+  status: stable
   support: Linux, macOS, ARM
   lang: Rust
   donate: https://etherscan.io/address/0x93b10cc89A3D3b5bb6bBB04EfFe104873EF002A9
