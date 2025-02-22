@@ -62,7 +62,7 @@
 - name: Nethermind
   link: http://nethermind.io/
   github: https://github.com/NethermindEth/nethermind
-  docs: https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started
+  docs: https://docs.nethermind.io/get-started/installing-nethermind
   chat: https://discord.com/invite/PaCMRFdvWT
   status: stable
   support: Linux, Win, macOS, ARM
