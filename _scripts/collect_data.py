@@ -65,7 +65,7 @@ def fetch(url, method="GET", payload={}, headers={}, retries=2, data_type="json"
 def save_to_file(rel_path, data):
   if not rel_path.startswith("/"):
     rel_path = "/" + rel_path
-    abs_path = os.path.dirname(__file__) + rel_path
+  abs_path = os.path.dirname(__file__) + rel_path
   # skip file save if using test data
   if use_test_data:
     return
