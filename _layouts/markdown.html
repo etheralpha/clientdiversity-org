@@ -35,9 +35,9 @@
           {%- if page.buttons -%}
             {%- for button in page.buttons -%}
               {%- if button.link contains "http" -%}
-                <a href="{{button.link}}" class="btn btn-outline-thirdary btn-lg px-4 m-1">{{button.text}}</a>
+                <a href="{{button.link}}" class="btn btn-outline-secondary btn-lg px-4 m-1">{{button.text}}</a>
               {%- else -%}
-                <a href="{{button.link}}" class="btn btn-outline-thirdary btn-lg px-4 m-1">{{button.text}}</a>
+                <a href="{{button.link}}" class="btn btn-outline-secondary btn-lg px-4 m-1">{{button.text}}</a>
               {%- endif -%}
             {%- endfor -%}
           {%- endif -%}
