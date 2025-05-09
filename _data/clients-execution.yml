@@ -30,9 +30,9 @@
   donate: https://protocol-guild.readthedocs.io/en/latest/index.html
   opensource: true
 - name: Erigon
-  link: https://github.com/ledgerwatch/erigon#erigon
-  github: https://github.com/ledgerwatch/erigon
-  docs: https://github.com/ledgerwatch/erigon#usage
+  link: https://github.com/erigontech/erigon#erigon
+  github: https://github.com/erigontech/erigon
+  docs: https://docs.erigon.tech/
   chat: # invite only
   status: alpha & beta
   support: Linux, Win, macOS, ARM
