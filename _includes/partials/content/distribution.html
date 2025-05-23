@@ -68,10 +68,10 @@
                 {%- if site.default_consensus_source == "blockprint" -%}
                   {%- assign checked = "checked" -%}
                 {%- endif -%}
-                <div class="form-check form-check-inline">
+                <!-- <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="datasourcesCC" id="dataSource1" value="blockprint"  onclick="setDataSource('blockprint', 'consensus');" {{checked}}>
                   <label class="form-check-label" for="dataSource1">Sigma Prime's Blockprint</label>
-                </div>
+                </div> -->
                 {%- assign checked = "" -%}
                 {%- if site.default_consensus_source == "migalabs" -%}
                   {%- assign checked = "checked" -%}

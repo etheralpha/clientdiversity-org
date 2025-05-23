@@ -27,7 +27,7 @@ analytics_tag: |
 
     gtag('config', 'G-5YPSBBTM6W');
   </script>
-default_consensus_source: blockprint # Options: blockprint, migalabs, rated 
+default_consensus_source: migalabs # Options: blockprint, migalabs, rated 
 default_execution_source: supermajority # Options: ethernodes, supermajority
 
 # Notification Bar
