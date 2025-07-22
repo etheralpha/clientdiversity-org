@@ -44,10 +44,10 @@
   github: https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client
   docs: https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client/docs
   chat: https://discord.gg/TNwARpR
-  status: alpha
+  status: deprecated
   support: Linux, Win, macOS
   lang: TypeScript
-  donate: funded # funded by EF
+  donate:
   opensource: true
 - name: Geth
   link: https://geth.ethereum.org/
