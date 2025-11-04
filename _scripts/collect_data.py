@@ -175,6 +175,8 @@ def pprint(data):
 
 
 ########################################
+# EDI (DEPRECATED)
+########################################
 
 
 
@@ -458,6 +460,8 @@ def edi_marketshare():
 
 
 ########################################
+# RATED
+########################################
 
 
 def get_rated_marketshare_data():
@@ -555,6 +559,8 @@ def rated_marketshare():
   save_to_file("../_data/rated.json", processed_data)
 
 
+########################################
+# SUPERMAJORITY
 ########################################
 
 
@@ -722,6 +728,8 @@ def supermajority_marketshare():
 
 
 ########################################
+# BLOCKPRINT (DEPRECATED)
+########################################
 
 
 def get_blockprint_marketshare_data():
@@ -884,6 +892,8 @@ def blockprint_marketshare():
 
 
 ########################################
+# ETHERNODES
+########################################
 
 
 def get_ethernodes_marketshare_data():
@@ -971,6 +981,8 @@ def ethernodes_marketshare():
 
 
 ########################################
+# MIGALABS
+########################################
 
 
 def get_migalabs_marketshare_data():
@@ -979,7 +991,7 @@ def get_migalabs_marketshare_data():
     print_data("fetch", response)
     return response
   else:
-    url = "https://monitoreth.io/data-api/api/eth/v1/nodes/consensus/validators/client_diversity"
+    url = "https://www.migalabs.io/api/eth/v1/nodes/consensus/all/client_diversity"
     payload = {}
     headers = {
       'X-Api-Key': migalabs_token
@@ -1094,9 +1106,9 @@ def get_data():
   #   edi_marketshare()
     rated_marketshare()
   supermajority_marketshare()
-  blockprint_marketshare()
+  # blockprint_marketshare()
   ethernodes_marketshare()
-  #migalabs_marketshare()
+  migalabs_marketshare()
 
 
 get_data()
