@@ -1107,7 +1107,7 @@ def get_data():
     rated_marketshare()
   supermajority_marketshare()
   # blockprint_marketshare()
-  ethernodes_marketshare()
+  # ethernodes_marketshare()
   migalabs_marketshare()
 
 
