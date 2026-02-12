@@ -13,11 +13,11 @@
             <h3 class="p-2 mb-4">Consensus Clients</h3>
             <!-- Consensus Client Alerts -->
               {%- assign blockprint = site.data.blockprint | last -%}
-              {%- include partials/components/alert.html data=blockprint.data.other type="consensus" -%}
+              {%- include partials/components/alert.html data=blockprint.data type="consensus" -%}
               {%- assign migalabs = site.data.migalabs | last -%}
-              {%- include partials/components/alert.html data=migalabs.data.other type="consensus" -%}
+              {%- include partials/components/alert.html data=migalabs.data type="consensus" -%}
               {%- assign rated = site.data.rated | last -%}
-              {%- include partials/components/alert.html data=rated.data.other type="consensus" -%}
+              {%- include partials/components/alert.html data=rated.data type="consensus" -%}
             <!-- Blockprint Data -->
             {%- assign visibility = "d-none" -%}
             {%- if site.default_consensus_source == "blockprint" -%}
@@ -100,10 +100,10 @@
             <!-- Execution Client Alerts -->
               <div class="d-none">
                 {%- assign ethernodes = site.data.ethernodes | last -%}
-                {%- include partials/components/alert.html data=ethernodes.data.other type="execution" -%}
+                {%- include partials/components/alert.html data=ethernodes.data type="execution" -%}
               </div>
               {%- assign supermajority = site.data.supermajority | last -%}
-              {%- include partials/components/alert.html data=supermajority.data.other type="execution" -%}
+              {%- include partials/components/alert.html data=supermajority.data type="execution" -%}
             <!-- Ethernodes Data -->
             {%- assign visibility = "d-none" -%}
             {%- if site.default_execution_source == "ethernodes" -%}
