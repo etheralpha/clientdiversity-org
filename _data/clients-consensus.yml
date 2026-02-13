@@ -10,6 +10,16 @@
 #   opensource: # true/false
 
 
+- name: Caplin (w/Erigon)
+  link: https://erigon.tech/products/
+  github: https://github.com/erigontech/erigon
+  docs: https://docs.erigon.tech/fundamentals/caplin
+  chat: https://dsc.gg/erigon
+  status: stable
+  support: Linux, Win, macOS, ARM
+  lang: Golang
+  donate: https://etherscan.io/address/0x8BFBB529A9E85fDC4b70A4FCdC0D68Bb298B8816 # funded by EF, Gnosis DAO
+  opensource: true
 - name: Grandine
   link: https://grandine.io/
   github: https://github.com/grandinetech/grandine
@@ -25,7 +35,7 @@
   github: https://github.com/lambdaclass/lambda_ethereum_consensus
   docs: https://github.com/lambdaclass/lambda_ethereum_consensus
   chat: https://t.me/lambdaconsensus
-  status: Pre-Alpha
+  status: deprecated
   support: Linux, macOS, Win
   lang: Elixir
   donate: # funded by Lambda

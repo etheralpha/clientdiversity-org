@@ -23,12 +23,15 @@
             </thead>
             <tbody>
               {%- for client in site.data.clients-consensus -%}
-                <tr>
+                {%- assign opacity = "" -%}
+                {%- if client.status == "deprecated" -%}
+                  {%- assign opacity = "opacity-50" -%}
+                {%- endif -%}
+                <tr class="{{opacity}}">
                   <th scope="row">
                     {%- if client.link -%}
                       <a href="{{client.link}}" class="" target="_blank">
                       {{client.name}}
-                      {{site.data.icons.new_tab}}
                       </a>
                     {%- else -%}
                       {{client.name}}
@@ -38,7 +41,6 @@
                     <td>
                       <a href="{{client.github}}" class="text-decoration-none" target="_blank">
                         {{site.data.icons.github}}
-                        {{site.data.icons.new_tab}}
                       </a>
                     </td>
                   {%- else -%}
@@ -48,7 +50,6 @@
                     <td>
                       <a href="{{client.docs}}" class="text-decoration-none" target="_blank">
                         {{site.data.icons.docs}}
-                        {{site.data.icons.new_tab}}
                       </a>
                     </td>
                   {%- else -%}
@@ -65,7 +66,6 @@
                     <td>
                       <a href="{{client.chat}}" class="text-decoration-none" target="_blank">
                         {{chat_icon}}
-                        {{site.data.icons.new_tab}}
                       </a>
                     </td>
                   {%- else -%}
@@ -101,7 +101,6 @@
                       <td>
                         <a href="{{client.donate}}" class="text-decoration-none" target="_blank">
                           {{donate_icon}}
-                          {{site.data.icons.new_tab}}
                         </a>
                       </td>
                     {%- else -%}
@@ -138,12 +137,15 @@
             </thead>
             <tbody>
               {%- for client in site.data.clients-execution -%}
-                <tr>
+                {%- assign opacity = "" -%}
+                {%- if client.status == "deprecated" -%}
+                  {%- assign opacity = "opacity-50" -%}
+                {%- endif -%}
+                <tr class="{{opacity}}">
                   <th scope="row">
                     {%- if client.link -%}
                       <a href="{{client.link}}" class="" target="_blank">
                         {{client.name}}
-                        {{site.data.icons.new_tab}}
                       </a>
                     {%- else -%}
                       {{client.name}}
@@ -153,7 +155,6 @@
                     <td>
                       <a href="{{client.github}}" class="text-decoration-none" target="_blank">
                         {{site.data.icons.github}}
-                        {{site.data.icons.new_tab}}
                       </a>
                     </td>
                   {%- else -%}
@@ -163,7 +164,6 @@
                     <td>
                       <a href="{{client.docs}}" class="text-decoration-none" target="_blank">
                         {{site.data.icons.docs}}
-                        {{site.data.icons.new_tab}}
                       </a>
                     </td>
                   {%- else -%}
@@ -180,7 +180,6 @@
                     <td>
                       <a href="{{client.chat}}" class="text-decoration-none" target="_blank">
                         {{chat_icon}}
-                        {{site.data.icons.new_tab}}
                       </a>
                     </td>
                   {%- else -%}
@@ -216,7 +215,6 @@
                       <td>
                         <a href="{{client.donate}}" class="text-decoration-none" target="_blank">
                           {{donate_icon}}
-                          {{site.data.icons.new_tab}}
                         </a>
                       </td>
                     {%- else -%}
