@@ -656,7 +656,7 @@ def get_data():
   if day == "Saturday" or current_time < 1747032025:
     rated_marketshare()
   supermajority_marketshare()
-  ethernodes_marketshare()
+  # ethernodes_marketshare()
   migalabs_marketshare()
 
 
