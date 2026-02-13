@@ -1,56 +1,93 @@
 {%- assign data = include.data -%}
 
 {%- comment -%}
-{	
-	"data_source":"blockprint",
-	"has_majority":false,
-	"has_supermajority":false,
-	"danger_client":"",
-	"top_client":"prysm"
+{
+  "date": "2025-06-26",
+  "timestamp": 1750905903,
+  "data": {
+    "distribution": [
+      {
+        "name": "teku",
+        "value": 0.9982540854400702,
+        "accuracy": "0"
+      },
+      ...
+    ],
+    "other": {
+      "data_source": "blockprint",
+      "has_majority": true,
+      "has_supermajority": true,
+      "danger_client": "teku",
+      "top_client": "teku"
+    }
+  }
 }
 {%- endcomment -%}
 
-{%- assign alert_type = "danger" -%}
-{%- if data.danger_client == "" -%}
-	{%- assign alert_type = "info" -%}
-{%- endif -%}
 
-{%- assign alert_icon = site.data.icons.warning -%}
-{%- if data.danger_client == "" -%}
-	{%- assign alert_icon = site.data.icons.info -%}
-{%- endif -%}
+{%- assign over33 = "" -%}
+{%- for client in data.distribution -%}
+	{%- if client.value > 0.33 -%}
+		{%- assign client_name = client.name  | capitalize -%}
+		{%- assign over33 = over33 | append: client_name | append: "," -%}
+	{%- endif -%}
+{%- endfor -%}
+{%- assign over33 = over33 | split: "," | uniq | join: ", " -%}
 
-{%- assign danger_client = data.danger_client | capitalize -%}
+{%- assign over50 = "" -%}
+{%- for client in data.distribution -%}
+	{%- if client.value > 0.5 -%}
+		{%- assign client_name = client.name  | capitalize -%}
+		{%- assign over50 = over50 | append: client_name | append: "," -%}
+	{%- endif -%}
+{%- endfor -%}
+{%- assign over50 = over50 | split: "," | uniq | join: ", " -%}
 
-{%- capture alert_msg -%}
-	Switch from {{danger_client}} to a minority client!
-{%- endcapture -%}
-{%- if data.has_supermajority == true -%}
-	{%- capture alert_msg -%}
-		{{danger_client}} has a supermajority, switch to a minority client!
-	{%- endcapture -%}
-{%- endif -%}
-{%- if data.has_majority == false -%}
-	{%- assign alert_msg = "Client diversity has improved!" -%}
-{%- endif -%}
-
-{%- assign alert_msg_padding = "" -%}
-{%- if data.danger_client == "" -%}
-	{%- assign alert_msg_padding = "ms-2" -%}
-{%- endif -%}
+{%- assign over66 = "" -%}
+{%- for client in data.distribution -%}
+	{%- if client.value > 0.66 -%}
+		{%- assign client_name = client.name  | capitalize -%}
+		{%- assign over66 = over66 | append: client_name | append: "," -%}
+	{%- endif -%}
+{%- endfor -%}
+{%- assign over66 = over66 | split: "," | uniq | join: ", " -%}
 
 {%- assign alert_style = "d-none" -%}
-{%- if data.data_source == site.default_consensus_source -%}
+{%- if data.other.data_source == site.default_consensus_source -%}
 	{%- assign alert_style = "" -%}
 {%- endif -%}
-{%- if data.data_source == site.default_execution_source -%}
+{%- if data.other.data_source == site.default_execution_source -%}
 	{%- assign alert_style = "" -%}
 {%- endif -%}
 
 
-<a href="#why" class="{{alert_style}} {{data.data_source}} {{include.type}}-data text-decoration-none">
-  <div class="alert alert-{{alert_type}} d-flex align-items-center" role="alert">
-    {{alert_icon}}
-    <div class="{{alert_msg_padding}}">{{alert_msg}}</div>
-  </div>
-</a>
+{%- if over66 != "" -%}
+	<a href="#why" class="{{alert_style}} {{data.other.data_source}} {{include.type}}-data text-decoration-none">
+	  <div class="alert alert-danger d-flex align-items-center" role="alert">
+	    {{site.data.icons.warning}}
+	    <div class="ms-2">{{over66}} has a supermajority, switch to a minority client!</div>
+	  </div>
+	</a>
+{%- elsif over50 != "" -%}
+	<a href="#why" class="{{alert_style}} {{data.other.data_source}} {{include.type}}-data text-decoration-none">
+	  <div class="alert alert-warning d-flex align-items-center" role="alert">
+	    {{site.data.icons.warning}}
+	    <div>{{over50}} has a majority, switch to a minority client!</div>
+	  </div>
+	</a>
+{%- elsif over33 != "" -%}
+	<a href="#why" class="{{alert_style}} {{data.other.data_source}} {{include.type}}-data text-decoration-none">
+	  <div class="alert alert-warning d-flex align-items-center" role="alert">
+	    {{site.data.icons.warning}}
+	    <div>Switch from {{over33}} to a minority client!</div>
+	  </div>
+	</a>
+{%- else -%}
+	<a href="#why" class="{{alert_style}} {{data.other.data_source}} {{include.type}}-data text-decoration-none">
+	  <div class="alert alert-info d-flex align-items-center" role="alert">
+	    {{site.data.icons.info}}
+	    <div>Client diversity is balanced!</div>
+	  </div>
+	</a>
+{%- endif -%}
+

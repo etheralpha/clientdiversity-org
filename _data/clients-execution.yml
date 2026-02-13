@@ -30,14 +30,24 @@
   donate: https://protocol-guild.readthedocs.io/en/latest/index.html
   opensource: true
 - name: Erigon
-  link: https://github.com/erigontech/erigon#erigon
+  link: https://erigon.tech/products/
   github: https://github.com/erigontech/erigon
   docs: https://docs.erigon.tech/
-  chat: # invite only
-  status: alpha & beta
+  chat: https://dsc.gg/erigon
+  status: stable
   support: Linux, Win, macOS, ARM
   lang: Golang
   donate: https://etherscan.io/address/0x8BFBB529A9E85fDC4b70A4FCdC0D68Bb298B8816 # funded by EF, Gnosis DAO
+  opensource: true
+- name: Ethrex
+  link: https://ethrex.xyz/
+  github: https://github.com/lambdaclass/ethrex/
+  docs: https://docs.ethrex.xyz/
+  chat: https://t.me/ethrex_client
+  status: stable
+  support: Linux, macOS
+  lang: Golang
+  donate: 
   opensource: true
 - name: EthereumJS
   link: https://ethereumjs.github.io/
