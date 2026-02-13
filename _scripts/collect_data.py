@@ -542,7 +542,7 @@ def get_migalabs_marketshare_data():
     print_data("fetch", response)
     return response
   else:
-    url = "https://www.migalabs.io/api/eth/v1/nodes/consensus/validators/client_diversity"
+    url = "https://www.migalabs.io/api/eth/v1/nodes/consensus/all/client_diversity"
     payload = {}
     headers = {
       'X-Api-Key': migalabs_token
