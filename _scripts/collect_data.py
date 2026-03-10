@@ -45,14 +45,15 @@ def fetch(url, method="GET", payload={}, headers={}, retries=2, data_type="json"
         time.sleep(1.05)
       response["attempts"] = response["attempts"] + 1
       r = requests.request(method, url, headers=headers, data=payload)
+      r.raise_for_status()
       if data_type == "json":
         response = {"status": r.status_code, "attempts": response["attempts"], "data": r.json()}
       elif data_type == "text":
         response = {"status": r.status_code, "attempts": response["attempts"], "data": r.text}
       else:
         response = {"status": r.status_code, "attempts": response["attempts"], "data": r.content}
-  except:
-    error = f"Fetch failed: {url}"
+  except Exception as e:
+    error = f"Fetch failed: {url}\nResponse:{r.text}\nError: {e}"
     report_error(error)
     if exit_on_fetch_error:
       raise SystemExit(error)
