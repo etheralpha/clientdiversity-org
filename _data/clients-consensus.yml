@@ -48,7 +48,7 @@
   status: stable
   support: Linux, Win, macOS, ARM
   lang: Rust
-  donate: https://protocol-guild.readthedocs.io/en/latest/index.html
+  donate: https://protocol-guild.readthedocs.io/en/latest/03-donate.html
   opensource: true
 - name: Lodestar
   link: https://lodestar.chainsafe.io/
@@ -59,7 +59,7 @@
   status: stable
   support: Linux, Win, macOS # windows theoretically works but not tested yet https://github.com/ChainSafe/lodestar/issues/3519
   lang: TypeScript
-  donate: https://protocol-guild.readthedocs.io/en/latest/index.html
+  donate: https://protocol-guild.readthedocs.io/en/latest/03-donate.html
   opensource: true
 - name: Nimbus
   link: https://nimbus.team/
@@ -80,7 +80,7 @@
   support: Linux, Win, macOS, ARM
   lang: Golang
   # donate: funded # Supported by Offchain Labs
-  donate: https://protocol-guild.readthedocs.io/en/latest/index.html
+  donate: https://protocol-guild.readthedocs.io/en/latest/03-donate.html
   opensource: true
 - name: Teku
   link: https://consensys.net/knowledge-base/ethereum-2/teku/
@@ -91,6 +91,6 @@
   support: Linux, Win, macOS
   lang: Java
   # donate: funded # funded by ConsenSys
-  donate: https://protocol-guild.readthedocs.io/en/latest/index.html
+  donate: https://protocol-guild.readthedocs.io/en/latest/03-donate.html
   opensource: true
 
