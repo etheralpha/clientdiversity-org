@@ -22,7 +22,8 @@
               </tr>
             </thead>
             <tbody>
-              {%- for client in site.data.clients-consensus -%}
+              {%- assign clients-consensus = site.data.clients-consensus | sort_natural: "name" -%}
+              {%- for client in clients-consensus -%}
                 {%- assign opacity = "" -%}
                 {%- if client.status == "deprecated" -%}
                   {%- assign opacity = "opacity-50" -%}
@@ -136,7 +137,8 @@
               </tr>
             </thead>
             <tbody>
-              {%- for client in site.data.clients-execution -%}
+              {%- assign clients-execution = site.data.clients-execution | sort_natural: "name" -%}
+              {%- for client in clients-execution -%}
                 {%- assign opacity = "" -%}
                 {%- if client.status == "deprecated" -%}
                   {%- assign opacity = "opacity-50" -%}
@@ -227,6 +229,121 @@
                   {%- else -%}
                     <td>-</td>
                   {%- endif -%}
+                </tr>
+              {%- endfor -%}
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="col col-xxl-8 col-xl-9 col-lg-10 col-md-11 mt-5">
+        <h3 class="mb-3">Lean Consensus Clients</h3>
+        <div class="table-responsive">
+          <table class="table table-bordered mb-2">
+            <thead class="">
+              <tr>
+                <th scope="col" style="min-width: 8rem;">Client</th>
+                <th scope="col">Github</th>
+                <th scope="col" style="min-width: 3.8rem;">Docs</th>
+                <th scope="col">Chat</th>
+                <th scope="col">Status</th>
+                <!-- <th scope="col">Support</th> -->
+                <th scope="col">Language</th>
+                <!-- <th scope="col">Donate</th> -->
+              </tr>
+            </thead>
+            <tbody>
+              {%- assign clients-lean-consensus = site.data.clients-lean-consensus | sort_natural: "name" -%}
+              {%- for client in clients-lean-consensus -%}
+                {%- assign opacity = "" -%}
+                {%- if client.status == "deprecated" -%}
+                  {%- assign opacity = "opacity-50" -%}
+                {%- endif -%}
+                <tr class="{{opacity}}">
+                  <th scope="row">
+                    {%- if client.link -%}
+                      <a href="{{client.link}}" class="" target="_blank">
+                      {{client.name}}
+                      </a>
+                    {%- else -%}
+                      {{client.name}}
+                    {%- endif -%}
+                  </th>
+                  {%- if client.github -%}
+                    <td>
+                      <a href="{{client.github}}" class="text-decoration-none" target="_blank">
+                        {{site.data.icons.github}}
+                      </a>
+                    </td>
+                  {%- else -%}
+                    <td>-</td>
+                  {%- endif -%}
+                  {%- if client.docs -%}
+                    <td>
+                      <a href="{{client.docs}}" class="text-decoration-none" target="_blank">
+                        {{site.data.icons.docs}}
+                      </a>
+                    </td>
+                  {%- else -%}
+                    <td>-</td>
+                  {%- endif -%}
+                  {%- if client.chat -%}
+                    {%- assign chat_icon = site.data.icons.chat -%}
+                    {%- if client.chat contains "discord" -%}
+                      {%- assign chat_icon = site.data.icons.discord -%}
+                    {%- endif -%}
+                    {%- if client.chat contains "t.me" -%}
+                      {%- assign chat_icon = site.data.icons.telegram -%}
+                    {%- endif -%}
+                    <td>
+                      <a href="{{client.chat}}" class="text-decoration-none" target="_blank">
+                        {{chat_icon}}
+                      </a>
+                    </td>
+                  {%- else -%}
+                    <td>-</td>
+                  {%- endif -%}
+                  {%- if client.status -%}
+                    <td>{{client.status}}</td>
+                  {%- else -%}
+                    <td>-</td>
+                  {%- endif -%}
+                  <!-- {%- if client.support -%}
+                    <td>{{client.support}}</td>
+                  {%- else -%}
+                    <td>-</td>
+                  {%- endif -%} -->
+                  {%- if client.lang -%}
+                    <td>{{client.lang}}</td>
+                  {%- else -%}
+                    <td>-</td>
+                  {%- endif -%}
+                  <!-- {%- if client.donate -%}
+                    {%- if client.donate contains "http" -%}
+                      {%- assign donate_icon = site.data.icons.donate -%}
+                      {%- if client.donate contains "etherscan.io" -%}
+                        {%- assign donate_icon = site.data.icons.etherscan -%}
+                      {%- endif -%}
+                      {%- if client.donate contains "gitcoin.co" -%}
+                        {%- assign donate_icon = site.data.icons.gitcoin -%}
+                      {%- endif -%}
+                      {%- if client.donate contains "protocol-guild" -%}
+                        {%- assign donate_icon = '<img src="/assets/img/protocol-guild.png" style="width:1.4rem;height:1.4rem;">' -%}
+                      {%- endif -%}
+                      <td>
+                        <a href="{{client.donate}}" class="text-decoration-none" target="_blank">
+                          {{donate_icon}}
+                        </a>
+                      </td>
+                    {%- else -%}
+                      {%- if client.donate == "funded" -%}
+                        <td><span class="text-success" title="funded">{{site.data.icons.checkmark}}</span></td>
+                      {%- else -%}
+                        <td>{{client.donate}}</td>
+                      {%- endif -%}
+                    {%- endif -%}
+                  {%- else -%}
+                    <td>-</td>
+                  {%- endif -%} -->
                 </tr>
               {%- endfor -%}
             </tbody>
