@@ -27,7 +27,7 @@
   status: stable
   support: Linux, Win, macOS
   lang: Java
-  donate: https://protocol-guild.readthedocs.io/en/latest/index.html
+  donate: https://protocol-guild.readthedocs.io/en/latest/03-donate.html
   opensource: true
 - name: Erigon
   link: https://erigon.tech/products/
@@ -67,7 +67,7 @@
   status: stable
   support: Linux, Win, macOS, ARM
   lang: Golang
-  donate: https://protocol-guild.readthedocs.io/en/latest/index.html
+  donate: https://protocol-guild.readthedocs.io/en/latest/03-donate.html
   opensource: true
 - name: Nethermind
   link: http://nethermind.io/
@@ -77,7 +77,7 @@
   status: stable
   support: Linux, Win, macOS, ARM
   lang: .NET
-  donate: https://protocol-guild.readthedocs.io/en/latest/index.html
+  donate: https://protocol-guild.readthedocs.io/en/latest/03-donate.html
   opensource: true
 - name: Nimbus
   link: https://nimbus.team/
