@@ -79,12 +79,12 @@
   lang: .NET
   donate: https://protocol-guild.readthedocs.io/en/latest/03-donate.html
   opensource: true
-- name: Nimbus
+- name: Nimbus (w/Nimbus CL)
   link: https://nimbus.team/
   github: https://github.com/status-im/nimbus-eth1
   docs: https://github.com/status-im/nimbus-eth1/tree/master/doc
   chat: https://discord.gg/qnjVyhatUa
-  status: pre-alpha
+  status: alpha
   support: 
   lang: Nim
   donate: 
