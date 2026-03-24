@@ -5,7 +5,8 @@
       <h2 class="h1 fw-bold mb-2">Client Resources</h2>
     </div>
     <div class="row justify-content-evenly mt-4">
-      <div class="col col-xxl-8 col-xl-9 col-lg-10 col-md-11">
+      <!-- Consensus Clients -->
+      <div id="consensus-clients" class="col col-xxl-8 col-xl-9 col-lg-10 col-md-11">
         <h3 class="mb-3">Consensus Clients</h3>
         <div class="table-responsive">
           <table class="table table-bordered mb-2">
@@ -119,8 +120,14 @@
             </tbody>
           </table>
         </div>
+        <div class="row justify-content-center mt-3">
+          <div class="col-md-11 text-md-center">
+            <p><strong>Note</strong>: Donations made to <a href="https://protocolguild.org" target="_blank">Protocol Guild</a> are distributed among Ethereum protocol contributors, including client teams. All recipients and splits can be <a href="https://github.com/protocolguild/documentation/blob/main/docs/01-membership.md" target="_blank">seen here</a>.</p>
+          </div>
+        </div>
       </div>
-      <div class="col col-xxl-8 col-xl-9 col-lg-10 col-md-11 mt-5">
+      <!-- Execution Clients -->
+      <div id="execution-clients" class="col col-xxl-8 col-xl-9 col-lg-10 col-md-11 mt-5">
         <h3 class="mb-3">Execution Clients</h3>
         <div class="table-responsive">
           <table class="table table-bordered mb-2">
@@ -234,8 +241,14 @@
             </tbody>
           </table>
         </div>
+        <div class="row justify-content-center mt-3">
+          <div class="col-md-11 text-md-center">
+            <p><strong>Note</strong>: Donations made to <a href="https://protocolguild.org" target="_blank">Protocol Guild</a> are distributed among Ethereum protocol contributors, including client teams. All recipients and splits can be <a href="https://github.com/protocolguild/documentation/blob/main/docs/01-membership.md" target="_blank">seen here</a>.</p>
+          </div>
+        </div>
       </div>
-      <div class="col col-xxl-8 col-xl-9 col-lg-10 col-md-11 mt-5">
+      <!-- Lean Consensus Clients -->
+      <div id="consensus-lean-clients" class="col col-xxl-8 col-xl-9 col-lg-10 col-md-11 mt-5">
         <h3 class="mb-3">Lean Consensus Clients</h3>
         <div class="table-responsive">
           <table class="table table-bordered mb-2">
@@ -350,10 +363,86 @@
           </table>
         </div>
       </div>
-    </div>
-    <div class="row justify-content-center mt-3">
-      <div class="col col-xl-6 col-lg-8 col-md-11 mt-3 text-md-center">
-        <p><strong>Note</strong>: Donations made to <a href="https://protocolguild.org" target="_blank">Protocol Guild</a> are distributed among Ethereum protocol contributors, including client teams. All recipients and splits can be <a href="https://github.com/protocolguild/documentation/blob/main/docs/01-membership.md" target="_blank">seen here</a>.</p>
+      <!-- Multinode Clients -->
+      <div id="multinode-clients" class="col col-xxl-8 col-xl-9 col-lg-10 col-md-11 mt-5">
+        <h3 class="mb-3">Multinode Clients</h3>
+        <div class="table-responsive">
+          <table class="table table-bordered mb-2">
+            <thead class="">
+              <tr>
+                <th scope="col" style="min-width: 8rem;">Feature / Property</th>
+                <th scope="col">
+                  <a href="https://vero.docs.serenita.io/" target="_blank">Vero</a>
+                </th>
+                <th scope="col">
+                  <a href="https://github.com/attestantio/vouch" target="_blank">Vouch</a>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Attestation Strategies</th>
+                <td>M of N</td>
+                <td>M of N, First, Best</td>
+              </tr>
+              <tr>
+                <th scope="row">Signer</th>
+                <td>Web3Signer</td>
+                <td>Dirk</td>
+              </tr>
+              <tr>
+                <th scope="row">Distributed Validator Keys</th>
+                <td>No, uses whole key</td>
+                <td>Yes, uses sharded keys</td>
+              </tr>
+              <tr>
+                <th scope="row">Active-active Redundancy</th>
+                <td>Vero Sponsors only</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <th scope="row">Ethereum Remote Signing API</th>
+                <td>Yes</td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <th scope="row">Slashing Protection</th>
+                <td>Yes</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <th scope="row">Slashing Detection</th>
+                <td>Yes</td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <th scope="row">Ease of Migration</th>
+                <td>Designed for simple adoption and rollback</td>
+                <td>More complex setup and integration</td>
+              </tr>
+              <tr>
+                <th scope="row">Eth Docker Support</th>
+                <td>Yes</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <th scope="row">Open Source</th>
+                <td>Yes</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <th scope="row">Dependency Surface</th>
+                <td>Minimal codebase and external dependencies; single maintainer</td>
+                <td>Large/complex codebase (~5x Vero) and external dependencies; creator retired, codebase maintained by Bitwise</td>
+              </tr>
+              <tr>
+                <th scope="row">Typical Use Case</th>
+                <td>Simple way to protect validators from client consensus bugs</td>
+                <td>Highly-configurable multi-node validator setups with sharded validator keys</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
