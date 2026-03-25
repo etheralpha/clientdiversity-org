@@ -45,8 +45,8 @@
   docs: https://docs.ethrex.xyz/
   chat: https://t.me/ethrex_client
   status: stable
-  support: Linux, macOS
-  lang: Golang
+  support: Linux, macOS, ARM
+  lang: Rust
   donate: 
   opensource: true
 - name: EthereumJS
