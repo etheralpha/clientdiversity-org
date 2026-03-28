@@ -1,7 +1,33 @@
 <!-- Switch Clients -->
 <section id="switch" class="bg-contrast">
   <div class="container py-5 my-5">
-    <h2 class="h1 fw-bold mb-3 text-center">Switch Clients</h2>
+    <!-- <h2 class="h1 fw-bold mb-5 text-center">Switch Clients</h2> -->
+    <div class="text-center mb-5">
+      <h2 class="h1 fw-bold mb-2">Switch Clients</h2>
+    </div>
+
+
+    <!-- Multinode Clients -->
+    <h3 class="h3 fw-bold mb-1 text-center">Multinode Clients</h3>
+    <h5 class="text-center text-success">(Recommended)</h5>
+    <div class="row justify-content-center mt-4">
+      <div cclass="col col-md-12 col-lg-9 col-xl-8 col-xxl-7 text-justify" style="max-width: 832px; text-align: justify">
+        <p>Multinode validator clients provide protection against client bugs that can cause validators to vote for an invalid fork of the chain. They do so by combining data from multiple consensus and execution clients, requiring M-of-N connected clients to agree before casting their vote.</p>
+
+        <p>When one client diverges or behaves inconsistently, the validator client continues operating through the rest of the clients as long as M of them agree on which fork to vote for. This way a defect or downtime in any single client does not disrupt validation activity.</p>
+
+        <p>This approach protects both the operator and the Ethereum network by reducing correlated failures, lowering risks during consensus bugs and improving overall resilience.</p>
+
+        <p>See the <a href="#multinode-clients">Multinode Clients section</a> to understand if Vero or Vouch is better for you. Under most situations Vero will cover 99% of usecases including institutional staking operations.</p>
+      </div>
+      <div class="text-center">
+        <a href="https://vero.docs.serenita.io/" target="_blank" class="btn btn-outline-dark btn-sm px-4 m-1">Get Vero</a>
+        <a href="https://github.com/attestantio/vouch" target="_blank" class="btn btn-outline-dark btn-sm px-4 m-1">Get Vouch</a>
+      </div>
+    </div>
+
+    <!-- Standalone Clients -->
+    <h3 class="h3 fw-bold mb-3 text-center mt-5">Standalone Clients</h3>
     <div class="text-center">
       <p>For an automated tool (with a GUI) to switch execution clients, <br class="d-none d-md-block">see Accidental-Green's <a href="https://github.com/accidental-green/client-switcher" target="_blank">Ethereum Client Switcher</a></p>
       <a href="/contribute/" class="btn btn-outline-dark btn-sm px-4 m-1">Submit Guide</a>

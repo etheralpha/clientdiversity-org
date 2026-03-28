@@ -109,4 +109,16 @@ root {
 }
 
 
+#supermajorityDataIssue .accordion-button {
+  color: var(--bs-warning-text-emphasis);
+  background-color: var(--bs-warning-bg-subtle);
+  border-color: var(--bs-warning-border-subtle);
+  box-shadow: none;
+}
+#supermajorityDataIssue .accordion-item {
+  border-color: var(--bs-warning-border-subtle);
+  --bs-accordion-btn-padding-x: 1rem;
+  --bs-accordion-btn-padding-y: 0.55rem;
+}
+
 
