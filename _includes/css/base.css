@@ -36,6 +36,7 @@ root {
 
 .alert {
   padding: 0.5rem 1rem;
+  font-size: 0.9rem;
 }
 .progress-label {
   float: left;
@@ -114,6 +115,7 @@ root {
   background-color: var(--bs-warning-bg-subtle);
   border-color: var(--bs-warning-border-subtle);
   box-shadow: none;
+  font-size: 0.9rem;
 }
 #supermajorityDataIssue .accordion-item {
   border-color: var(--bs-warning-border-subtle);
