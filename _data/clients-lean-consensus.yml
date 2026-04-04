@@ -1,0 +1,106 @@
+# - name:       # client name
+#   link:       # link to website
+#   github:     # link to github
+#   docs:       # link to documentation
+#   chat:       # link to community chat
+#   status:     # (select one) deprecated, pre-alpha, alpha, beta, stable
+#   support:    # Linux, Win, macOS, ARM
+#   lang        # programming language it's written in
+#   donate:     # link to gitcoin or etherscan address
+#   opensource: # true/false
+
+
+# template
+# - name: 
+#   link: 
+#   github: 
+#   docs: 
+#   chat: 
+#   # status: 
+#   # support: 
+#   lang: 
+#   # donate: 
+#   opensource: true
+
+
+- name: Peam
+  link: 
+  github: https://github.com/malik672/Peam
+  docs: 
+  chat: 
+  status: R&D
+  # support: 
+  lang: Rust
+  # donate: 
+  opensource: true
+- name: Ream
+  link: https://reamlabs.com/
+  github: https://github.com/ReamLabs/ream
+  docs: https://hackmd.io/@reamlabs
+  chat: https://t.me/ReamLabs
+  status: R&D
+  # support: 
+  lang: Rust
+  # donate: 
+  opensource: true
+- name: Zeam
+  link: 
+  github: https://github.com/blockblaz/zeam
+  docs: 
+  chat: https://t.me/zeamETH
+  status: R&D
+  # support: 
+  lang: Zig
+  # donate: 
+  opensource: true
+- name: Qlean-mini
+  link: https://qdrvm.io/
+  github: https://github.com/qdrvm/qlean-mini
+  docs: 
+  chat: 
+  status: R&D
+  # support: 
+  lang: C++
+  # donate: 
+  opensource: true
+- name: Lantern
+  link: https://piertwo.com/
+  github: https://github.com/Pier-Two/lantern
+  docs: 
+  chat: 
+  status: R&D
+  # support: 
+  lang: C
+  # donate: 
+  opensource: true
+- name: Lighthouse
+  link: https://lighthouse.sigmaprime.io/
+  github: https://github.com/hopinheimer/lighthouse
+  docs: https://lighthouse-book.sigmaprime.io/
+  chat: https://discord.gg/cyAszAh
+  status: R&D
+  # support: 
+  lang: Rust
+  # donate: 
+  opensource: true
+- name: ethlambda
+  link: https://lambdaclass.com/
+  github: https://github.com/lambdaclass/ethlambda
+  docs: 
+  chat: 
+  status: R&D
+  # support: 
+  lang: Rust
+  # donate: 
+  opensource: true
+- name: gean
+  link: https://geanlabs.com/
+  github: https://github.com/geanlabs/gean
+  docs: 
+  chat: 
+  status: R&D
+  # support: 
+  lang: Go
+  # donate: 
+  opensource: true
+
