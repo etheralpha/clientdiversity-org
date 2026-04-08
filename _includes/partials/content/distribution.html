@@ -130,6 +130,28 @@
               {%- assign visibility = "" -%}
             {%- endif -%}
             <div class="{{visibility}} text-start flex-grow-1 supermajority execution-data">
+              
+              <!-- data issue warning -->
+              <div class="accordion" id="supermajorityDataIssue">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                      {{site.data.icons.warning}} Data is stale
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#supermajorityDataIssue">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>This data set is mostly comprised of mostly time-intensive manually-gathered data which requires reaching out to each entity. Most of this data hasn't been updated in over a year.</li>
+                        <li>Lido curated operator set last updated for Q3 2024 data. This data set does not take into account consolidations so it skews results towards older data.</li>
+                        <li>Coinbase data last updated for Q1 2025 data. This data set does not take into account consolidations so it skews results towards older data.</li>
+                        <li>Graffiti data is updated on an ongoing basis, but accounts for a small portion of the data set.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               {%- assign supermajority = site.data.supermajority | last -%}
               {%- assign supermajority_coverage = supermajority.data.other.validators_percentage | times: 100 | round: 1 -%}
               {%- include partials/components/progress-bar.html data=supermajority.data.distribution round=true -%}

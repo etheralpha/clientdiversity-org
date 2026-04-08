@@ -62,28 +62,28 @@
 
 
 {%- if over66 != "" -%}
-	<a href="#why" class="{{alert_style}} {{data.other.data_source}} {{include.type}}-data text-decoration-none">
+	<a href="#switch" class="{{alert_style}} {{data.other.data_source}} {{include.type}}-data text-decoration-none">
 	  <div class="alert alert-danger d-flex align-items-center" role="alert">
 	    {{site.data.icons.warning}}
-	    <div class="ms-2">{{over66}} has a supermajority, switch to a minority client!</div>
+	    <div class="ms-2">{{over66}} has a supermajority, switch to a multinode client!</div>
 	  </div>
 	</a>
 {%- elsif over50 != "" -%}
-	<a href="#why" class="{{alert_style}} {{data.other.data_source}} {{include.type}}-data text-decoration-none">
+	<a href="#switch" class="{{alert_style}} {{data.other.data_source}} {{include.type}}-data text-decoration-none">
 	  <div class="alert alert-warning d-flex align-items-center" role="alert">
 	    {{site.data.icons.warning}}
-	    <div>{{over50}} has a majority, switch to a minority client!</div>
+	    <div>{{over50}} has a majority, switch to a multinode client!</div>
 	  </div>
 	</a>
 {%- elsif over33 != "" -%}
-	<a href="#why" class="{{alert_style}} {{data.other.data_source}} {{include.type}}-data text-decoration-none">
+	<a href="#switch" class="{{alert_style}} {{data.other.data_source}} {{include.type}}-data text-decoration-none">
 	  <div class="alert alert-warning d-flex align-items-center" role="alert">
 	    {{site.data.icons.warning}}
-	    <div>Switch from {{over33}} to a minority client!</div>
+	    <div>Switch from {{over33}} to a multinode client!</div>
 	  </div>
 	</a>
 {%- else -%}
-	<a href="#why" class="{{alert_style}} {{data.other.data_source}} {{include.type}}-data text-decoration-none">
+	<a href="#switch" class="{{alert_style}} {{data.other.data_source}} {{include.type}}-data text-decoration-none">
 	  <div class="alert alert-info d-flex align-items-center" role="alert">
 	    {{site.data.icons.info}}
 	    <div>Client diversity is balanced!</div>
