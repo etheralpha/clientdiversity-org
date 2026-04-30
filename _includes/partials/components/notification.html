@@ -21,29 +21,23 @@ notification_expiration: 3000000000 # epoch time in seconds
     bottom: 0;
     left: 0;
     right: 0;
-    color: #000;
+    color: var(--bs-dark);
     text-align: center;
     overflow: hidden;
-    box-shadow: 0 0 5px rgba(100, 100, 100, 0.5);
-    display: none;
-    background-color: #000;
-  }
-  #notificationClose {
-    position: absolute;
-    right: 10px;
-    height: 100%;
-    top: 50%;
-    transform: translateY(-18%);
-    cursor: pointer;
+    box-shadow: 0 -0.5rem 1rem rgba(0,0,0,.15);
+    background-color: var(--bs-body-bg);
   }
   #notification a {
-    color: #000;
+    color: var(--bs-dark);
+  }
+  #notificationClose {
+    cursor: pointer;
   }
 </style>
 
 
 <!-- Notification Bar -->
-<div id="notification" class="d-none d-flex">
+<div id="notification" class="d-none d-flex bg-warning">
   <span id="notification_msg" class="flex-grow-1 py-2 ps-3 pe-1">
     {{site.notification_msg}}
   </span>

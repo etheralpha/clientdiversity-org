@@ -31,10 +31,10 @@ default_consensus_source: migalabs # Options: blockprint, migalabs, rated
 default_execution_source: supermajority # Options: ethernodes, supermajority
 
 # Notification Bar
-enable_notification: false
-notification_msg_id: 1 # must increment when creating a new message
-notification_msg: Join the community! <br><a href=""></a>.
-notification_expiration: 3000000000 # epoch time in seconds
+enable_notification: true
+notification_msg_id: 2 # must increment when creating a new message
+notification_msg: <a href="https://ethstaker.org/forms/staking-landscape-survey-2026" target="_blank">Take the 2026 Staking Landscape Survey!</a>
+notification_expiration: 1779555600 # epoch time in seconds
 
 # Toast
 enable_toast: true
