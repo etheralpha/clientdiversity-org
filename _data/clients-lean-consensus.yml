@@ -84,10 +84,10 @@
   # donate: 
   opensource: true
 - name: ethlambda
-  link: https://lambdaclass.com/
+  link: https://ethlambda.xyz/
   github: https://github.com/lambdaclass/ethlambda
-  docs: 
-  chat: 
+  docs: https://docs.ethlambda.xyz/
+  chat: https://t.me/ethlambda_client
   status: R&D
   # support: 
   lang: Rust
