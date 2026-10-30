@@ -20,6 +20,16 @@
   lang: Golang
   donate: https://etherscan.io/address/0x8BFBB529A9E85fDC4b70A4FCdC0D68Bb298B8816 # funded by EF, Gnosis DAO
   opensource: true
+- name: ethlambda
+  link: https://ethlambda.xyz/
+  github: https://github.com/lambdaclass/ethlambda
+  docs: https://docs.ethlambda.xyz/
+  chat: https://t.me/ethlambda_client
+  status: stable
+  support: Linux, macOS, ARM
+  lang: Rust
+  donate: 
+  opensource: true
 - name: Grandine
   link: https://grandine.io/
   github: https://github.com/grandinetech/grandine
