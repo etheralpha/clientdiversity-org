@@ -24,7 +24,7 @@
   link: https://ethlambda.xyz/
   github: https://github.com/lambdaclass/ethlambda
   docs: https://docs.ethlambda.xyz/
-  chat: https://t.me/lambdaconsensus
+  chat: https://t.me/ethlambda
   status: stable
   support: Linux, macOS, ARM
   lang: Rust
@@ -44,7 +44,7 @@
   link: https://github.com/lambdaclass/lambda_ethereum_consensus
   github: https://github.com/lambdaclass/lambda_ethereum_consensus
   docs: https://github.com/lambdaclass/lambda_ethereum_consensus
-  chat: https://t.me/lambdaconsensus
+  chat: https://t.me/ethlambda
   status: deprecated
   support: Linux, macOS, Win
   lang: Elixir
