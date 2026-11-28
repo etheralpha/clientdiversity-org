@@ -127,4 +127,4 @@
   support: Linux, macOS
   lang: Rust
   donate: 
-  opensource: false
+  opensource: true
