@@ -120,11 +120,11 @@
   opensource: true
 - name: xOneRS
   link: https://xone.sh/
-  github: 
+  github: https://github.com/xOneSH/xone-rs
   docs: https://xone.sh/docs/
   chat: 
   status: alpha
-  support: Linux, macOS
+  support: Linux amd64
   lang: Rust
   donate: 
   opensource: true
