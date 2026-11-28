@@ -118,3 +118,13 @@
   lang: C++
   donate: https://etherscan.io/address/0x8BFBB529A9E85fDC4b70A4FCdC0D68Bb298B8816
   opensource: true
+- name: xOneRS
+  link: https://xone.sh/
+  github: https://github.com/xOneSH/xone-rs
+  docs: https://xone.sh/docs/
+  chat: 
+  status: alpha
+  support: Linux amd64
+  lang: Rust
+  donate: 
+  opensource: true
